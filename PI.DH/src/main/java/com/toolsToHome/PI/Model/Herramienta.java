@@ -13,20 +13,21 @@ import lombok.Setter;
 @Table(name="Herramientas")
 public class Herramienta {
     private Long id;
+    private String nombre;
+    private String descripcion;
     private Long categoria;
+    private Long precio;
     private Long cantidad;
-    private Long costo;
-    private boolean diponibilidad;
-    private String nombra;
-    private String marca;
     private String imagen;
+    private String marca;
+
+
 
     public Herramienta(Long categoria, Long cantidad, Long costo, boolean diponibilidad, String nombra, String marca, String imagen) {
         this.categoria = categoria;
         this.cantidad = cantidad;
-        this.costo = costo;
-        this.diponibilidad = diponibilidad;
-        this.nombra = nombra;
+        this.precio = costo;
+        this.nombre = nombra;
         this.marca = marca;
         this.imagen = imagen;
     }
