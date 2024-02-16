@@ -1,4 +1,4 @@
-package com.toolsToHome.PI.DH.Model;
+package com.toolsToHome.PI.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

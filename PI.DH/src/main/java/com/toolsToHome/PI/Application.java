@@ -1,4 +1,4 @@
-package com.toolsToHome.PI.DH;
+package com.toolsToHome.PI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

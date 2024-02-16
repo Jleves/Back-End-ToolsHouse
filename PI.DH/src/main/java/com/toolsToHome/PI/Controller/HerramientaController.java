@@ -1,7 +1,7 @@
-package com.toolsToHome.PI.DH.Controller;
+package com.toolsToHome.PI.Controller;
 
-import com.toolsToHome.PI.DH.Model.Herramienta;
-import com.toolsToHome.PI.DH.Service.HerramientaService;
+import com.toolsToHome.PI.Model.Herramienta;
+import com.toolsToHome.PI.Service.HerramientaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

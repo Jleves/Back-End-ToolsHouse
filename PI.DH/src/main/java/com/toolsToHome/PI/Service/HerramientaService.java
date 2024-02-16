@@ -1,7 +1,7 @@
-package com.toolsToHome.PI.DH.Service;
+package com.toolsToHome.PI.Service;
 
-import com.toolsToHome.PI.DH.Model.Herramienta;
-import com.toolsToHome.PI.DH.Repository.HerramientaRepository;
+import com.toolsToHome.PI.Model.Herramienta;
+import com.toolsToHome.PI.Repository.HerramientaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
