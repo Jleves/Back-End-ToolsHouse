@@ -1,33 +1,33 @@
 package com.toolsToHome.PI.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
-@Table(name="Herramientas")
+@NoArgsConstructor
+@Table(name = "Herramientas")
 public class Herramienta {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private Long categoria;
     private Long cantidad;
     private Long costo;
-    private boolean diponibilidad;
-    private String nombra;
+    private boolean disponibilidad;
+    private String nombre;
     private String marca;
-    private String imagen;
 
-    public Herramienta(Long categoria, Long cantidad, Long costo, boolean diponibilidad, String nombra, String marca, String imagen) {
-        this.categoria = categoria;
-        this.cantidad = cantidad;
-        this.costo = costo;
-        this.diponibilidad = diponibilidad;
-        this.nombra = nombra;
-        this.marca = marca;
-        this.imagen = imagen;
-    }
+    @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
+    private List<Imagen> imagenes = new ArrayList<>();
+
 }

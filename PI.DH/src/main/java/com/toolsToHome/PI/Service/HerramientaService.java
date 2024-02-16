@@ -15,32 +15,20 @@ public class HerramientaService {
     public HerramientaService(HerramientaRepository herramientaRepository) {
         this.herramientaRepository = herramientaRepository;
     }
-    public Optional <Herramienta> buscarPorId(Long id){
-        Optional<Herramienta>herramientaBuscada= herramientaRepository.findById(id);
-        if(herramientaBuscada.isPresent()){
-            return Optional.of(herramientaBuscada.get());
-        }else return Optional.empty();
+    public Herramienta guardarHerramienta (Herramienta herramienta) {
+        return herramientaRepository.save(herramienta);
     }
-    public Herramienta guardarHerramienta (Herramienta herramienta){
-       return herramientaRepository.save(herramienta);
+    public Optional<Herramienta> buscarPorId(Long id){
+        return herramientaRepository.findById(id);
     }
-
-    public void eliminarHerramienta (Long id){
-        Optional<Herramienta> buscarHerramienta = herramientaRepository.findById(id);
-        if(buscarHerramienta.isPresent()){
-            herramientaRepository.deleteById(id);
-        }
+    public void eliminarHerramienta(Long id){
+        herramientaRepository.deleteById(id);
     }
-
-    public void actualizarHerramienta (Herramienta herramienta){
-        Optional<Herramienta> buscarHerramienta = herramientaRepository.findById(herramienta.getId());
-        if(buscarHerramienta.isPresent()){
-            herramientaRepository.save(herramienta);
-        }
-
+    public void actualizarHerramienta(Herramienta herramienta){
+        herramientaRepository.save(herramienta);
     }
-
     public List<Herramienta> listarTodos(){
         return herramientaRepository.findAll();
     }
+
 }
