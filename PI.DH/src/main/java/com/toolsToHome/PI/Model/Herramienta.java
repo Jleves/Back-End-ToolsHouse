@@ -21,8 +21,8 @@ public class Herramienta {
     private Long id;
 
     private Long categoria;
-    private Long cantidad;
-    private Long costo;
+    private Long stock;
+    private Long precio;
     private boolean disponibilidad;
     private String nombre;
     private String marca;
