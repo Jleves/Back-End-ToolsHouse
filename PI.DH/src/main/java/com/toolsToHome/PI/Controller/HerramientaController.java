@@ -3,6 +3,7 @@ package com.toolsToHome.PI.Controller;
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Service.HerramientaService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/Herramientas")
 public class HerramientaController {
+    private static final Logger logger = Logger.getLogger(HerramientaController.class);
     private HerramientaService herramientaService;
     @Autowired
     public HerramientaController(HerramientaService herramientaService) {
@@ -40,7 +42,9 @@ public class HerramientaController {
         /* Aquí no sé si sea necesaria la verificación de que no manden algo vacío, desde el front
            se podría controlar esto, pero no está mal igualmente */
         if(herramienta != null){
+            logger.info("Herramienta pasa por controller");
             return ResponseEntity.ok(herramientaGuardada);
+
         }else return ResponseEntity.badRequest().build();
     }
 
@@ -57,41 +61,21 @@ public class HerramientaController {
 
     @PutMapping
     public ResponseEntity<String>actualizarHerramienta(@RequestBody Herramienta herramienta) throws ResourceNotFoundException{
-        Optional<Herramienta>herramientaBuscada= herramientaService.buscarPorId(herramienta.getId());
-        if(herramientaBuscada.isPresent()){
-            herramientaService.actualizarHerramienta(herramienta);
-            return ResponseEntity.ok("Herramienta actualizada");
-
-        }else {
-            throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + herramienta.getId());
-        }
-
-    }
-
-    /* A este último de actualizar lo había pensado así:
-
-    @PutMapping("/{id}")
-    public ResponseEntity<String> updateHerramienta(@PathVariable Long id, @RequestBody Herramienta herramienta) throws ResourceNotFoundException{
-        Optional<Herramienta> herramientaRequest = herramientaService.buscarPorId(id);
+        Optional<Herramienta> herramientaRequest = herramientaService.buscarPorId(herramienta.getId());
 
         if(herramientaRequest.isPresent()){
             Herramienta updatedHerramienta = herramientaRequest.get();
-            updatedHerramienta.setCantidad(herramienta.getCantidad());
+            updatedHerramienta.setStock(herramienta.getStock());
             updatedHerramienta.setDisponibilidad(herramienta.isDisponibilidad());
-            updatedHerramienta.setCosto(herramienta.getCosto());
-
-
-            ✧ La diferencia sería que aquí se le marca qué campos son los que se
-            pueden actualizar, en este caso solo se le podría cambiar la cantidad,
-            la disponibilidad y el costo. Es más que nada para evitar modificar
-             campos que quizás no deben ser modificados ✧
-
+            updatedHerramienta.setPrecio(herramienta.getPrecio());
             herramientaService.actualizarHerramienta(updatedHerramienta);
-            return ResponseEntity.ok("La herramienta con el ID: " + id + " ha sido actualizada correctamente");
-        } else {
-            throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + id);
+            return ResponseEntity.ok("La herramienta con el ID: " + updatedHerramienta.getId() + " ha sido actualizada correctamente");
         }
 
-        */
+         else {
+        throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + herramienta.getId());
+        }
+    }
+
 
 }
