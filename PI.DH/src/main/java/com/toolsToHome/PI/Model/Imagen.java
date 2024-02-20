@@ -18,7 +18,7 @@ public class Imagen {
     @Column (name = "url")
     private String url;
 
-    @ManyToOne
-    @JoinColumn(name = "herramienta_id",referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "herramienta_id")
     private Herramienta herramienta;
 }
