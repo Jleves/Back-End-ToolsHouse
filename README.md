@@ -3,17 +3,17 @@
 Este poryecto es una aplicaicón de booking desarrollada con SpringBoot
 
 ### Tecnologías utilizadas
-> - Spring Boot
-> - Spring Data JPA
-> - Spring Security
-> - MySQL
-> - Lombok
-> - Maven
+ - Spring Boot
+ - Spring Data JPA
+ - Spring Security
+ - MySQL
+ - Lombok
+ - Maven
 
 ### Funcionalidades
-> - Reserva de herramientas de construcción
-> - Administración de inventario
-> - Visualización de disponibilidad de herramientas
+ - Reserva de herramientas de construcción
+ - Administración de inventario
+ - Visualización de disponibilidad de herramientas
 
 ### Configuración de la Base de Datos
 
