@@ -1,6 +1,6 @@
 # ToolHouse - Proyecto Integrador
 
-Este poryecto es una aplicaicón de booking desarrollada con SpringBoot
+Este proyecto es una aplicación de booking desarrollada con SpringBoot
 
 ### Tecnologías utilizadas
  - Spring Boot
