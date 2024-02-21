@@ -31,7 +31,7 @@ spring.jpa.show-sql=true
 > [!IMPORTANT]
 > Recuerda configurar la base de datos según las necesidades antes de ejecutar la aplicación.
 
-### Ejecución del poryecto
+### Ejecución del proyecto
 Para ejecutar el proyecto localmente es necesario seguir los siguientes pasos:
 1. Clonar el repositorio
 2. Configurar la base de datos como se describe arriba
