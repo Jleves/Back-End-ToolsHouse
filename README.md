@@ -17,9 +17,10 @@ Este proyecto es una aplicación de booking desarrollada con SpringBoot
 
 ### Configuración de la Base de Datos
 
-La aplicación utiliza MySQL para almacenar datos. Asegúrate de confugurar correctamente la base de datos antes de ejecutar la aplicación
+La aplicación utiliza MySQL para almacenar datos. Asegúrate de configurar correctamente la base de datos antes de ejecutar la aplicación
 
-```properties
+> application.properties
+```
 spring.datasource.url=jdbc:mysql://localhost:3306/DB_ToolsToHome
 spring.datasource.username=usuario
 spring.datasource.password=contraseña
