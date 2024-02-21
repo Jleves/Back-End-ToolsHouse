@@ -36,7 +36,7 @@ Para ejecutar el proyecto localmente es necesario seguir los siguientes pasos:
 2. Configurar la base de datos como se describe arriba
 3. Ejecutar la aplicación usando Maven o el IDE que estés utilizando
   ```
-  mvn spring-boo:run
+  mvn spring-boot:run
   ```
 4. Accender a la aplicación desde tu navegador web a la dirección:
 ```
