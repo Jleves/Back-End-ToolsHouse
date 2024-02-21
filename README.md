@@ -34,7 +34,7 @@ spring.jpa.show-sql=true
 Para ejecutar el proyecto localmente es necesario seguir los siguientes pasos:
 1. Clonar el repositorio
 2. Configurar la base de datos como se describe arriba
-3. Ejecutar la aplicación usando Maven
+3. Ejecutar la aplicación usando Maven o el IDE que estés utilizando
   ```
   mvn spring-boo:run
   ```
