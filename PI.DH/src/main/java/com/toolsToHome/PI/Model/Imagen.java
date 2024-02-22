@@ -14,9 +14,10 @@ public class Imagen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String url;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "herramienta_id")
     private Herramienta herramienta;
 }
