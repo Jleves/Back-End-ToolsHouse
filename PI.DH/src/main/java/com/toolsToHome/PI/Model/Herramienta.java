@@ -21,7 +21,7 @@ public class Herramienta {
     private Long id;
 
     @Column(name = "categoria",nullable = false)
-    private Long categoria;
+    private String categoria;
     @Column(name = "stock")
     private Long stock;
     @Column(name = "precio")
@@ -32,11 +32,13 @@ public class Herramienta {
     private String nombre;
     @Column(name = "marca",nullable = false)
     private String marca;
+    @Column(nullable = false)
+    private String descripcion;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "herramienta",cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();
     @Autowired
-    public Herramienta(Long categoria, Long stock, Long precio, boolean disponibilidad, String nombre, String marca, List<Imagen> imagenes) {
+    public Herramienta(String categoria, Long stock, Long precio, boolean disponibilidad, String nombre, String marca, List<Imagen> imagenes) {
         this.categoria = categoria;
         this.stock = stock;
         this.precio = precio;
