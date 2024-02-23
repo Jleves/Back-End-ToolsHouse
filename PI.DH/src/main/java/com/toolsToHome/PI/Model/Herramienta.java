@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +12,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "Herramientas")
 public class Herramienta {
@@ -20,30 +20,22 @@ public class Herramienta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "categoria",nullable = false)
-    private Long categoria;
-    @Column(name = "stock")
+    @Column(nullable = false)
+    private String categoria;
+    @Column(nullable = false)
     private Long stock;
-    @Column(name = "precio")
+    @Column(nullable = false)
     private Long precio;
-    @Column(name = "disponibilidad")
+    @Column(nullable = false)
     private boolean disponibilidad;
-    @Column(name = "nombre", nullable = false)
+    @Column(nullable = false)
     private String nombre;
-    @Column(name = "marca",nullable = false)
+    @Column(nullable = false)
     private String marca;
+    @Column(nullable = false)
+    private String descripcion;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "herramienta",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();
-    @Autowired
-    public Herramienta(Long categoria, Long stock, Long precio, boolean disponibilidad, String nombre, String marca, List<Imagen> imagenes) {
-        this.categoria = categoria;
-        this.stock = stock;
-        this.precio = precio;
-        this.disponibilidad = disponibilidad;
-        this.nombre = nombre;
-        this.marca = marca;
-        this.imagenes = imagenes;
-    }
 
 }
