@@ -49,8 +49,13 @@ public class DataInitializer implements CommandLineRunner {
         imagenH1e.setUrl("https://http2.mlstatic.com/D_NQ_NP_605114-MLA44286542803_122020-O.webp");
         imagenH1e.setHerramienta(herramienta1);
 
-        List<Imagen> imagenesH1 = List.of(imagenH1a, imagenH1b, imagenH1c, imagenH1d, imagenH1e);
-        herramienta1.setImagenes(imagenesH1);
+        herramienta1.getImagenes().add(imagenH1a);
+        herramienta1.getImagenes().add(imagenH1b);
+        herramienta1.getImagenes().add(imagenH1c);
+        herramienta1.getImagenes().add(imagenH1d);
+        herramienta1.getImagenes().add(imagenH1e);
+
+        herramientaRepository.save(herramienta1);
 
 
         //PALA
@@ -79,8 +84,13 @@ public class DataInitializer implements CommandLineRunner {
         imagenH2e.setUrl("https://hydroenv.com.mx/catalogo/images/pala7273_450.jpg");
         imagenH2e.setHerramienta(herramienta2);
 
-        List<Imagen> imagenesH2 = List.of(imagenH2a, imagenH2b, imagenH2c, imagenH2d, imagenH2e);
-        herramienta2.setImagenes(imagenesH2);
+        herramienta2.getImagenes().add(imagenH2a);
+        herramienta2.getImagenes().add(imagenH2b);
+        herramienta2.getImagenes().add(imagenH2c);
+        herramienta2.getImagenes().add(imagenH2d);
+        herramienta2.getImagenes().add(imagenH2e);
+
+        herramientaRepository.save(herramienta2);
 
 
         //BROCA
@@ -107,9 +117,14 @@ public class DataInitializer implements CommandLineRunner {
         imagenH3d.setHerramienta(herramienta3);
         Imagen imagenH3e = new Imagen();
         imagenH3e.setUrl("https://dehumtudo.com.br/wp-content/uploads/2021/12/486aa5c14b4930c11f7d95a676647611-1.jpg");
-        imagenH3e.setHerramienta(herramienta3);
-        List<Imagen> imagenesH3 = List.of(imagenH3a, imagenH3b, imagenH3c, imagenH3d, imagenH3e);
-        herramienta3.setImagenes(imagenesH3);
+
+        herramienta3.getImagenes().add(imagenH3a);
+        herramienta3.getImagenes().add(imagenH3b);
+        herramienta3.getImagenes().add(imagenH3c);
+        herramienta3.getImagenes().add(imagenH3d);
+        herramienta3.getImagenes().add(imagenH3e);
+
+        herramientaRepository.save(herramienta3);
 
 
         //CINTA METRICA
@@ -137,8 +152,15 @@ public class DataInitializer implements CommandLineRunner {
         Imagen imagenH4e = new Imagen();
         imagenH4e.setUrl("https://run.com.ve/wp-content/uploads/2022/01/CM04.jpg");
         imagenH4e.setHerramienta(herramienta4);
-        List<Imagen> imagenesH4 = List.of(imagenH4a, imagenH4b, imagenH4c, imagenH4d, imagenH4e);
-        herramienta4.setImagenes(imagenesH4);
+
+        herramienta4.getImagenes().add(imagenH4a);
+        herramienta4.getImagenes().add(imagenH4b);
+        herramienta4.getImagenes().add(imagenH4c);
+        herramienta4.getImagenes().add(imagenH4d);
+        herramienta4.getImagenes().add(imagenH4e);
+
+        herramientaRepository.save(herramienta4);
+
 
 
         //LIJADORA
@@ -165,9 +187,14 @@ public class DataInitializer implements CommandLineRunner {
         imagenH5d.setHerramienta(herramienta5);
         Imagen imagenH5e = new Imagen();
         imagenH5e.setUrl("https://maquistoresas.com/wp-content/uploads/2021/12/Lijadora-orbital-Makita-180W-M9200B-2.jpg");
-        imagenH5e.setHerramienta(herramienta5);
-        List<Imagen> imagenesH5 = List.of(imagenH5a, imagenH5b, imagenH5c, imagenH5d, imagenH5e);
-        herramienta5.setImagenes(imagenesH5);
+
+        herramienta5.getImagenes().add(imagenH5a);
+        herramienta5.getImagenes().add(imagenH5b);
+        herramienta5.getImagenes().add(imagenH5c);
+        herramienta5.getImagenes().add(imagenH5d);
+        herramienta5.getImagenes().add(imagenH5e);
+
+        herramientaRepository.save(herramienta5);
 
 
         //NIVEL
@@ -195,9 +222,14 @@ public class DataInitializer implements CommandLineRunner {
         Imagen imagenH6e = new Imagen();
         imagenH6e.setUrl("https://almacen.do/wp-content/uploads/2021/08/Nivel-de-Burbuja-INGCO-Aluminio-16-Front.jpg");
         imagenH6e.setHerramienta(herramienta6);
-        List<Imagen> imagenesH6 = List.of(imagenH6a, imagenH6b, imagenH6c, imagenH6d, imagenH6e);
-        herramienta6.setImagenes(imagenesH6);
 
+        herramienta6.getImagenes().add(imagenH6a);
+        herramienta6.getImagenes().add(imagenH6b);
+        herramienta6.getImagenes().add(imagenH6c);
+        herramienta6.getImagenes().add(imagenH6d);
+        herramienta6.getImagenes().add(imagenH6e);
+
+        herramientaRepository.save(herramienta6);
 
         //TALADRO
         Herramienta herramienta7 = new Herramienta();
@@ -224,8 +256,15 @@ public class DataInitializer implements CommandLineRunner {
         Imagen imagenH7e = new Imagen();
         imagenH7e.setUrl("https://deutschlandferreteria.com/wp-content/uploads/2021/01/Taladro-Inalambrico-24-Voltios-WSA-TOOLS-ZC-3234-DF-scaled.jpg");
         imagenH7e.setHerramienta(herramienta7);
-        List<Imagen> imagenesH7 = List.of(imagenH7a, imagenH7b, imagenH7c, imagenH7d, imagenH7e);
-        herramienta7.setImagenes(imagenesH7);
+
+        herramienta7.getImagenes().add(imagenH7a);
+        herramienta7.getImagenes().add(imagenH7b);
+        herramienta7.getImagenes().add(imagenH7c);
+        herramienta7.getImagenes().add(imagenH7d);
+        herramienta7.getImagenes().add(imagenH7e);
+
+        herramientaRepository.save(herramienta7);
+
 
         //AMOLADORA
         Herramienta herramienta8 = new Herramienta();
@@ -251,9 +290,15 @@ public class DataInitializer implements CommandLineRunner {
         imagenH8d.setHerramienta(herramienta8);
         Imagen imagenH8e = new Imagen();
         imagenH8e.setUrl("https://ar.blackanddecker.global/LAG/PRODUCT/IMAGES/HIRES/G650K5-AR/G650K5_1.jpg?resize=530x530");
-        imagenH8e.setHerramienta(herramienta8);
-        List<Imagen> imagenesH8 = List.of(imagenH8a, imagenH8b, imagenH8c, imagenH8d, imagenH8e);
-        herramienta8.setImagenes(imagenesH8);
+
+        herramienta8.getImagenes().add(imagenH8a);
+        herramienta8.getImagenes().add(imagenH8b);
+        herramienta8.getImagenes().add(imagenH8c);
+        herramienta8.getImagenes().add(imagenH8d);
+        herramienta8.getImagenes().add(imagenH8e);
+
+        herramientaRepository.save(herramienta8);
+
 
 
         //DESTORNILLADOR
@@ -281,9 +326,14 @@ public class DataInitializer implements CommandLineRunner {
         Imagen imagenH9e = new Imagen();
         imagenH9e.setUrl("https://http2.mlstatic.com/D_NQ_NP_982719-MLA28984973985_122018-O.webp");
         imagenH9e.setHerramienta(herramienta9);
-        List<Imagen> imagenesH9 = List.of(imagenH9a, imagenH9b, imagenH9c, imagenH9d, imagenH9e);
-        herramienta9.setImagenes(imagenesH9);
 
+        herramienta9.getImagenes().add(imagenH9a);
+        herramienta9.getImagenes().add(imagenH9b);
+        herramienta9.getImagenes().add(imagenH9c);
+        herramienta9.getImagenes().add(imagenH9d);
+        herramienta9.getImagenes().add(imagenH9e);
+
+        herramientaRepository.save(herramienta9);
 
         // MARTILLO
         Herramienta herramienta10 = new Herramienta();
@@ -310,11 +360,16 @@ public class DataInitializer implements CommandLineRunner {
         Imagen imagenH10e = new Imagen();
         imagenH10e.setUrl("https://www.wurth.com.ar/blog/wp-content/uploads/2022/11/martillo-de-carpintero.jpg");
         imagenH10e.setHerramienta(herramienta10);
-        List<Imagen> imagenesH10 = List.of(imagenH10a, imagenH10b, imagenH10c, imagenH10d, imagenH10e);
-        herramienta10.setImagenes(imagenesH10);
+
+        herramienta10.getImagenes().add(imagenH10a);
+        herramienta10.getImagenes().add(imagenH10b);
+        herramienta10.getImagenes().add(imagenH10c);
+        herramienta10.getImagenes().add(imagenH10d);
+        herramienta10.getImagenes().add(imagenH10e);
+
+        herramientaRepository.save(herramienta10);
 
 
-        herramientaRepository.saveAll(List.of(herramienta1, herramienta2, herramienta3, herramienta4, herramienta5, herramienta6, herramienta7, herramienta8, herramienta9, herramienta10));
     }
 }
 

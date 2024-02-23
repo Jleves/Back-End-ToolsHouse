@@ -35,13 +35,13 @@ public class HerramientaController {
     }
 
     @PostMapping
-    public ResponseEntity<Herramienta>guardarHerramienta(@RequestBody Herramienta herramienta){
+    public ResponseEntity<Herramienta> guardarHerramienta(@RequestBody Herramienta herramienta) {
         Herramienta herramientaGuardada = herramientaService.guardarHerramienta(herramienta);
-        /* Aquí no sé si sea necesaria la verificación de que no manden algo vacío, desde el front
-           se podría controlar esto, pero no está mal igualmente */
-        if(herramienta != null){
+        if (herramientaGuardada != null) {
             return ResponseEntity.ok(herramientaGuardada);
-        }else return ResponseEntity.badRequest().build();
+        } else {
+            return ResponseEntity.badRequest().build();
+        }
     }
 
     @DeleteMapping("/{id}")
@@ -68,30 +68,5 @@ public class HerramientaController {
 
     }
 
-    /* A este último de actualizar lo había pensado así:
-
-    @PutMapping("/{id}")
-    public ResponseEntity<String> updateHerramienta(@PathVariable Long id, @RequestBody Herramienta herramienta) throws ResourceNotFoundException{
-        Optional<Herramienta> herramientaRequest = herramientaService.buscarPorId(id);
-
-        if(herramientaRequest.isPresent()){
-            Herramienta updatedHerramienta = herramientaRequest.get();
-            updatedHerramienta.setCantidad(herramienta.getCantidad());
-            updatedHerramienta.setDisponibilidad(herramienta.isDisponibilidad());
-            updatedHerramienta.setCosto(herramienta.getCosto());
-
-
-            ✧ La diferencia sería que aquí se le marca qué campos son los que se
-            pueden actualizar, en este caso solo se le podría cambiar la cantidad,
-            la disponibilidad y el costo. Es más que nada para evitar modificar
-             campos que quizás no deben ser modificados ✧
-
-            herramientaService.actualizarHerramienta(updatedHerramienta);
-            return ResponseEntity.ok("La herramienta con el ID: " + id + " ha sido actualizada correctamente");
-        } else {
-            throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + id);
-        }
-
-        */
 
 }

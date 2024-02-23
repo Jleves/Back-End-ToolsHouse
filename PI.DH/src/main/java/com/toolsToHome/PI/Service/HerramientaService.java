@@ -1,6 +1,7 @@
 package com.toolsToHome.PI.Service;
 
 import com.toolsToHome.PI.Model.Herramienta;
+import com.toolsToHome.PI.Model.Imagen;
 import com.toolsToHome.PI.Repository.HerramientaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,10 @@ public class HerramientaService {
     public HerramientaService(HerramientaRepository herramientaRepository) {
         this.herramientaRepository = herramientaRepository;
     }
-    public Herramienta guardarHerramienta (Herramienta herramienta) {
+    public Herramienta guardarHerramienta(Herramienta herramienta) {
+        for (Imagen imagen : herramienta.getImagenes()) {
+            imagen.setHerramienta(herramienta);
+        }
         return herramientaRepository.save(herramienta);
     }
     public Optional<Herramienta> buscarPorId(Long id){
