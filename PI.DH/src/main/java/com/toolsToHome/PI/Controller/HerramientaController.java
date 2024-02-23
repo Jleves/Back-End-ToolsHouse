@@ -37,15 +37,15 @@ public class HerramientaController {
     }
 
     @PostMapping
-    public ResponseEntity<Herramienta>guardarHerramienta(@RequestBody Herramienta herramienta){
+    public ResponseEntity<Herramienta>guardarHerramienta(@RequestBody Herramienta herramienta)throws ResourceNotFoundException{
+        Optional<Herramienta>buscarHerramienta= herramientaService.buscarPorNombre(herramienta.getNombre());
+        if(buscarHerramienta.isEmpty()){
         Herramienta herramientaGuardada = herramientaService.guardarHerramienta(herramienta);
-        /* Aquí no sé si sea necesaria la verificación de que no manden algo vacío, desde el front
-           se podría controlar esto, pero no está mal igualmente */
-        if(herramienta != null){
+
             logger.info("Herramienta pasa por controller");
             return ResponseEntity.ok(herramientaGuardada);
 
-        }else return ResponseEntity.badRequest().build();
+        }else throw new ResourceNotFoundException("La Herramienta ya existe");
     }
 
     @DeleteMapping("/{id}")

@@ -1,8 +1,8 @@
 package com.toolsToHome.PI.Service;
 
 import com.toolsToHome.PI.Model.Herramienta;
+import com.toolsToHome.PI.Model.Imagen;
 import com.toolsToHome.PI.Repository.HerramientaRepository;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,18 +11,27 @@ import java.util.Optional;
 
 @Service
 public class HerramientaService {
-    private static final Logger logger= Logger.getLogger(HerramientaService.class);
     private HerramientaRepository herramientaRepository;
     @Autowired
     public HerramientaService(HerramientaRepository herramientaRepository) {
         this.herramientaRepository = herramientaRepository;
     }
-    public Herramienta guardarHerramienta (Herramienta herramienta) {
-        logger.info("Herramienta service");return herramientaRepository.save(herramienta);
+    public Herramienta guardarHerramienta(Herramienta herramienta) {
+        for (Imagen imagen : herramienta.getImagenes()) {
+            imagen.setHerramienta(herramienta);
+        }
+        return herramientaRepository.save(herramienta);
     }
     public Optional<Herramienta> buscarPorId(Long id){
         return herramientaRepository.findById(id);
     }
+    public Optional<Herramienta>buscarPorNombre(String nombre){
+        return herramientaRepository.findByNombre(nombre);
+    }
+    /*
+    public Optional<Herramienta> findHerramientaByMarca(String marca) {
+        return herramientaRepository.findHerramientaByMarca(marca);
+    }*/
     public void eliminarHerramienta(Long id){
         herramientaRepository.deleteById(id);
     }
