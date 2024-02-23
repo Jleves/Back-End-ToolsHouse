@@ -20,15 +20,9 @@ public class Herramienta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-<<<<<<< HEAD
-    @Column(name = "categoria",nullable = false)
-    private String categoria;
-    @Column(name = "stock")
-=======
     @Column(nullable = false)
     private String categoria;
     @Column(nullable = false)
->>>>>>> JorgeLeves
     private Long stock;
     @Column(nullable = false)
     private Long precio;
@@ -43,18 +37,5 @@ public class Herramienta {
 
     @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();
-<<<<<<< HEAD
-    @Autowired
-    public Herramienta(String categoria, Long stock, Long precio, boolean disponibilidad, String nombre, String marca, List<Imagen> imagenes) {
-        this.categoria = categoria;
-        this.stock = stock;
-        this.precio = precio;
-        this.disponibilidad = disponibilidad;
-        this.nombre = nombre;
-        this.marca = marca;
-        this.imagenes = imagenes;
-    }
-=======
->>>>>>> JorgeLeves
 
 }
