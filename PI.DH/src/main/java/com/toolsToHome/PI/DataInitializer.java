@@ -25,7 +25,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //LLAVE INGLESA
         Herramienta herramienta1 = new Herramienta();
-        herramienta1.setCategoria("...");
+        herramienta1.setCategoria("Herreria");
         herramienta1.setStock(10L);
         herramienta1.setPrecio(50L);
         herramienta1.setDisponibilidad(true);
@@ -60,7 +60,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //PALA
         Herramienta herramienta2 = new Herramienta();
-        herramienta2.setCategoria("...");
+        herramienta2.setCategoria("Exterior");
         herramienta2.setStock(12L);
         herramienta2.setPrecio(50L);
         herramienta2.setDisponibilidad(true);
@@ -95,7 +95,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //BROCA
         Herramienta herramienta3 = new Herramienta();
-        herramienta3.setCategoria("...");
+        herramienta3.setCategoria("Construccion");
         herramienta3.setStock(12L);
         herramienta3.setPrecio(50L);
         herramienta3.setDisponibilidad(true);
@@ -130,7 +130,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //CINTA METRICA
         Herramienta herramienta4 = new Herramienta();
-        herramienta4.setCategoria("...");
+        herramienta4.setCategoria("Construccion");
         herramienta4.setStock(15L);
         herramienta4.setPrecio(75L);
         herramienta4.setDisponibilidad(true);
@@ -166,7 +166,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //LIJADORA
         Herramienta herramienta5 = new Herramienta();
-        herramienta5.setCategoria("...");
+        herramienta5.setCategoria("Construccion");
         herramienta5.setStock(15L);
         herramienta5.setPrecio(75L);
         herramienta5.setDisponibilidad(true);
@@ -201,7 +201,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //NIVEL
         Herramienta herramienta6 = new Herramienta();
-        herramienta6.setCategoria("...");
+        herramienta6.setCategoria("Construccion");
         herramienta6.setStock(15L);
         herramienta6.setPrecio(75L);
         herramienta6.setDisponibilidad(true);
@@ -235,7 +235,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //TALADRO
         Herramienta herramienta7 = new Herramienta();
-        herramienta7.setCategoria("...");
+        herramienta7.setCategoria("Construccion");
         herramienta7.setStock(15L);
         herramienta7.setPrecio(75L);
         herramienta7.setDisponibilidad(true);
@@ -270,7 +270,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //AMOLADORA
         Herramienta herramienta8 = new Herramienta();
-        herramienta8.setCategoria("...");
+            herramienta8.setCategoria("Herreria");
         herramienta8.setStock(15L);
         herramienta8.setPrecio(75L);
         herramienta8.setDisponibilidad(true);
@@ -306,7 +306,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //DESTORNILLADOR
         Herramienta herramienta9 = new Herramienta();
-        herramienta9.setCategoria("...");
+        herramienta9.setCategoria("Herreria");
         herramienta9.setStock(15L);
         herramienta9.setPrecio(75L);
         herramienta9.setDisponibilidad(true);
@@ -340,7 +340,7 @@ public class DataInitializer implements CommandLineRunner {
 
         // MARTILLO
         Herramienta herramienta10 = new Herramienta();
-        herramienta10.setCategoria("...");
+        herramienta10.setCategoria("Construccion");
         herramienta10.setStock(15L);
         herramienta10.setPrecio(75L);
         herramienta10.setDisponibilidad(true);
