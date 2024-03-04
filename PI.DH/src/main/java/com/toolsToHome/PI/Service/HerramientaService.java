@@ -28,10 +28,7 @@ public class HerramientaService {
     public Optional<Herramienta>buscarPorNombre(String nombre){
         return herramientaRepository.findByNombre(nombre);
     }
-    /*
-    public Optional<Herramienta> findHerramientaByMarca(String marca) {
-        return herramientaRepository.findHerramientaByMarca(marca);
-    }*/
+
     public void eliminarHerramienta(Long id){
         herramientaRepository.deleteById(id);
     }

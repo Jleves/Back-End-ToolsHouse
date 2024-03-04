@@ -1,6 +1,8 @@
 package com.toolsToHome.PI;
 
+import com.toolsToHome.PI.Model.Categoria;
 import com.toolsToHome.PI.Model.Imagen;
+import com.toolsToHome.PI.Repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -14,10 +16,12 @@ import java.util.List;
 public class DataInitializer implements CommandLineRunner {
 
     private final HerramientaRepository herramientaRepository;
+    private final CategoriaRepository categoriaRepository;
 
     @Autowired
-    public DataInitializer(HerramientaRepository herramientaRepository) {
+    public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository) {
         this.herramientaRepository = herramientaRepository;
+        this.categoriaRepository = categoriaRepository;
     }
 
     @Override
@@ -25,7 +29,9 @@ public class DataInitializer implements CommandLineRunner {
 
         //LLAVE INGLESA
         Herramienta herramienta1 = new Herramienta();
-        herramienta1.setCategoria("Herreria");
+        Categoria categoria1=new Categoria();
+        categoria1.setTitulo("Herreria");
+        herramienta1.setCategoria(categoria1);
         herramienta1.setStock(10L);
         herramienta1.setPrecio(50L);
         herramienta1.setDisponibilidad(true);
@@ -55,12 +61,15 @@ public class DataInitializer implements CommandLineRunner {
         herramienta1.getImagenes().add(imagenH1d);
         herramienta1.getImagenes().add(imagenH1e);
 
+        categoriaRepository.save(categoria1);
         herramientaRepository.save(herramienta1);
 
 
         //PALA
         Herramienta herramienta2 = new Herramienta();
-        herramienta2.setCategoria("Exterior");
+        Categoria categoria2=new Categoria();
+        categoria2.setTitulo("Exterior");
+        herramienta2.setCategoria(categoria2);
         herramienta2.setStock(12L);
         herramienta2.setPrecio(50L);
         herramienta2.setDisponibilidad(true);
@@ -89,13 +98,15 @@ public class DataInitializer implements CommandLineRunner {
         herramienta2.getImagenes().add(imagenH2c);
         herramienta2.getImagenes().add(imagenH2d);
         herramienta2.getImagenes().add(imagenH2e);
-
+        categoriaRepository.save(categoria2);
         herramientaRepository.save(herramienta2);
 
 
         //BROCA
         Herramienta herramienta3 = new Herramienta();
-        herramienta3.setCategoria("Construccion");
+        Categoria categoria3 = new Categoria();
+        categoria3.setTitulo("Construccion");
+        herramienta3.setCategoria(categoria3);
         herramienta3.setStock(12L);
         herramienta3.setPrecio(50L);
         herramienta3.setDisponibilidad(true);
@@ -124,13 +135,13 @@ public class DataInitializer implements CommandLineRunner {
         herramienta3.getImagenes().add(imagenH3c);
         herramienta3.getImagenes().add(imagenH3d);
         herramienta3.getImagenes().add(imagenH3e);
-
+        categoriaRepository.save(categoria3);
         herramientaRepository.save(herramienta3);
 
 
         //CINTA METRICA
         Herramienta herramienta4 = new Herramienta();
-        herramienta4.setCategoria("Construccion");
+        herramienta4.setCategoria(categoria3);
         herramienta4.setStock(15L);
         herramienta4.setPrecio(75L);
         herramienta4.setDisponibilidad(true);
@@ -166,7 +177,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //LIJADORA
         Herramienta herramienta5 = new Herramienta();
-        herramienta5.setCategoria("Construccion");
+        herramienta5.setCategoria(categoria3);
         herramienta5.setStock(15L);
         herramienta5.setPrecio(75L);
         herramienta5.setDisponibilidad(true);
@@ -201,7 +212,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //NIVEL
         Herramienta herramienta6 = new Herramienta();
-        herramienta6.setCategoria("Construccion");
+        herramienta6.setCategoria(categoria3);
         herramienta6.setStock(15L);
         herramienta6.setPrecio(75L);
         herramienta6.setDisponibilidad(true);
@@ -235,7 +246,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //TALADRO
         Herramienta herramienta7 = new Herramienta();
-        herramienta7.setCategoria("Construccion");
+        herramienta7.setCategoria(categoria3);
         herramienta7.setStock(15L);
         herramienta7.setPrecio(75L);
         herramienta7.setDisponibilidad(true);
@@ -270,7 +281,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //AMOLADORA
         Herramienta herramienta8 = new Herramienta();
-            herramienta8.setCategoria("Herreria");
+            herramienta8.setCategoria(categoria1);
         herramienta8.setStock(15L);
         herramienta8.setPrecio(75L);
         herramienta8.setDisponibilidad(true);
@@ -306,7 +317,7 @@ public class DataInitializer implements CommandLineRunner {
 
         //DESTORNILLADOR
         Herramienta herramienta9 = new Herramienta();
-        herramienta9.setCategoria("Herreria");
+        herramienta9.setCategoria(categoria1);
         herramienta9.setStock(15L);
         herramienta9.setPrecio(75L);
         herramienta9.setDisponibilidad(true);
@@ -340,7 +351,7 @@ public class DataInitializer implements CommandLineRunner {
 
         // MARTILLO
         Herramienta herramienta10 = new Herramienta();
-        herramienta10.setCategoria("Construccion");
+        herramienta10.setCategoria(categoria3);
         herramienta10.setStock(15L);
         herramienta10.setPrecio(75L);
         herramienta10.setDisponibilidad(true);

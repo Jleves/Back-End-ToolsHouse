@@ -3,6 +3,7 @@ package com.toolsToHome.PI.Model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -20,13 +21,15 @@ public class Usuario implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Getter
     @Column (name= "nombre")
     private String nombre;
+    @Getter
     @Column (name = "apellido")
     private String apellido;
     @Column(name = "password", nullable = false)
     private String password;
-    @Column(name = "Correo Electronico", unique = true)
+    @Column(name = "email", unique = true)
     private String email;
 
     @Enumerated(EnumType.STRING)
@@ -50,17 +53,17 @@ public class Usuario implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override

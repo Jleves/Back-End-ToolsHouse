@@ -1,5 +1,6 @@
 package com.toolsToHome.PI.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,8 +21,9 @@ public class Herramienta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String categoria;
+    @ManyToOne
+    @JoinColumn(name = "Categoria_id", referencedColumnName= "id")
+    private Categoria categoria;
     @Column(nullable = false)
     private Long stock;
     @Column(nullable = false)
