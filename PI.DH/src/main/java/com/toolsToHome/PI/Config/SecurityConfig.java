@@ -25,15 +25,15 @@ public class SecurityConfig {
         return http
                 .csrf(csrf ->
                         csrf
-                        .disable())
-                .authorizeHttpRequests(authRequest ->
+                                .disable())
+                .authorizeHttpRequests( authRequest ->
                         authRequest
-                                .requestMatchers("/auth/**").permitAll()
-                                 /* Configurar aqui las rutas públicas */
+                                .requestMatchers("/", "/auth/**", "/detail/**").permitAll()
+                                .requestMatchers("/admin", "/categoria/**").hasAnyRole("ADMIN", "SUPERADMIN")
+                                .requestMatchers("/users/**").hasRole("SUPERADMIN")
                                 .anyRequest().authenticated()
-                                /* Todas las demás serán privadas */
-                    )
-                .sessionManagement(sessionManager->
+                        )
+                .sessionManagement( sessionManager ->
                         sessionManager
                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authProvider)
