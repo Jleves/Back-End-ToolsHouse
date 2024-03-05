@@ -60,7 +60,7 @@ public class WebConfig  {
                                 .disable())
                 .authorizeHttpRequests(authRequest ->
                         authRequest
-                                .requestMatchers("/auth/**").permitAll()
+                                .requestMatchers("/auth/**", "/Herramientas/**").permitAll()
 
                                 .anyRequest().authenticated()
                 )

@@ -32,8 +32,8 @@ public class Herramienta {
     private boolean disponibilidad;
     @Column(nullable = false)
     private String nombre;
-    @Column(nullable = false)
-    private String marca;
+    @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
+    private List<Caracteristicas> caracteristicas=new ArrayList<>();
     @Column(nullable = false)
     private String descripcion;
 

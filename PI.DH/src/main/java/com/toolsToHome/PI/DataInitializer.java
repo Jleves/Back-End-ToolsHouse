@@ -1,12 +1,13 @@
 package com.toolsToHome.PI;
 
-import com.toolsToHome.PI.Model.Categoria;
-import com.toolsToHome.PI.Model.Imagen;
+import com.toolsToHome.PI.Model.*;
 import com.toolsToHome.PI.Repository.CategoriaRepository;
+import com.toolsToHome.PI.Repository.UsuarioRepository;
+import com.toolsToHome.PI.Security.PasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
-import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Repository.HerramientaRepository;
 
 import java.awt.*;
@@ -17,15 +18,34 @@ public class DataInitializer implements CommandLineRunner {
 
     private final HerramientaRepository herramientaRepository;
     private final CategoriaRepository categoriaRepository;
+    private final UsuarioRepository usuarioRepository;
 
     @Autowired
-    public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository) {
+    public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository, UsuarioRepository usuarioRepository) {
         this.herramientaRepository = herramientaRepository;
         this.categoriaRepository = categoriaRepository;
+        this.usuarioRepository = usuarioRepository;
     }
+
+
+
 
     @Override
     public void run(String... args) {
+
+        BCryptPasswordEncoder cifrador = new BCryptPasswordEncoder();
+        Usuario usuarioSupAdmin= new Usuario(1L,"SuperAdmin", cifrador.encode( "Admin"), "admin", "toolshouse@gmail.com", UsuarioRole.SUPERADMIN);
+        usuarioRepository.save(usuarioSupAdmin);
+
+
+
+
+
+
+
+
+
+
 
         //LLAVE INGLESA
         Herramienta herramienta1 = new Herramienta();
@@ -36,7 +56,7 @@ public class DataInitializer implements CommandLineRunner {
         herramienta1.setPrecio(50L);
         herramienta1.setDisponibilidad(true);
         herramienta1.setNombre("Llave inglesa");
-        herramienta1.setMarca("X");
+
         herramienta1.setDescripcion("La llave inglesa, tu solución todo en uno para ajustes precisos.");
 
         Imagen imagenH1a = new Imagen();
@@ -74,7 +94,7 @@ public class DataInitializer implements CommandLineRunner {
         herramienta2.setPrecio(50L);
         herramienta2.setDisponibilidad(true);
         herramienta2.setNombre("Pala");
-        herramienta2.setMarca("Y");
+
         herramienta2.setDescripcion("La pala, tu compañera confiable para cualquier trabajo de jardinería y construcción.");
 
         Imagen imagenH2a = new Imagen();
@@ -111,7 +131,7 @@ public class DataInitializer implements CommandLineRunner {
         herramienta3.setPrecio(50L);
         herramienta3.setDisponibilidad(true);
         herramienta3.setNombre("Broca");
-        herramienta3.setMarca("Y");
+
         herramienta3.setDescripcion("La broca, tu herramienta imprescindible para perforar agujeros precisos en una variedad de materiales.");
 
         Imagen imagenH3a = new Imagen();
@@ -146,7 +166,7 @@ public class DataInitializer implements CommandLineRunner {
         herramienta4.setPrecio(75L);
         herramienta4.setDisponibilidad(true);
         herramienta4.setNombre("Cinta métrica");
-        herramienta4.setMarca("Z");
+
         herramienta4.setDescripcion("La cinta métrica, tu aliada indispensable para mediciones precisas en cualquier proyecto.");
 
         Imagen imagenH4a = new Imagen();
@@ -182,7 +202,7 @@ public class DataInitializer implements CommandLineRunner {
         herramienta5.setPrecio(75L);
         herramienta5.setDisponibilidad(true);
         herramienta5.setNombre("Lijadora");
-        herramienta5.setMarca("X");
+
         herramienta5.setDescripcion("La lijadora, tu herramienta esencial para obtener acabados suaves y profesionales en tus proyectos de carpintería y bricolaje.");
 
         Imagen imagenH5a = new Imagen();
@@ -217,7 +237,7 @@ public class DataInitializer implements CommandLineRunner {
         herramienta6.setPrecio(75L);
         herramienta6.setDisponibilidad(true);
         herramienta6.setNombre("Nivel");
-        herramienta6.setMarca("Z");
+
         herramienta6.setDescripcion("El nivel, tu socio confiable para asegurar la precisión en cualquier proyecto de construcción y decoración.");
 
         Imagen imagenH6a = new Imagen();
@@ -251,7 +271,7 @@ public class DataInitializer implements CommandLineRunner {
         herramienta7.setPrecio(75L);
         herramienta7.setDisponibilidad(true);
         herramienta7.setNombre("Taladro");
-        herramienta7.setMarca("Z");
+
         herramienta7.setDescripcion("El taladro, el motor de tus proyectos más ambiciosos. Con su potencia y precisión, el taladro perfora superficies con facilidad.");
 
         Imagen imagenH7a = new Imagen();
@@ -286,7 +306,7 @@ public class DataInitializer implements CommandLineRunner {
         herramienta8.setPrecio(75L);
         herramienta8.setDisponibilidad(true);
         herramienta8.setNombre("Amoladora");
-        herramienta8.setMarca("Z");
+
         herramienta8.setDescripcion("La amoladora, la herramienta imprescindible para dar forma y pulir tus creaciones con facilidad.");
 
         Imagen imagenH8a = new Imagen();
@@ -322,7 +342,7 @@ public class DataInitializer implements CommandLineRunner {
         herramienta9.setPrecio(75L);
         herramienta9.setDisponibilidad(true);
         herramienta9.setNombre("Destornillador");
-        herramienta9.setMarca("Z");
+
         herramienta9.setDescripcion("El destornillador, el héroe discreto de cualquier caja de herramientas.");
 
         Imagen imagenH9a = new Imagen();
@@ -356,7 +376,7 @@ public class DataInitializer implements CommandLineRunner {
         herramienta10.setPrecio(75L);
         herramienta10.setDisponibilidad(true);
         herramienta10.setNombre("Martillo");
-        herramienta10.setMarca("Z");
+
         herramienta10.setDescripcion("El martillo, un aliado esencial en todo proyecto de construcción y bricolaje.");
 
         Imagen imagenH10a = new Imagen();
