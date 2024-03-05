@@ -33,9 +33,6 @@ public class DataInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) {
 
-        BCryptPasswordEncoder cifrador = new BCryptPasswordEncoder();
-        Usuario usuarioSupAdmin= new Usuario(1L,"SuperAdmin", cifrador.encode( "Admin"), "admin", "toolshouse@gmail.com", UsuarioRole.SUPERADMIN);
-        usuarioRepository.save(usuarioSupAdmin);
 
 
 

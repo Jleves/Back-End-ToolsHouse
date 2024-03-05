@@ -77,6 +77,26 @@ public class WebConfig  {
 
 }
 
+/*
+* return http
+                .csrf(csrf ->
+                        csrf
+                                .disable())
+                .authorizeHttpRequests( authRequest ->
+                        authRequest
+                                .requestMatchers("/", "/auth/*", "/detail/*").permitAll()
+                                .requestMatchers("/admin", "/categoria/**").hasAnyRole("ADMIN", "SUPERADMIN")
+                                .requestMatchers("/users/**").hasRole("SUPERADMIN")
+                                .anyRequest().authenticated()
+                        )
+                .sessionManagement( sessionManager ->
+                        sessionManager
+                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authenticationProvider(authProvider)
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                .build();
+    } */
+
     /*
     @Override
     public void addCorsMappings(CorsRegistry registry) {

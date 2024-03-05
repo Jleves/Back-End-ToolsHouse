@@ -60,7 +60,7 @@ public class CategoriaContoller {
                 categoriaService.eliminarCategoria(id);
                 return ResponseEntity.ok("Herramienta Eliminada");
             } else {
-                throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + id);
+                throw new ResourceNotFoundException("No se encontró la caracteristica con el ID: " + id);
             }
         }
 

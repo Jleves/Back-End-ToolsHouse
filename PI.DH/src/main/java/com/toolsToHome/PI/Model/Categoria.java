@@ -20,4 +20,8 @@ public class Categoria {
     private List<Herramienta> herramienta= new ArrayList<>();
     @Column
     private String titulo;
+    @Column
+    private String descripcion;
+    @Column
+    private String icono;
 }
