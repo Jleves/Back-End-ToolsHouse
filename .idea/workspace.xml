@@ -5,31 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80d8ed76-a05a-4f70-ba8b-21a011d2730a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Auth/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Auth/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Auth/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Auth/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Jwt/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/User/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/User/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PI.DH/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PI.DH/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Controller/HerramientaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Controller/HerramientaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Service/ImagenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/DataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Model/Imagen.java" beforeDir="false" afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Model/Imagen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Repository/HerramientaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Repository/HerramientaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Service/HerramientaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PI.DH/src/main/java/com/toolsToHome/PI/Service/HerramientaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PI.DH/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PI.DH/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,19 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;angelG&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/angel/OneDrive/Desktop/backend-springBoot-Dev&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3321839&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Application.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging angelG",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/angel/OneDrive/Desktop/TPI",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.3321839",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
