@@ -21,6 +21,8 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 
+
+
 @Configuration
 @EnableWebSecurity
 public class WebConfig  {
@@ -54,14 +56,25 @@ public class WebConfig  {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
     {
-        return http
+
+
+
+
+        return
+
+
+                http
+
                 .csrf(csrf ->
                         csrf
                                 .disable())
-                .authorizeHttpRequests(authRequest ->
-                        authRequest
-                                .requestMatchers("/auth/**", "/Herramientas/**").permitAll()
 
+                .authorizeHttpRequests( authRequest ->
+                        authRequest
+
+                                .requestMatchers("/auth/*", "/detail/*","/registro").permitAll()
+                                .requestMatchers("/admin", "/categoria/**").hasAnyRole("ADMIN", "SUPERADMIN")
+                                .requestMatchers("/users/**").hasRole("SUPERADMIN")
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(sessionManager ->
@@ -71,9 +84,39 @@ public class WebConfig  {
                 )
                 .authenticationProvider(daoAuthenticationProvider())
                 .addFilterBefore(jwtRequestFilter,UsernamePasswordAuthenticationFilter.class)
+
                 .build();
 
+
+
+
     }
+    /*@Bean
+    public void addCorsMappings(Cors registry) {
+        registry.allowedOriginPatterns("/**")
+                .codePoints("http://localhost:5173")
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedHeaders("*");
+    }*/
+/*
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("http://localhost:5173/")
+                .allowCredentials(true)
+
+                .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS")
+                .allowedHeaders("Access-Control-Allow-Origin");
+
+
+        registry.addMapping("/auth/**")
+                .allowedOrigins("http://localhost:5173/")
+
+
+                .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS")
+                .allowedHeaders("Access-Control-Allow-Origin");
+
+
+    }*/
 
 }
 

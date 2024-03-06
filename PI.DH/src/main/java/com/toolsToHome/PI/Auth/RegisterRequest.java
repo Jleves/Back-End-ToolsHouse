@@ -12,9 +12,10 @@ import lombok.NoArgsConstructor;
 public class RegisterRequest {
 String nombre;
 String apellido;
-String password;
+
 String email;
 String ciudad;
+String password;
 }
 
 //Datos para el registro de usuarios que viene desde AuthController

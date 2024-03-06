@@ -33,7 +33,7 @@ public class Usuario implements UserDetails {
     private String email;
 
     @Column
-    private String ciuidad;
+    private String ciudad;
 
     @Enumerated(EnumType.STRING)
     private UsuarioRole usuarioRole;
