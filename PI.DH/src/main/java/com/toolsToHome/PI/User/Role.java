@@ -1,7 +1,7 @@
 package com.toolsToHome.PI.User;
 
 public enum Role {
-    SUPERADMIN,
+    SUPER_ADMIN,
     ADMIN,
     USER
 }

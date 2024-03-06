@@ -1,8 +1,14 @@
 package com.toolsToHome.PI;
 
 import com.toolsToHome.PI.Model.Imagen;
+import com.toolsToHome.PI.Service.AuthService;
+import com.toolsToHome.PI.Service.UserService;
+import com.toolsToHome.PI.User.Role;
+import com.toolsToHome.PI.User.User;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Repository.HerramientaRepository;
@@ -14,14 +20,41 @@ import java.util.List;
 public class DataInitializer implements CommandLineRunner {
 
     private final HerramientaRepository herramientaRepository;
-
+    private final UserService userService;
+    private final PasswordEncoder passwordEncoder;
     @Autowired
-    public DataInitializer(HerramientaRepository herramientaRepository) {
+    public DataInitializer(HerramientaRepository herramientaRepository, UserService userService, PasswordEncoder passwordEncoder) {
         this.herramientaRepository = herramientaRepository;
+        this.userService = userService;
+        this.passwordEncoder=passwordEncoder;
     }
 
     @Override
     public void run(String... args) {
+
+
+        //Creación del superadmin
+          User superAdmin = User.builder()
+                    .username("superadmin@toolshouse.com")
+                    .password(passwordEncoder.encode("admin"))
+                    .nombre("Super")
+                    .apellido("Admin")
+                    .role(Role.SUPER_ADMIN)
+                    .build();
+
+            userService.save(superAdmin);
+
+            //Creacion de ADMIN
+        User admin = User.builder()
+                .username("admin@toolshouse.com")
+                .password(passwordEncoder.encode("admin"))
+                .nombre("Super")
+                .apellido("Admin")
+                .role(Role.ADMIN)
+                .build();
+         userService.save(admin);
+
+        // Creación de productos
 
         //LLAVE INGLESA
         Herramienta herramienta1 = new Herramienta();

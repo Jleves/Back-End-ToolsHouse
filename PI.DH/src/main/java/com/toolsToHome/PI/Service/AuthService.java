@@ -48,4 +48,5 @@ public class AuthService {
                 .token(jwtService.getToken(user))
                 .build();
     }
+
 }

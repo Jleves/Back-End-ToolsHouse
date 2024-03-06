@@ -1,5 +1,6 @@
 package com.toolsToHome.PI.DTO;
 
+import com.toolsToHome.PI.User.Role;
 import com.toolsToHome.PI.User.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,6 +14,7 @@ public class UserDTO {
     private String nombre;
     private String apellido;
     private String username;
+    private Role role;
 
     public static UserDTO fromUser(User user)
     {
@@ -20,7 +22,8 @@ public class UserDTO {
                 user.getId(),
                 user.getNombre(),
                 user.getApellido(),
-                user.getUsername()
+                user.getUsername(),
+                user.getRole()
         );
     }
 }
