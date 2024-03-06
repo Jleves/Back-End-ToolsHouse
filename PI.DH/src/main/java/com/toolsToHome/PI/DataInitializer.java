@@ -150,6 +150,7 @@ public class DataInitializer implements CommandLineRunner {
         imagenH3d.setHerramienta(herramienta3);
         Imagen imagenH3e = new Imagen();
         imagenH3e.setUrl("https://dehumtudo.com.br/wp-content/uploads/2021/12/486aa5c14b4930c11f7d95a676647611-1.jpg");
+        imagenH3e.setHerramienta(herramienta3);
 
         herramienta3.getImagenes().add(imagenH3a);
         herramienta3.getImagenes().add(imagenH3b);
@@ -220,6 +221,7 @@ public class DataInitializer implements CommandLineRunner {
         imagenH5d.setHerramienta(herramienta5);
         Imagen imagenH5e = new Imagen();
         imagenH5e.setUrl("https://maquistoresas.com/wp-content/uploads/2021/12/Lijadora-orbital-Makita-180W-M9200B-2.jpg");
+        imagenH5e.setHerramienta(herramienta5);
 
         herramienta5.getImagenes().add(imagenH5a);
         herramienta5.getImagenes().add(imagenH5b);
@@ -323,6 +325,7 @@ public class DataInitializer implements CommandLineRunner {
         imagenH8d.setHerramienta(herramienta8);
         Imagen imagenH8e = new Imagen();
         imagenH8e.setUrl("https://ar.blackanddecker.global/LAG/PRODUCT/IMAGES/HIRES/G650K5-AR/G650K5_1.jpg?resize=530x530");
+        imagenH8e.setHerramienta(herramienta8);
 
         herramienta8.getImagenes().add(imagenH8a);
         herramienta8.getImagenes().add(imagenH8b);

@@ -8,7 +8,6 @@ import java.util.Optional;
 
 @Repository
 public interface HerramientaRepository extends JpaRepository<Herramienta, Long> {
-    // Filtrar por marca
-    Optional<Herramienta> findHerramientaByMarca (String marca);
+    Optional<Herramienta>findByNombre(String string);
 
 }
