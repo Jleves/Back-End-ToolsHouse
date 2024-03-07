@@ -1,7 +1,8 @@
 package com.toolsToHome.PI.Service;
 
 
-import com.toolsToHome.PI.Model.Herramienta;
+
+import com.toolsToHome.PI.DTO.UserDTO;
 import com.toolsToHome.PI.Model.Usuario;
 import com.toolsToHome.PI.Repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +31,14 @@ public class UsuarioService implements UserDetailsService {
 
         }else throw new UsernameNotFoundException("No se encontro el usuario");
     }
-    public Optional<Usuario> buscarPorId(Long id){
-        return usuarioRepository.findById(id);
+    public Optional<UserDTO> buscarPorId(Long id){
+        Optional<Usuario>buscarUsuario = usuarioRepository.findById(id);
+        if(buscarUsuario.isPresent()){
+            return Optional.of(userDto(buscarUsuario.get()));
+        }else return Optional.empty();
+
+
+
     }
     public void eliminarUsuario(Long id){
         usuarioRepository.deleteById(id);
@@ -42,6 +49,23 @@ public class UsuarioService implements UserDetailsService {
     public List<Usuario> listarTodos(){
         return usuarioRepository.findAll();
     }
+
+
+
+    private UserDTO userDto(Usuario usuario){
+        UserDTO userDTO = new UserDTO();
+
+        userDTO.setId(usuario.getId());
+        userDTO.setNombre(usuario.getNombre());
+        userDTO.setApellido(usuario.getApellido());
+        userDTO.setUsername(usuario.getUsername());
+        userDTO.setRole(usuario.getUsuarioRole());
+
+        return userDTO;
+    }
+
+
+
 
 
 }

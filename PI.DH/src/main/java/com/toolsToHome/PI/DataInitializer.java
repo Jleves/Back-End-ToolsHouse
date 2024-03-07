@@ -19,13 +19,17 @@ public class DataInitializer implements CommandLineRunner {
     private final HerramientaRepository herramientaRepository;
     private final CategoriaRepository categoriaRepository;
     private final UsuarioRepository usuarioRepository;
-
+    private final PasswordEncoder passwordEncoder;
     @Autowired
-    public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository, UsuarioRepository usuarioRepository) {
+    public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository, UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder) {
         this.herramientaRepository = herramientaRepository;
         this.categoriaRepository = categoriaRepository;
         this.usuarioRepository = usuarioRepository;
+        this.passwordEncoder = passwordEncoder;
     }
+
+
+
 
 
 
@@ -34,7 +38,16 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) {
 
 
+        Usuario superAdmin = Usuario.builder()
+                .email("superadmin@toolshouse.com")
+                .password(passwordEncoder.bCryptPasswordEncoder().encode("admin"))
+                .nombre("Super")
+                .apellido("Admin")
+                .ciudad("El Espacio Exterior")
+                .usuarioRole(UsuarioRole.SUPERADMIN)
+                .build();
 
+        usuarioRepository.save(superAdmin);
 
 
 

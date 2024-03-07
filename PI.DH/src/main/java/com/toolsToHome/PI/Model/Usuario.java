@@ -44,6 +44,14 @@ public class Usuario implements UserDetails {
         return Collections.singletonList(grantedAuthority);
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public UsuarioRole getUsuarioRole() {
+        return usuarioRole;
+    }
+
     @Override
     public String getPassword() {
         return password;

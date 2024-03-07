@@ -73,8 +73,9 @@ public class WebConfig  {
                         authRequest
 
                                 .requestMatchers("/auth/*", "/detail/*","/registro").permitAll()
-                                .requestMatchers("/admin", "/categoria/**").hasAnyRole("ADMIN", "SUPERADMIN")
-                                .requestMatchers("/users/**").hasRole("SUPERADMIN")
+                                .requestMatchers("/Herramientas/**").permitAll()
+                                .requestMatchers("/admin", "/categoria/**").hasAnyRole("ADMIN", "SUPERADMIN","USER")
+                                .requestMatchers("/users/**").hasAnyRole("SUPERADMIN","USER","ADMIN")
                                 .anyRequest().authenticated()
                 )
                 .sessionManagement(sessionManager ->

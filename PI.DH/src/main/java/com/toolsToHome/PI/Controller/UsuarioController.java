@@ -1,5 +1,6 @@
 package com.toolsToHome.PI.Controller;
 
+import com.toolsToHome.PI.DTO.UserDTO;
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Model.Usuario;
@@ -28,7 +29,7 @@ public class UsuarioController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarUsuario(@PathVariable Long id) throws ResourceNotFoundException {
-        Optional<Usuario> buscarUsuario = usuarioService.buscarPorId(id);
+        Optional<UserDTO> buscarUsuario = usuarioService.buscarPorId(id);
         if(buscarUsuario.isPresent()){
             usuarioService.eliminarUsuario(id);
             return ResponseEntity.ok("Usuario Eliminada");
