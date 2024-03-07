@@ -54,9 +54,6 @@ public class DataInitializer implements CommandLineRunner {
 
 
 
-
-
-
         //LLAVE INGLESA
         Herramienta herramienta1 = new Herramienta();
         Categoria categoria1=new Categoria();

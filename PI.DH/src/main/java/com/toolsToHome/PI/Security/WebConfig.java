@@ -65,28 +65,28 @@ public class WebConfig  {
 
                 http
 
-                .csrf(csrf ->
-                        csrf
-                                .disable())
+                        .csrf(csrf ->
+                                csrf
+                                        .disable())
 
-                .authorizeHttpRequests( authRequest ->
-                        authRequest
+                        .authorizeHttpRequests( authRequest ->
+                                authRequest
 
-                                .requestMatchers("/auth/*", "/detail/*","/registro").permitAll()
-                                .requestMatchers("/Herramientas/**").permitAll()
-                                .requestMatchers("/admin", "/categoria/**").hasAnyRole("ADMIN", "SUPERADMIN","USER")
-                                .requestMatchers("/users/**").hasAnyRole("SUPERADMIN","USER","ADMIN")
-                                .anyRequest().authenticated()
-                )
-                .sessionManagement(sessionManager ->
-                        sessionManager
-                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                                        .requestMatchers("/auth/*", "/detail/*","/registro").permitAll()
+                                        .requestMatchers("/Herramientas/**").permitAll()
+                                        .requestMatchers("/admin", "/categoria/**").permitAll()
+                                        .requestMatchers("/users/**").hasAnyRole("SUPERADMIN","USER","ADMIN")
+                                        .anyRequest().authenticated()
+                        )
+                        .sessionManagement(sessionManager ->
+                                sessionManager
+                                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 
-                )
-                .authenticationProvider(daoAuthenticationProvider())
-                .addFilterBefore(jwtRequestFilter,UsernamePasswordAuthenticationFilter.class)
+                        )
+                        .authenticationProvider(daoAuthenticationProvider())
+                        .addFilterBefore(jwtRequestFilter,UsernamePasswordAuthenticationFilter.class)
 
-                .build();
+                        .build();
 
 
 

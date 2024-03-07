@@ -2,8 +2,10 @@ package com.toolsToHome.PI.Security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
+@EnableWebMvc
 public class CorsConfig implements WebMvcConfigurer {
 
     public void addCorsMappings(CorsRegistry registry) {
@@ -19,8 +21,11 @@ public class CorsConfig implements WebMvcConfigurer {
                 .allowedHeaders("*");
         registry.addMapping("/Herramientas/**")
                 .allowedOrigins("http://localhost:5173/Herramientas/**")
+                .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS")
+                .allowedHeaders("*");
 
-
+        registry.addMapping("/user/**")
+                .allowedOrigins("http://localhost:5173/user/**")
                 .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS")
                 .allowedHeaders("*");
     }
