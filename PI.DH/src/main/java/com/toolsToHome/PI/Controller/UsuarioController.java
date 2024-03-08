@@ -32,8 +32,6 @@ public class UsuarioController {
     }
 
 
-<<<<<<< HEAD
-=======
 
     @PutMapping("/{id}/usuarioRole")
     public ResponseEntity<?> updateRole(@PathVariable Long id,@RequestBody Usuario usuarioRole) {
@@ -49,7 +47,6 @@ public class UsuarioController {
 
 
 
->>>>>>> ad9fc671e336f70b7c56e9e61593380e6bd3f5ce
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarUsuario(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<UserDTO> buscarUsuario = usuarioService.buscarPorId(id);
@@ -58,19 +55,6 @@ public class UsuarioController {
             return ResponseEntity.ok("Usuario Eliminada");
         } else {
             throw new ResourceNotFoundException("No se encontró el usuario con el ID: " + id);
-        }
-    }
-
-
-    @PutMapping("/{id}")
-    public ResponseEntity<?> updateRole(@PathVariable Long id, @RequestBody UsuarioRole newRole) {
-        try {
-            usuarioService.updateRole(id, newRole);
-            return ResponseEntity.ok().build();
-        } catch (ResourceNotFoundException e) {
-            return ResponseEntity.notFound().build();
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 }

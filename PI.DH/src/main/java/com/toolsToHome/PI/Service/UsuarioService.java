@@ -8,8 +8,6 @@ import com.toolsToHome.PI.Model.Usuario;
 import com.toolsToHome.PI.Model.UsuarioRole;
 import com.toolsToHome.PI.Repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.AuthenticationManager;
-
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -22,11 +20,9 @@ import java.util.Optional;
 public class UsuarioService implements UserDetailsService {
 
     private UsuarioRepository usuarioRepository;
-
     @Autowired
-    public UsuarioService(UsuarioRepository usuarioRepository, AuthenticationManager authenticationManager) {
+    public UsuarioService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
-
     }
 
 
@@ -43,8 +39,6 @@ public class UsuarioService implements UserDetailsService {
         }else throw new UsernameNotFoundException("No se encontro el usuario");
     }
     public Optional<UserDTO> buscarPorId(Long id){
-
-
         Optional<Usuario>buscarUsuario = usuarioRepository.findById(id);
         if(buscarUsuario.isPresent()){
             return Optional.of(userDto(buscarUsuario.get()));
@@ -56,16 +50,8 @@ public class UsuarioService implements UserDetailsService {
     public void eliminarUsuario(Long id){
         usuarioRepository.deleteById(id);
     }
-    public void updateRole(Long id, UsuarioRole newRole) throws ResourceNotFoundException {
-        Optional<UserDTO> usuarioRequest = buscarPorId(id);
-        if(usuarioRequest.isPresent()){
-            Usuario user = usuarioRepository.findByEmail(usuarioRequest.get().getUsername())
-                    .orElseThrow(() -> new ResourceNotFoundException("No se encontró al usuario con el id: " + id));
-            user.setUsuarioRole(newRole);
-            usuarioRepository.save(user);
-        } else {
-            throw new ResourceNotFoundException("No se encontró al usuario con el id: " + id);
-        }
+    public void actualizarUsuario(Usuario usuario){
+        usuarioRepository.save(usuario);
     }
     public List<Usuario> listarTodos(){
         return usuarioRepository.findAll();
