@@ -38,6 +38,10 @@ public class Usuario implements UserDetails {
     @Enumerated(EnumType.STRING)
     private UsuarioRole usuarioRole;
 
+    public void setUsuarioRole(UsuarioRole usuarioRole) {
+        this.usuarioRole = usuarioRole;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         SimpleGrantedAuthority grantedAuthority = new SimpleGrantedAuthority(usuarioRole.name());

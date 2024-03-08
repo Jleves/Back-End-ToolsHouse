@@ -4,9 +4,11 @@ import com.toolsToHome.PI.DTO.UserDTO;
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Model.Usuario;
+import com.toolsToHome.PI.Model.UsuarioRole;
 import com.toolsToHome.PI.Service.UsuarioService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,6 +31,7 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarioService.listarTodos());
     }
 
+
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarUsuario(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<UserDTO> buscarUsuario = usuarioService.buscarPorId(id);
@@ -37,6 +40,19 @@ public class UsuarioController {
             return ResponseEntity.ok("Usuario Eliminada");
         } else {
             throw new ResourceNotFoundException("No se encontró el usuario con el ID: " + id);
+        }
+    }
+
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateRole(@PathVariable Long id, @RequestBody UsuarioRole newRole) {
+        try {
+            usuarioService.updateRole(id, newRole);
+            return ResponseEntity.ok().build();
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 }
