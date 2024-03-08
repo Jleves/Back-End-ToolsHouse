@@ -10,23 +10,11 @@ public class CorsConfig implements WebMvcConfigurer {
 
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173") // Permitir solicitudes desde este origen
-                .allowedMethods("GET", "POST", "PUT", "DELETE") // Permitir estos métodos HTTP
-                .allowedHeaders("*"); // Permitir todos los encabezados
-        registry.addMapping("/auth/register")
-                .allowedOrigins("http://localhost:5173/auth/register")
-
-
-                .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS")
-                .allowedHeaders("*");
-        registry.addMapping("/Herramientas/**")
-                .allowedOrigins("http://localhost:5173/Herramientas/**")
-                .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS")
+                .allowedOrigins("*")
+                .allowedMethods("*")
                 .allowedHeaders("*");
 
-        registry.addMapping("/user/**")
-                .allowedOrigins("http://localhost:5173/user/**")
-                .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS")
-                .allowedHeaders("*");
+
+
     }
 }

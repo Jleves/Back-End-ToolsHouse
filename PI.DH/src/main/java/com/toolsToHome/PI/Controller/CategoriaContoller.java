@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-@CrossOrigin(origins = "http://localhost:5173/", maxAge = 3600)
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/Categorias")
+
 public class CategoriaContoller {
     private CategoriaService categoriaService;
     private static final Logger logger = Logger.getLogger(HerramientaController.class);
@@ -21,7 +22,7 @@ public class CategoriaContoller {
     public CategoriaContoller(CategoriaService categoriaService) {
         this.categoriaService = categoriaService;
     }
-
+    @CrossOrigin(origins = "*")
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Categoria>> buscarCategoria(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Categoria> buscarcategoria = categoriaService.buscarPorId(id);
@@ -31,6 +32,7 @@ public class CategoriaContoller {
             throw new ResourceNotFoundException("No se encontró la categoria con el ID: " + id);
         }
     }
+    @CrossOrigin(origins = "*")
         @GetMapping
         public ResponseEntity<List<Categoria>>listarHerramientas(){
             return ResponseEntity.ok(categoriaService.listarTodos());
