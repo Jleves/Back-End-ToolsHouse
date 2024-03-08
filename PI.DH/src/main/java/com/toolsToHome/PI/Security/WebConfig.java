@@ -15,6 +15,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -25,7 +26,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-public class WebConfig  {
+public class WebConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UsuarioService usuarioService;
     @Autowired
@@ -34,6 +35,22 @@ public class WebConfig  {
     private JwtRequestFilter jwtRequestFilter;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    public WebConfig(UsuarioService usuarioService, JwtUtil jwtUtil, JwtRequestFilter jwtRequestFilter, BCryptPasswordEncoder bCryptPasswordEncoder) {
+        this.usuarioService = usuarioService;
+        this.jwtUtil = jwtUtil;
+        this.jwtRequestFilter = jwtRequestFilter;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
+
+    public WebConfig(boolean disableDefaults, UsuarioService usuarioService, JwtUtil jwtUtil, JwtRequestFilter jwtRequestFilter, BCryptPasswordEncoder bCryptPasswordEncoder) {
+        super(disableDefaults);
+        this.usuarioService = usuarioService;
+        this.jwtUtil = jwtUtil;
+        this.jwtRequestFilter = jwtRequestFilter;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
+
     @Bean
     public DaoAuthenticationProvider daoAuthenticationProvider(){
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
@@ -53,6 +70,37 @@ public class WebConfig  {
         auth.authenticationProvider(daoAuthenticationProvider());
     }
 
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .cors().and()
+
+                .csrf(csrf ->
+                        csrf
+                                .disable())
+
+                .authorizeHttpRequests( authRequest ->
+                        authRequest
+
+                                .antMatchers("/auth/*", "/detail/*","/registro").permitAll()
+                                .antMatchers("/Herramientas/**").permitAll()
+                                .antMatchers("/admin", "/categoria/**").permitAll()
+                                .antMatchers("/users/**").hasAnyRole("SUPERADMIN","USER","ADMIN")
+                                .anyRequest().authenticated()
+                )
+                .sessionManagement(sessionManager ->
+                        sessionManager
+                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+
+                )
+                .authenticationProvider(daoAuthenticationProvider())
+
+                .addFilterBefore(jwtRequestFilter,UsernamePasswordAuthenticationFilter.class)
+
+                .build();
+
+    }
+/*
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
     {
@@ -64,6 +112,7 @@ public class WebConfig  {
 
 
                 http
+                        .cors().and()
 
                         .csrf(csrf ->
                                 csrf
@@ -91,7 +140,7 @@ public class WebConfig  {
 
 
 
-    }
+    }*/
     /*@Bean
     public void addCorsMappings(Cors registry) {
         registry.allowedOriginPatterns("/**")
