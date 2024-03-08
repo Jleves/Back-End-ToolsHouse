@@ -4,10 +4,12 @@ import com.toolsToHome.PI.DTO.UserDTO;
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Model.Usuario;
+import com.toolsToHome.PI.Model.UsuarioRole;
 import com.toolsToHome.PI.Repository.UsuarioRepository;
 import com.toolsToHome.PI.Service.UsuarioService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -45,6 +47,19 @@ public class UsuarioController {
             return ResponseEntity.ok(userDTO);
         } else {
             return ResponseEntity.notFound().build();
+        }
+    }
+
+    /* VER */
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateRole(@PathVariable Long id, @RequestBody UsuarioRole newRole) {
+        try {
+            usuarioService.updateRole(id, newRole);
+            return ResponseEntity.ok().build();
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 

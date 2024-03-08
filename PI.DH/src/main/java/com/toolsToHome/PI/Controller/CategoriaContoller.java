@@ -39,10 +39,6 @@ public class CategoriaContoller {
         }
 
 
-
-
-
-
         @PostMapping
         public ResponseEntity<Categoria>guardarCategoria(@RequestBody Categoria categoria)throws ResourceNotFoundException{
             Optional<Categoria>buscarCategoria= categoriaService.buscarPorCategoria(categoria.getTitulo());

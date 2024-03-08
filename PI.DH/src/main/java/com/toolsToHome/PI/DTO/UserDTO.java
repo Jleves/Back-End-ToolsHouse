@@ -17,6 +17,7 @@ public class UserDTO {
     private String nombre;
     private String apellido;
     private UsuarioRole role;
+    private String username;
 
     public static UserDTO fromUser(Usuario user) {
         UserDTO userDTO = new UserDTO();
@@ -24,6 +25,7 @@ public class UserDTO {
         userDTO.setNombre(user.getNombre());
         userDTO.setApellido(user.getApellido());
         userDTO.setRole(user.getUsuarioRole());
+        userDTO.setUsername(user.getUsername());
         return userDTO;
     }
 
