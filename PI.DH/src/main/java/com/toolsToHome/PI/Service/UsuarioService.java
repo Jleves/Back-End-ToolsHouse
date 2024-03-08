@@ -3,7 +3,9 @@ package com.toolsToHome.PI.Service;
 
 
 import com.toolsToHome.PI.DTO.UserDTO;
+import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Usuario;
+import com.toolsToHome.PI.Model.UsuarioRole;
 import com.toolsToHome.PI.Repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,6 +24,11 @@ public class UsuarioService implements UserDetailsService {
     public UsuarioService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }
+
+
+
+
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -49,6 +56,31 @@ public class UsuarioService implements UserDetailsService {
     public List<Usuario> listarTodos(){
         return usuarioRepository.findAll();
     }
+
+
+
+
+
+    public void updateRole(Long id, Usuario usuarioRole) throws ResourceNotFoundException {
+        Optional<UserDTO> usuarioRequest = buscarPorId(id);
+        if(usuarioRequest.isPresent()){
+            Usuario user = usuarioRepository.findByEmail(usuarioRequest.get().getUsername())
+                    .orElseThrow(() -> new ResourceNotFoundException("No se encontró al usuario con el id: " + id));
+            user.setUsuarioRole(usuarioRole.getUsuarioRole());
+            usuarioRepository.save(user);
+        } else {
+            throw new ResourceNotFoundException("No se encontró al usuario con el id: " + id);
+        }
+    }
+
+
+
+
+
+
+
+
+
 
 
 

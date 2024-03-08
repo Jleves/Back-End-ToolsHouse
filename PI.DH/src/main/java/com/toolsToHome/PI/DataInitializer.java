@@ -1,6 +1,7 @@
 package com.toolsToHome.PI;
 
 import com.toolsToHome.PI.Model.*;
+import com.toolsToHome.PI.Repository.CaracteristicaRepository;
 import com.toolsToHome.PI.Repository.CategoriaRepository;
 import com.toolsToHome.PI.Repository.UsuarioRepository;
 import com.toolsToHome.PI.Security.PasswordEncoder;
@@ -19,12 +20,14 @@ public class DataInitializer implements CommandLineRunner {
     private final HerramientaRepository herramientaRepository;
     private final CategoriaRepository categoriaRepository;
     private final UsuarioRepository usuarioRepository;
+    private final CaracteristicaRepository caracteristicaRepository;
     private final PasswordEncoder passwordEncoder;
     @Autowired
-    public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository, UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder) {
+    public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository, UsuarioRepository usuarioRepository, CaracteristicaRepository caracteristicaRepository, PasswordEncoder passwordEncoder) {
         this.herramientaRepository = herramientaRepository;
         this.categoriaRepository = categoriaRepository;
         this.usuarioRepository = usuarioRepository;
+        this.caracteristicaRepository = caracteristicaRepository;
         this.passwordEncoder = passwordEncoder;
     }
 
@@ -50,7 +53,31 @@ public class DataInitializer implements CommandLineRunner {
         usuarioRepository.save(superAdmin);
 
 
+        Caracteristicas caracteristica1 = new Caracteristicas();
+        caracteristica1.setTitulo("Resistente al agua");
+        caracteristica1.setIcono("waterproof_icon.png");
 
+        Caracteristicas caracteristica2 = new Caracteristicas();
+        caracteristica2.setTitulo("Durabilidad");
+        caracteristica2.setIcono("durable_icon.png");
+
+        Caracteristicas caracteristica3 = new Caracteristicas();
+        caracteristica3.setTitulo("Portátil");
+        caracteristica3.setIcono("portable_icon.png");
+
+        Caracteristicas caracteristica4 = new Caracteristicas();
+        caracteristica4.setTitulo("Facilidad de uso");
+        caracteristica4.setIcono("user_friendly_icon.png");
+
+        Caracteristicas caracteristica5 = new Caracteristicas();
+        caracteristica5.setTitulo("Alto rendimiento");
+        caracteristica5.setIcono("high_performance_icon.png");
+
+        caracteristicaRepository.save(caracteristica1);
+        caracteristicaRepository.save(caracteristica2);
+        caracteristicaRepository.save(caracteristica3);
+        caracteristicaRepository.save(caracteristica4);
+        caracteristicaRepository.save(caracteristica5);
 
 
 
@@ -58,6 +85,11 @@ public class DataInitializer implements CommandLineRunner {
         Herramienta herramienta1 = new Herramienta();
         Categoria categoria1=new Categoria();
         categoria1.setTitulo("Herreria");
+        herramienta1.getCaracteristicas().add(caracteristica1);
+        herramienta1.getCaracteristicas().add(caracteristica2);
+        herramienta1.getCaracteristicas().add(caracteristica3);
+        herramienta1.getCaracteristicas().add(caracteristica4);
+        herramienta1.getCaracteristicas().add(caracteristica5);
         herramienta1.setCategoria(categoria1);
         herramienta1.setStock(10L);
         herramienta1.setPrecio(50L);
