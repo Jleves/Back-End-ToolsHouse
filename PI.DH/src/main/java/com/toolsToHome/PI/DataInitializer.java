@@ -5,6 +5,7 @@ import com.toolsToHome.PI.Repository.CaracteristicaRepository;
 import com.toolsToHome.PI.Repository.CategoriaRepository;
 import com.toolsToHome.PI.Repository.UsuarioRepository;
 import com.toolsToHome.PI.Security.PasswordEncoder;
+import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -15,6 +16,7 @@ import java.awt.*;
 import java.util.List;
 
 @Component
+@Builder
 public class DataInitializer implements CommandLineRunner {
 
         private final HerramientaRepository herramientaRepository;
@@ -30,12 +32,6 @@ public class DataInitializer implements CommandLineRunner {
                 this.caracteristicaRepository = caracteristicaRepository;
                 this.passwordEncoder = passwordEncoder;
         }
-
-
-
-
-
-
 
         @Override
         public void run(String... args) {
@@ -55,23 +51,23 @@ public class DataInitializer implements CommandLineRunner {
 
                 Caracteristicas caracteristica1 = new Caracteristicas();
                 caracteristica1.setTitulo("Resistente al agua");
-                caracteristica1.setIcono("waterproof_icon.png");
+                caracteristica1.setIcono("hammer");
 
                 Caracteristicas caracteristica2 = new Caracteristicas();
                 caracteristica2.setTitulo("Durabilidad");
-                caracteristica2.setIcono("durable_icon.png");
+                caracteristica2.setIcono("tree");
 
                 Caracteristicas caracteristica3 = new Caracteristicas();
                 caracteristica3.setTitulo("Portátil");
-                caracteristica3.setIcono("portable_icon.png");
+                caracteristica3.setIcono("user");
 
                 Caracteristicas caracteristica4 = new Caracteristicas();
                 caracteristica4.setTitulo("Facilidad de uso");
-                caracteristica4.setIcono("user_friendly_icon.png");
+                caracteristica4.setIcono("ruler");
 
                 Caracteristicas caracteristica5 = new Caracteristicas();
                 caracteristica5.setTitulo("Alto rendimiento");
-                caracteristica5.setIcono("high_performance_icon.png");
+                caracteristica5.setIcono("pen");
 
                 caracteristicaRepository.save(caracteristica1);
                 caracteristicaRepository.save(caracteristica2);
@@ -85,6 +81,7 @@ public class DataInitializer implements CommandLineRunner {
                 Herramienta herramienta1 = new Herramienta();
                 Categoria categoria1=new Categoria();
                 categoria1.setTitulo("Herreria");
+                categoria1.setIcono("hammer");
                 herramienta1.getCaracteristicas().add(caracteristica1);
                 herramienta1.getCaracteristicas().add(caracteristica2);
                 herramienta1.getCaracteristicas().add(caracteristica3);
@@ -128,6 +125,7 @@ public class DataInitializer implements CommandLineRunner {
                 Herramienta herramienta2 = new Herramienta();
                 Categoria categoria2=new Categoria();
                 categoria2.setTitulo("Exterior");
+                categoria2.setIcono("tree");
                 herramienta2.setCategoria(categoria2);
                 herramienta2.setStock(12L);
                 herramienta2.setPrecio(50L);
@@ -165,6 +163,7 @@ public class DataInitializer implements CommandLineRunner {
                 Herramienta herramienta3 = new Herramienta();
                 Categoria categoria3 = new Categoria();
                 categoria3.setTitulo("Construccion");
+                categoria3.setIcono("hammer");
                 herramienta3.setCategoria(categoria3);
                 herramienta3.setStock(12L);
                 herramienta3.setPrecio(50L);

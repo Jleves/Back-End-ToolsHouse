@@ -25,11 +25,6 @@ public class UsuarioService implements UserDetailsService {
         this.usuarioRepository = usuarioRepository;
     }
 
-
-
-
-
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<Usuario> buscarUsuario = usuarioRepository.findByEmail(username);
@@ -43,9 +38,6 @@ public class UsuarioService implements UserDetailsService {
         if(buscarUsuario.isPresent()){
             return Optional.of(userDto(buscarUsuario.get()));
         }else return Optional.empty();
-
-
-
     }
     public void eliminarUsuario(Long id){
         usuarioRepository.deleteById(id);
@@ -56,10 +48,6 @@ public class UsuarioService implements UserDetailsService {
     public List<Usuario> listarTodos(){
         return usuarioRepository.findAll();
     }
-
-
-
-
 
     public void updateRole(Long id, Usuario usuarioRole) throws ResourceNotFoundException {
         Optional<UserDTO> usuarioRequest = buscarPorId(id);
@@ -73,17 +61,6 @@ public class UsuarioService implements UserDetailsService {
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
     private UserDTO userDto(Usuario usuario){
         UserDTO userDTO = new UserDTO();
 
@@ -94,6 +71,11 @@ public class UsuarioService implements UserDetailsService {
         userDTO.setRole(usuario.getUsuarioRole());
 
         return userDTO;
+    }
+
+    public Optional<UserDTO> findUserByEmail(String email) {
+        Optional<Usuario> userOptional = usuarioRepository.findByEmail(email);
+        return userOptional.map(UserDTO::fromUser);
     }
 
 

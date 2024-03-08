@@ -2,17 +2,13 @@ package com.toolsToHome.PI.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name ="Caracteristicas")
@@ -31,7 +27,3 @@ public class Caracteristicas {
 
 
 }
-/*
-    @ManyToOne
-    @JoinColumn(name = "herramienta_id", referencedColumnName= "id")
-    private Herramienta herramienta;*/

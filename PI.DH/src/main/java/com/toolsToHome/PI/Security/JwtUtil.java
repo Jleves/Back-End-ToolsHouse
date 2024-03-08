@@ -46,7 +46,7 @@ public class JwtUtil {
                 .setClaims(claims)//La informacion clave valor que queremos guardar
                 .setSubject(subject)//username
                 .setIssuedAt(new Date(System.currentTimeMillis()))//Fecha en que se crea
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 +60 * 50))//Fecha actual + Tiempo de expiracion
+                .setExpiration(new Date(System.currentTimeMillis() + 3600000))
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY).compact();// La firma, ponemos el tipo de algoritmo y nuestra clave secreta.
     }
 

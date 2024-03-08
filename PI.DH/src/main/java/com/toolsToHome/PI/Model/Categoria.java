@@ -8,8 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name ="Categoria")
@@ -22,8 +21,6 @@ public class Categoria {
     private List<Herramienta> herramienta= new ArrayList<>();
     @Column
     private String titulo;
-    @Column
-    private String descripcion;
     @Column
     private String icono;
 }

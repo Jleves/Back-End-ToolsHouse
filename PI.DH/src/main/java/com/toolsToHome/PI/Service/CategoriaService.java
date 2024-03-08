@@ -25,8 +25,8 @@ public class CategoriaService {
     public Optional<Categoria> buscarPorId(Long id){
         return categoriaRepository.findById(id);
     }
-    public Optional<Categoria>buscarPorCategoria(String categoria){
-        return categoriaRepository.findByTitulo(categoria);
+    public Optional<Categoria>buscarPorCategoria(String titulo){
+        return categoriaRepository.findByTitulo(titulo);
     }
 
     public void eliminarCategoria(Long id){

@@ -20,4 +20,12 @@ public class UserDTO {
     private UsuarioRole role;
 
 
+    public static UserDTO fromUser(Usuario user) {
+        UserDTO userDTO = new UserDTO();
+        userDTO.setId(user.getId());
+        userDTO.setNombre(user.getNombre());
+        userDTO.setApellido(user.getApellido());
+        userDTO.setRole(user.getUsuarioRole());
+        return userDTO;
+    }
 }
