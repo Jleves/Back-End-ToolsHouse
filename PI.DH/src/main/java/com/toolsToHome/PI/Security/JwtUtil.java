@@ -43,10 +43,10 @@ public class JwtUtil {
 
     private String createToken(Map<String, Object> claims, String subject) {
         return Jwts.builder()
-                .setClaims(claims)
-                .setSubject(subject)
-                .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 3600000))
+                .setClaims(claims)//La informacion clave valor que queremos guardar
+                .setSubject(subject)//username
+                .setIssuedAt(new Date(System.currentTimeMillis()))//Fecha en que se crea
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 +60 * 50))//Fecha actual + Tiempo de expiracion
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY).compact();// La firma, ponemos el tipo de algoritmo y nuestra clave secreta.
     }
 

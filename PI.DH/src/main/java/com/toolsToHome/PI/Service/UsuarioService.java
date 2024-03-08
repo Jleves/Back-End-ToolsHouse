@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class UsuarioService implements UserDetailsService {
@@ -26,10 +25,10 @@ public class UsuarioService implements UserDetailsService {
         this.usuarioRepository = usuarioRepository;
     }
 
-    public Optional<UserDTO> findUserByEmail(String email) {
-        Optional<Usuario> userOptional = usuarioRepository.findByEmail(email);
-        return userOptional.map(UserDTO::fromUser);
-    }
+
+
+
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -39,43 +38,66 @@ public class UsuarioService implements UserDetailsService {
 
         }else throw new UsernameNotFoundException("No se encontro el usuario");
     }
+    public Optional<UserDTO> buscarPorId(Long id){
+        Optional<Usuario>buscarUsuario = usuarioRepository.findById(id);
+        if(buscarUsuario.isPresent()){
+            return Optional.of(userDto(buscarUsuario.get()));
+        }else return Optional.empty();
 
-    public Optional<UserDTO> findUserById(Long id) throws ResourceNotFoundException{
-        Optional<Usuario> userOptional = usuarioRepository.findById(id);
-        if (userOptional.isPresent()) {
-            Usuario user = userOptional.get();
-            UserDTO userDTO = UserDTO.fromUser(user);
-            return Optional.of(userDTO);
-        } else {
-            throw  new ResourceNotFoundException("No se encontró al usuario con el ID: " + id);
-        }
+
+
     }
-
-
-
-    public void updateRole(Long id, UsuarioRole newRole) throws ResourceNotFoundException {
-        Optional<UserDTO> usuarioRequest = findUserById(id);
-        if(usuarioRequest.isPresent()){
-            Usuario user = usuarioRepository.findByEmail(usuarioRequest.get().getUsername())
-                    .orElseThrow(() -> new ResourceNotFoundException("No se encontró al usuario con el id: " + id));
-            user.setUsuarioRole(newRole);
-            usuarioRepository.save(user);
-        } else {
-            throw new ResourceNotFoundException("No se encontró al usuario con el id: " + id);
-        }
-    }
-
     public void eliminarUsuario(Long id){
         usuarioRepository.deleteById(id);
     }
     public void actualizarUsuario(Usuario usuario){
         usuarioRepository.save(usuario);
     }
-    public List<UserDTO> listarUsuarios() {
-        List<Usuario> usuarios = usuarioRepository.findAll();
-        return usuarios.stream()
-                .map(UserDTO::fromUser)
-                .collect(Collectors.toList());
+    public List<Usuario> listarTodos(){
+        return usuarioRepository.findAll();
     }
+
+
+
+
+
+    public void updateRole(Long id, Usuario usuarioRole) throws ResourceNotFoundException {
+        Optional<UserDTO> usuarioRequest = buscarPorId(id);
+        if(usuarioRequest.isPresent()){
+            Usuario user = usuarioRepository.findByEmail(usuarioRequest.get().getUsername())
+                    .orElseThrow(() -> new ResourceNotFoundException("No se encontró al usuario con el id: " + id));
+            user.setUsuarioRole(usuarioRole.getUsuarioRole());
+            usuarioRepository.save(user);
+        } else {
+            throw new ResourceNotFoundException("No se encontró al usuario con el id: " + id);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    private UserDTO userDto(Usuario usuario){
+        UserDTO userDTO = new UserDTO();
+
+        userDTO.setId(usuario.getId());
+        userDTO.setNombre(usuario.getNombre());
+        userDTO.setApellido(usuario.getApellido());
+        userDTO.setUsername(usuario.getUsername());
+        userDTO.setRole(usuario.getUsuarioRole());
+
+        return userDTO;
+    }
+
+
+
+
 
 }

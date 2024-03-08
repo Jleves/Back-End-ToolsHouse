@@ -56,7 +56,13 @@ public class WebConfig  {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
     {
+
+
+
+
         return
+
+
                 http
                         .csrf(csrf ->
                                 csrf
@@ -67,11 +73,13 @@ public class WebConfig  {
 
                         .authorizeHttpRequests( authRequest ->
                                 authRequest
+
                                         .requestMatchers("/auth/*", "/detail/*","/registro").permitAll()
                                         .requestMatchers("/Herramientas/**").permitAll()
                                         .requestMatchers("/admin", "/categoria/**").permitAll()
                                         .requestMatchers("/user/**").permitAll()
                                         .requestMatchers("/Categorias/**").permitAll()
+                                        .requestMatchers("/Caracteristicas/**").permitAll()
                                         .anyRequest().authenticated()
                         )
                         .sessionManagement(sessionManager ->

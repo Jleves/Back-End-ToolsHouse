@@ -33,51 +33,54 @@ public class CategoriaContoller {
         }
     }
     @CrossOrigin(origins = "*")
-        @GetMapping
-        public ResponseEntity<List<Categoria>>listarHerramientas(){
-            return ResponseEntity.ok(categoriaService.listarTodos());
-        }
-
-
-        @PostMapping
-        public ResponseEntity<Categoria>guardarCategoria(@RequestBody Categoria categoria)throws ResourceNotFoundException{
-            Optional<Categoria>buscarCategoria= categoriaService.buscarPorCategoria(categoria.getTitulo());
-            if(buscarCategoria.isEmpty()){
-                Categoria categoriaGuardada = categoriaService.guardarCategoria(categoria);
-
-                logger.info("Categoria pasa por controller");
-                return ResponseEntity.ok(categoriaGuardada);
-
-            }else throw new ResourceNotFoundException("La Categoria ya existe");
-        }
-
-        @DeleteMapping("/{id}")
-        public ResponseEntity<String> eliminarCategoria(@PathVariable Long id) throws ResourceNotFoundException{
-            Optional<Categoria>buscarCategoria = categoriaService.buscarPorId(id);
-            if(buscarCategoria.isPresent()){
-                categoriaService.eliminarCategoria(id);
-                return ResponseEntity.ok("Herramienta Eliminada");
-            } else {
-                throw new ResourceNotFoundException("No se encontró la caracteristica con el ID: " + id);
-            }
-        }
-
-        @PutMapping
-        public ResponseEntity<String>actualizarCategoria(@RequestBody Categoria categoria) throws ResourceNotFoundException{
-            Optional<Categoria> categoriaRequest = categoriaService.buscarPorId(categoria.getId());
-
-            if(categoriaRequest.isPresent()){
-                Categoria updatedCategoria = categoriaRequest.get();
-                updatedCategoria.setTitulo(categoria.getTitulo());
-                updatedCategoria.setHerramienta(categoria.getHerramienta());
-
-                return ResponseEntity.ok("La categoria: " + categoria.getTitulo() + " ha sido actualizada correctamente");
-            }
-
-            else {
-                throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + categoria.getId());
-            }
-        }
-
+    @GetMapping
+    public ResponseEntity<List<Categoria>>listarHerramientas(){
+        return ResponseEntity.ok(categoriaService.listarTodos());
     }
 
+
+
+
+
+
+    @PostMapping
+    public ResponseEntity<Categoria>guardarCategoria(@RequestBody Categoria categoria)throws ResourceNotFoundException{
+        Optional<Categoria>buscarCategoria= categoriaService.buscarPorCategoria(categoria.getTitulo());
+        if(buscarCategoria.isEmpty()){
+            Categoria categoriaGuardada = categoriaService.guardarCategoria(categoria);
+
+            logger.info("Categoria pasa por controller");
+            return ResponseEntity.ok(categoriaGuardada);
+
+        }else throw new ResourceNotFoundException("La Categoria ya existe");
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> eliminarCategoria(@PathVariable Long id) throws ResourceNotFoundException{
+        Optional<Categoria>buscarCategoria = categoriaService.buscarPorId(id);
+        if(buscarCategoria.isPresent()){
+            categoriaService.eliminarCategoria(id);
+            return ResponseEntity.ok("Herramienta Eliminada");
+        } else {
+            throw new ResourceNotFoundException("No se encontró la caracteristica con el ID: " + id);
+        }
+    }
+
+    @PutMapping
+    public ResponseEntity<String>actualizarCategoria(@RequestBody Categoria categoria) throws ResourceNotFoundException{
+        Optional<Categoria> categoriaRequest = categoriaService.buscarPorId(categoria.getId());
+
+        if(categoriaRequest.isPresent()){
+            Categoria updatedCategoria = categoriaRequest.get();
+            updatedCategoria.setTitulo(categoria.getTitulo());
+            updatedCategoria.setHerramienta(categoria.getHerramienta());
+
+            return ResponseEntity.ok("La categoria: " + categoria.getTitulo() + " ha sido actualizada correctamente");
+        }
+
+        else {
+            throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + categoria.getId());
+        }
+    }
+
+}
