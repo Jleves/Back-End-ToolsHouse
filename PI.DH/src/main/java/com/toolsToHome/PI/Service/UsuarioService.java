@@ -29,6 +29,11 @@ public class UsuarioService implements UserDetailsService {
 
     }
 
+
+
+
+
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<Usuario> buscarUsuario = usuarioRepository.findByEmail(username);
@@ -65,6 +70,31 @@ public class UsuarioService implements UserDetailsService {
     public List<Usuario> listarTodos(){
         return usuarioRepository.findAll();
     }
+
+
+
+
+
+    public void updateRole(Long id, Usuario usuarioRole) throws ResourceNotFoundException {
+        Optional<UserDTO> usuarioRequest = buscarPorId(id);
+        if(usuarioRequest.isPresent()){
+            Usuario user = usuarioRepository.findByEmail(usuarioRequest.get().getUsername())
+                    .orElseThrow(() -> new ResourceNotFoundException("No se encontró al usuario con el id: " + id));
+            user.setUsuarioRole(usuarioRole.getUsuarioRole());
+            usuarioRepository.save(user);
+        } else {
+            throw new ResourceNotFoundException("No se encontró al usuario con el id: " + id);
+        }
+    }
+
+
+
+
+
+
+
+
+
 
 
 

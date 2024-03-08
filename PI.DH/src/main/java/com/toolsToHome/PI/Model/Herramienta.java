@@ -32,9 +32,15 @@ public class Herramienta {
     private boolean disponibilidad;
     @Column(nullable = false)
     private String nombre;
-
+    @JsonIgnore
+    @ManyToMany
+    @JoinTable(name = "MuchosAMuchos",
+            joinColumns = @JoinColumn(name = "herramienta_id"),
+            inverseJoinColumns = @JoinColumn(name = "caracteristica_id"))
+    private List<Caracteristicas> caracteristicas = new ArrayList<>();
+/*
     @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
-    private List<Caracteristicas> caracteristicas=new ArrayList<>();
+    private List<Caracteristicas> caracteristicas=new ArrayList<>();*/
     @Column(nullable = false)
     private String descripcion;
 

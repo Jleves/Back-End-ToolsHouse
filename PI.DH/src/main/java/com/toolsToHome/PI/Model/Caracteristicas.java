@@ -1,10 +1,14 @@
 package com.toolsToHome.PI.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -18,14 +22,16 @@ public class Caracteristicas {
     private Long id;
     @Column
     private String titulo;
-    @Column
-    private String descripcion;
+
     @Column
     private String icono;
-    @Column
-    private boolean isprincipal;
-    @ManyToOne
-    @JoinColumn(name = "herramienta_id", referencedColumnName= "id")
-    private Herramienta herramienta;
+    @JsonIgnore
+    @ManyToMany(mappedBy = "caracteristicas")
+    private List<Herramienta> herramientas = new ArrayList<>();
+
 
 }
+/*
+    @ManyToOne
+    @JoinColumn(name = "herramienta_id", referencedColumnName= "id")
+    private Herramienta herramienta;*/

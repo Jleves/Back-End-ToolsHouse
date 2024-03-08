@@ -79,6 +79,7 @@ public class WebConfig  {
                                         .requestMatchers("/admin", "/categoria/**").permitAll()
                                         .requestMatchers("/user/**").permitAll()
                                         .requestMatchers("/Categorias/**").permitAll()
+                                        .requestMatchers("/Caracteristicas/**").permitAll()
                                         .anyRequest().authenticated()
                         )
                         .sessionManagement(sessionManager ->
