@@ -28,6 +28,9 @@ public class Herramienta {
     private Long stock;
     @Column(nullable = false)
     private Long precio;
+    @OneToOne
+    @JoinColumn(name = "reserva_id", referencedColumnName = "id")
+    private Reserva reserva;
     @Column(nullable = false)
     private boolean disponibilidad;
     @Column(nullable = false)

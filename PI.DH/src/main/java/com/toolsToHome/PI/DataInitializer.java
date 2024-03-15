@@ -1,18 +1,17 @@
 package com.toolsToHome.PI;
 
 import com.toolsToHome.PI.Model.*;
-import com.toolsToHome.PI.Repository.CaracteristicaRepository;
-import com.toolsToHome.PI.Repository.CategoriaRepository;
-import com.toolsToHome.PI.Repository.UsuarioRepository;
+import com.toolsToHome.PI.Repository.*;
 import com.toolsToHome.PI.Security.PasswordEncoder;
 import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
-import com.toolsToHome.PI.Repository.HerramientaRepository;
 
 import java.awt.*;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Component
@@ -24,17 +23,25 @@ public class DataInitializer implements CommandLineRunner {
         private final UsuarioRepository usuarioRepository;
         private final CaracteristicaRepository caracteristicaRepository;
         private final PasswordEncoder passwordEncoder;
+        private final ReservaRepository reservaRepository;
         @Autowired
-        public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository, UsuarioRepository usuarioRepository, CaracteristicaRepository caracteristicaRepository, PasswordEncoder passwordEncoder) {
+        public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository, UsuarioRepository usuarioRepository, CaracteristicaRepository caracteristicaRepository, PasswordEncoder passwordEncoder, ReservaRepository reservaRepository) {
                 this.herramientaRepository = herramientaRepository;
                 this.categoriaRepository = categoriaRepository;
                 this.usuarioRepository = usuarioRepository;
                 this.caracteristicaRepository = caracteristicaRepository;
                 this.passwordEncoder = passwordEncoder;
+                this.reservaRepository = reservaRepository;
         }
 
         @Override
         public void run(String... args) {
+
+                Reserva reserva1= new Reserva();
+                reserva1.setFechaAlquiler(LocalDate.of(2024,03,14));
+                reserva1.setFechaDevolucion(LocalDate.of(2024,03,20));
+                reservaRepository.save(reserva1);
+
 
 
                 Usuario superAdmin = Usuario.builder()
@@ -92,6 +99,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta1.setPrecio(50L);
                 herramienta1.setDisponibilidad(true);
                 herramienta1.setNombre("Llave inglesa");
+                herramienta1.setReserva(reserva1);
 
                 herramienta1.setDescripcion("La llave inglesa, tu solución todo en uno para ajustes precisos.");
 
