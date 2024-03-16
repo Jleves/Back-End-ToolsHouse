@@ -8,7 +8,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -17,33 +19,43 @@ import java.util.List;
 @NoArgsConstructor
 @Table(name = "Herramientas")
 public class Herramienta {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "Categoria_id", referencedColumnName= "id")
     private Categoria categoria;
+
     @Column(nullable = false)
     private Long stock;
+
     @Column(nullable = false)
     private Long precio;
-    @OneToOne
-    @JoinColumn(name = "reserva_id", referencedColumnName = "id")
-    private Reserva reserva;
+
+
+
+    @OneToMany(mappedBy = "herramientaId") // Puede ser un tipo REFRESH...debatirlo
+    private Set<Reserva> reserva = new HashSet<>();
+
+
     @Column(nullable = false)
     private boolean disponibilidad;
+
+
     @Column(nullable = false)
     private String nombre;
+
+
     @JsonIgnore
     @ManyToMany
     @JoinTable(name = "MuchosAMuchos",
             joinColumns = @JoinColumn(name = "herramienta_id"),
             inverseJoinColumns = @JoinColumn(name = "caracteristica_id"))
     private List<Caracteristicas> caracteristicas = new ArrayList<>();
-    /*
-        @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
-        private List<Caracteristicas> caracteristicas=new ArrayList<>();*/
+
     @Column(nullable = false)
     private String descripcion;
 

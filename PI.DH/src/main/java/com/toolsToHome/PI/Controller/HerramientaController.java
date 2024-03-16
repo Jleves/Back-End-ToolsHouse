@@ -2,6 +2,7 @@ package com.toolsToHome.PI.Controller;
 
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Herramienta;
+import com.toolsToHome.PI.Service.CategoriaService;
 import com.toolsToHome.PI.Service.HerramientaService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +17,11 @@ import java.util.Optional;
 public class HerramientaController {
     private static final Logger logger = Logger.getLogger(HerramientaController.class);
     private HerramientaService herramientaService;
+    private CategoriaService categoriaService;
     @Autowired
-    public HerramientaController(HerramientaService herramientaService) {
+    public HerramientaController(HerramientaService herramientaService, CategoriaService categoriaService) {
         this.herramientaService = herramientaService;
+        this.categoriaService = categoriaService;
     }
 
     @GetMapping("/{id}")
@@ -65,10 +68,7 @@ public class HerramientaController {
         Optional<Herramienta> herramientaRequest = herramientaService.buscarPorId(herramienta.getId());
 
         if(herramientaRequest.isPresent()){
-            Herramienta updatedHerramienta = herramientaRequest.get();
-            updatedHerramienta.setStock(herramienta.getStock());
-            updatedHerramienta.setDisponibilidad(herramienta.isDisponibilidad());
-            updatedHerramienta.setPrecio(herramienta.getPrecio());
+            Herramienta updatedHerramienta = getHerramienta(herramienta, herramientaRequest);
             herramientaService.actualizarHerramienta(updatedHerramienta);
             return ResponseEntity.ok("La herramienta con el ID: " + updatedHerramienta.getId() + " ha sido actualizada correctamente");
         }
@@ -77,6 +77,20 @@ public class HerramientaController {
             throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + herramienta.getId());
         }
     }
+
+    private Herramienta getHerramienta(Herramienta herramienta, Optional<Herramienta> herramientaRequest) {
+        Herramienta updatedHerramienta = herramientaRequest.get();
+        updatedHerramienta.setCaracteristicas(herramienta.getCaracteristicas());
+        updatedHerramienta.setCategoria(categoriaService.guardarCategoria(herramienta.getCategoria()));
+        updatedHerramienta.setReserva(herramienta.getReserva());
+        updatedHerramienta.setImagenes(herramienta.getImagenes());
+        updatedHerramienta.setDescripcion(herramienta.getDescripcion());
+        updatedHerramienta.setStock(herramienta.getStock());
+        updatedHerramienta.setDisponibilidad(herramienta.isDisponibilidad());
+        updatedHerramienta.setPrecio(herramienta.getPrecio());
+        return updatedHerramienta;
+    }
+
     @GetMapping ("buscar/{nombre}")
     public ResponseEntity<Optional<Herramienta>>buscarPorNombre (@PathVariable String nombre)throws ResourceNotFoundException{
         Optional<Herramienta>herramientaBuscada = herramientaService.buscarPorNombre(nombre);

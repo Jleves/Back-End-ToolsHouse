@@ -75,6 +75,7 @@ public class CaracteristicaController {
 
         if(categoriaRequest.isPresent()){
             Caracteristicas updatedCaracteristicas = categoriaRequest.get();
+            updatedCaracteristicas.setIcono(caracteristicas.getIcono());
             updatedCaracteristicas.setTitulo(caracteristicas.getTitulo());
             updatedCaracteristicas.setHerramientas(caracteristicas.getHerramientas());
 

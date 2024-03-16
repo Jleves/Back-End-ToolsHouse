@@ -19,10 +19,17 @@ public class Reserva {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @JsonIgnore
-    @OneToOne(mappedBy = "reserva")
+    @ManyToOne
+    @JoinColumn(name = "Herramienta_id", referencedColumnName= "id")
     private Herramienta herramientaId;
+
+
     @Column
     private LocalDate fechaAlquiler;
     @Column
     private LocalDate fechaDevolucion;
+
+    @ManyToOne
+    @JoinColumn(name = "UsuarioID", referencedColumnName = "id", nullable = false)
+    private Usuario usuarioId;
 }

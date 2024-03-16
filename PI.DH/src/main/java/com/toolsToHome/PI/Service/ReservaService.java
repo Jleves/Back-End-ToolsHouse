@@ -5,6 +5,8 @@ import com.toolsToHome.PI.Repository.ReservaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ReservaService {
     private ReservaRepository reservaRepository;
@@ -19,6 +21,12 @@ public class ReservaService {
 
     public void actualizarReserva(Reserva reserva){
         reservaRepository.save(reserva);
+    }
+
+    public void eliminarReserva(Long id){reservaRepository.deleteById(id);}
+
+    public Optional<Reserva> buscarReserva(Long id){
+        return reservaRepository.findById(id);
     }
 
 }

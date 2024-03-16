@@ -63,6 +63,7 @@ public class CategoriaContoller {
 
         if(categoriaRequest.isPresent()){
             Categoria updatedCategoria = categoriaRequest.get();
+            updatedCategoria.setIcono(categoria.getIcono());
             updatedCategoria.setTitulo(categoria.getTitulo());
             updatedCategoria.setHerramienta(categoria.getHerramienta());
             return ResponseEntity.ok("La categoria: " + categoria.getTitulo() + " ha sido actualizada correctamente");

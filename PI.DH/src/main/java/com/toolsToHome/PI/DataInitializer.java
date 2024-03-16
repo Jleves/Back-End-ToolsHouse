@@ -37,10 +37,7 @@ public class DataInitializer implements CommandLineRunner {
         @Override
         public void run(String... args) {
 
-                Reserva reserva1= new Reserva();
-                reserva1.setFechaAlquiler(LocalDate.of(2024,03,14));
-                reserva1.setFechaDevolucion(LocalDate.of(2024,03,20));
-                reservaRepository.save(reserva1);
+
 
 
 
@@ -84,6 +81,8 @@ public class DataInitializer implements CommandLineRunner {
 
 
 
+
+
                 //LLAVE INGLESA
                 Herramienta herramienta1 = new Herramienta();
                 Categoria categoria1=new Categoria();
@@ -99,7 +98,11 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta1.setPrecio(50L);
                 herramienta1.setDisponibilidad(true);
                 herramienta1.setNombre("Llave inglesa");
-                herramienta1.setReserva(reserva1);
+
+
+
+
+
 
                 herramienta1.setDescripcion("La llave inglesa, tu solución todo en uno para ajustes precisos.");
 
@@ -127,7 +130,21 @@ public class DataInitializer implements CommandLineRunner {
 
                 categoriaRepository.save(categoria1);
                 herramientaRepository.save(herramienta1);
+                Reserva reserva1= new Reserva();
+                reserva1.setFechaAlquiler(LocalDate.of(2024,03,14));
+                reserva1.setFechaDevolucion(LocalDate.of(2024,03,20));
+                reserva1.setUsuarioId(superAdmin);
+                reserva1.setHerramientaId(herramienta1);
+                Reserva reserva2=new Reserva();
+                reserva2.setFechaAlquiler(LocalDate.of(2024,04,15));
+                reserva2.setFechaDevolucion(LocalDate.of(2024,04,25));
+                reserva2.setUsuarioId(superAdmin);
+                reserva2.setHerramientaId(herramienta1);
 
+                herramienta1.getReserva().add(reserva1);
+                herramienta1.getReserva().add(reserva2);
+                reservaRepository.save(reserva2);
+                reservaRepository.save(reserva1);
 
                 //PALA
                 Herramienta herramienta2 = new Herramienta();

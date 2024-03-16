@@ -74,6 +74,7 @@ public class WebConfig  {
                                         .requestMatchers("/user/**", "/user/{id}/usuarioRole").permitAll()
                                         .requestMatchers("/Categorias/**").permitAll()
                                         .requestMatchers("/Caracteristicas/**").permitAll()
+                                        .requestMatchers("/v2/api-docs/**", "/swagger-ui/**", "/swagger-resources/**", "/v2/api-docs/**").permitAll()
 
                                         .anyRequest().authenticated()
                         )
