@@ -24,7 +24,7 @@ public class Herramienta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonIgnore
+
     @ManyToOne
     @JoinColumn(name = "Categoria_id", referencedColumnName= "id")
     private Categoria categoria;
@@ -36,8 +36,8 @@ public class Herramienta {
     private Long precio;
 
 
-
-    @OneToMany(mappedBy = "herramientaId") // Puede ser un tipo REFRESH...debatirlo
+    @JsonIgnore
+    @OneToMany(mappedBy = "herramientaId",cascade = CascadeType.ALL) // Puede ser un tipo REFRESH...debatirlo
     private Set<Reserva> reserva = new HashSet<>();
 
 

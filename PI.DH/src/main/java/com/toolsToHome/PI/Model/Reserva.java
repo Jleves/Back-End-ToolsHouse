@@ -18,7 +18,7 @@ public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @JsonIgnore
+
     @ManyToOne
     @JoinColumn(name = "Herramienta_id", referencedColumnName= "id")
     private Herramienta herramientaId;
@@ -28,7 +28,7 @@ public class Reserva {
     private LocalDate fechaAlquiler;
     @Column
     private LocalDate fechaDevolucion;
-
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "UsuarioID", referencedColumnName = "id", nullable = false)
     private Usuario usuarioId;
