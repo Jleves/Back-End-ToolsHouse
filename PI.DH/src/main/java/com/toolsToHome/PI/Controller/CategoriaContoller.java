@@ -62,11 +62,10 @@ public class CategoriaContoller {
         Optional<Categoria> categoriaRequest = categoriaService.buscarPorId(categoria.getId());
 
         if(categoriaRequest.isPresent()){
-            Categoria updatedCategoria = categoriaRequest.get();
-            updatedCategoria.setIcono(categoria.getIcono());
-            updatedCategoria.setTitulo(categoria.getTitulo());
-            updatedCategoria.setHerramienta(categoria.getHerramienta());
-            return ResponseEntity.ok("La categoria: " + categoria.getTitulo() + " ha sido actualizada correctamente");
+
+            categoriaService.actualizarCategoria(categoria);
+
+            return ResponseEntity.ok("La categoria: " + categoria.getId() + " ha sido actualizada correctamente");
         }
         else {
             throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + categoria.getId());

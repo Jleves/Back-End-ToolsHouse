@@ -36,8 +36,8 @@ public class Herramienta {
     private Long precio;
 
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "herramientaId",cascade = CascadeType.ALL) // Puede ser un tipo REFRESH...debatirlo
+
+    @OneToMany(mappedBy = "herramientaId",cascade = CascadeType.MERGE) // Puede ser un tipo REFRESH...debatirlo
     private Set<Reserva> reserva = new HashSet<>();
 
 
@@ -49,7 +49,7 @@ public class Herramienta {
     private String nombre;
 
 
-    @JsonIgnore
+
     @ManyToMany
     @JoinTable(name = "MuchosAMuchos",
             joinColumns = @JoinColumn(name = "herramienta_id"),

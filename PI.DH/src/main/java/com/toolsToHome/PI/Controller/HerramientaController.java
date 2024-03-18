@@ -68,9 +68,9 @@ public class HerramientaController {
         Optional<Herramienta> herramientaRequest = herramientaService.buscarPorId(herramienta.getId());
 
         if(herramientaRequest.isPresent()){
-            Herramienta updatedHerramienta = getHerramienta(herramienta, herramientaRequest);
-            herramientaService.actualizarHerramienta(updatedHerramienta);
-            return ResponseEntity.ok("La herramienta con el ID: " + updatedHerramienta.getId() + " ha sido actualizada correctamente");
+
+            herramientaService.actualizarHerramienta(herramienta);
+            return ResponseEntity.ok("La herramienta con el ID: " + herramienta.getId() + " ha sido actualizada correctamente");
         }
 
         else {

@@ -18,7 +18,7 @@ public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "Herramienta_id", referencedColumnName= "id")
     private Herramienta herramientaId;
