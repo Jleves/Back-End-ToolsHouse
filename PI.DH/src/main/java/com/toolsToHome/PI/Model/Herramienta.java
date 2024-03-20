@@ -36,8 +36,8 @@ public class Herramienta {
     private Long precio;
 
 
-
-    @OneToMany(mappedBy = "herramientaId",cascade = CascadeType.MERGE) // Puede ser un tipo REFRESH...debatirlo
+    @JsonIgnore
+    @OneToMany(mappedBy = "herramientaId") // Puede ser un tipo REFRESH...debatirlo
     private Set<Reserva> reserva = new HashSet<>();
 
 

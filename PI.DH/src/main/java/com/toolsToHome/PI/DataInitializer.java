@@ -151,6 +151,11 @@ public class DataInitializer implements CommandLineRunner {
                 Categoria categoria2=new Categoria();
                 categoria2.setTitulo("Exterior");
                 categoria2.setIcono("tree");
+                herramienta2.getCaracteristicas().add(caracteristica1);
+                herramienta2.getCaracteristicas().add(caracteristica2);
+                herramienta2.getCaracteristicas().add(caracteristica3);
+                herramienta2.getCaracteristicas().add(caracteristica4);
+                herramienta2.getCaracteristicas().add(caracteristica5);
                 herramienta2.setCategoria(categoria2);
                 herramienta2.setStock(12L);
                 herramienta2.setPrecio(50L);
@@ -189,6 +194,11 @@ public class DataInitializer implements CommandLineRunner {
                 Categoria categoria3 = new Categoria();
                 categoria3.setTitulo("Construccion");
                 categoria3.setIcono("hammer");
+                herramienta3.getCaracteristicas().add(caracteristica1);
+                herramienta3.getCaracteristicas().add(caracteristica2);
+                herramienta3.getCaracteristicas().add(caracteristica3);
+                herramienta3.getCaracteristicas().add(caracteristica4);
+                herramienta3.getCaracteristicas().add(caracteristica5);
                 herramienta3.setCategoria(categoria3);
                 herramienta3.setStock(12L);
                 herramienta3.setPrecio(50L);
@@ -225,6 +235,11 @@ public class DataInitializer implements CommandLineRunner {
                 //CINTA METRICA
                 Herramienta herramienta4 = new Herramienta();
                 herramienta4.setCategoria(categoria3);
+                herramienta4.getCaracteristicas().add(caracteristica1);
+                herramienta4.getCaracteristicas().add(caracteristica2);
+                herramienta4.getCaracteristicas().add(caracteristica3);
+                herramienta4.getCaracteristicas().add(caracteristica4);
+                herramienta4.getCaracteristicas().add(caracteristica5);
                 herramienta4.setStock(15L);
                 herramienta4.setPrecio(75L);
                 herramienta4.setDisponibilidad(true);
@@ -260,6 +275,11 @@ public class DataInitializer implements CommandLineRunner {
 
                 //LIJADORA
                 Herramienta herramienta5 = new Herramienta();
+                herramienta5.getCaracteristicas().add(caracteristica1);
+                herramienta5.getCaracteristicas().add(caracteristica2);
+                herramienta5.getCaracteristicas().add(caracteristica3);
+                herramienta5.getCaracteristicas().add(caracteristica4);
+                herramienta5.getCaracteristicas().add(caracteristica5);
                 herramienta5.setCategoria(categoria3);
                 herramienta5.setStock(15L);
                 herramienta5.setPrecio(75L);
@@ -296,6 +316,11 @@ public class DataInitializer implements CommandLineRunner {
                 //NIVEL
                 Herramienta herramienta6 = new Herramienta();
                 herramienta6.setCategoria(categoria3);
+                herramienta6.getCaracteristicas().add(caracteristica1);
+                herramienta6.getCaracteristicas().add(caracteristica2);
+                herramienta6.getCaracteristicas().add(caracteristica3);
+                herramienta6.getCaracteristicas().add(caracteristica4);
+                herramienta6.getCaracteristicas().add(caracteristica5);
                 herramienta6.setStock(15L);
                 herramienta6.setPrecio(75L);
                 herramienta6.setDisponibilidad(true);
@@ -330,6 +355,11 @@ public class DataInitializer implements CommandLineRunner {
                 //TALADRO
                 Herramienta herramienta7 = new Herramienta();
                 herramienta7.setCategoria(categoria3);
+                herramienta7.getCaracteristicas().add(caracteristica1);
+                herramienta7.getCaracteristicas().add(caracteristica2);
+                herramienta7.getCaracteristicas().add(caracteristica3);
+                herramienta7.getCaracteristicas().add(caracteristica4);
+                herramienta7.getCaracteristicas().add(caracteristica5);
                 herramienta7.setStock(15L);
                 herramienta7.setPrecio(75L);
                 herramienta7.setDisponibilidad(true);
@@ -365,6 +395,11 @@ public class DataInitializer implements CommandLineRunner {
                 //AMOLADORA
                 Herramienta herramienta8 = new Herramienta();
                 herramienta8.setCategoria(categoria1);
+                herramienta8.getCaracteristicas().add(caracteristica1);
+                herramienta8.getCaracteristicas().add(caracteristica2);
+                herramienta8.getCaracteristicas().add(caracteristica3);
+                herramienta8.getCaracteristicas().add(caracteristica4);
+                herramienta8.getCaracteristicas().add(caracteristica5);
                 herramienta8.setStock(15L);
                 herramienta8.setPrecio(75L);
                 herramienta8.setDisponibilidad(true);
@@ -400,6 +435,11 @@ public class DataInitializer implements CommandLineRunner {
 
                 //DESTORNILLADOR
                 Herramienta herramienta9 = new Herramienta();
+                herramienta9.getCaracteristicas().add(caracteristica1);
+                herramienta9.getCaracteristicas().add(caracteristica2);
+                herramienta9.getCaracteristicas().add(caracteristica3);
+                herramienta9.getCaracteristicas().add(caracteristica4);
+                herramienta9.getCaracteristicas().add(caracteristica5);
                 herramienta9.setCategoria(categoria1);
                 herramienta9.setStock(15L);
                 herramienta9.setPrecio(75L);
@@ -434,6 +474,11 @@ public class DataInitializer implements CommandLineRunner {
 
                 // MARTILLO
                 Herramienta herramienta10 = new Herramienta();
+                herramienta10.getCaracteristicas().add(caracteristica1);
+                herramienta10.getCaracteristicas().add(caracteristica2);
+                herramienta10.getCaracteristicas().add(caracteristica3);
+                herramienta10.getCaracteristicas().add(caracteristica4);
+                herramienta10.getCaracteristicas().add(caracteristica5);
                 herramienta10.setCategoria(categoria3);
                 herramienta10.setStock(15L);
                 herramienta10.setPrecio(75L);

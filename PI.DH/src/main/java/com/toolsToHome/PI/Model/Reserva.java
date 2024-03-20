@@ -18,8 +18,8 @@ public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @JsonIgnore
-    @ManyToOne
+
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "Herramienta_id", referencedColumnName= "id")
     private Herramienta herramientaId;
 

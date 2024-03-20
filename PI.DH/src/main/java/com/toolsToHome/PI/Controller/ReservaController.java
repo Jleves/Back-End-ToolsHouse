@@ -1,7 +1,9 @@
 package com.toolsToHome.PI.Controller;
 
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
+import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Model.Reserva;
+import com.toolsToHome.PI.Service.HerramientaService;
 import com.toolsToHome.PI.Service.ReservaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,16 +17,22 @@ import java.util.Optional;
 public class ReservaController {
 
     private ReservaService reservaService;
+    private HerramientaService herramientaService;
     @Autowired
-    public ReservaController(ReservaService reservaService) {
+    public ReservaController(ReservaService reservaService, HerramientaService herramientaService) {
         this.reservaService = reservaService;
+        this.herramientaService = herramientaService;
     }
 
 
     @PostMapping
     public ResponseEntity<Reserva> guardarReserva(@RequestBody Reserva reserva)throws ResourceNotFoundException{
         Optional<Reserva>buscarReserva = reservaService.buscarReserva(reserva.getId());
-        if(buscarReserva.isEmpty()){
+        Optional<Herramienta>buscarHerramienta= herramientaService.buscarPorId(reserva.getHerramientaId().getId());
+        if(buscarReserva.isEmpty() && buscarHerramienta.isPresent()){
+            Reserva newResrva  = reservaService.guardarReserva(reserva);
+            Herramienta herramientaEncontrada= buscarHerramienta.get();
+            newResrva.setHerramientaId(herramientaEncontrada);
             return ResponseEntity.ok(reservaService.guardarReserva(reserva));
         }else throw new ResourceNotFoundException("No pudo guardarse la reserva");
     }
