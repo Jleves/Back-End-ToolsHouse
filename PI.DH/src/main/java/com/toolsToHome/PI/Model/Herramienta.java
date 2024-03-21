@@ -21,6 +21,12 @@ public class Herramienta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    public Herramienta(Long id, Long stock, String nombre) {
+        this.id = id;
+        this.stock = stock;
+        this.nombre = nombre;
+    }
+
     @ManyToOne
     @JoinColumn(name = "Categoria_id", referencedColumnName= "id")
     private Categoria categoria;
