@@ -18,7 +18,7 @@ public class CaracteristicaServiceTest {
     @Test
     @Order(1)
     public void guardarCaracteristica(){
-        Caracteristicas caracteristicaAGuardar= new Caracteristicas();
+        Caracteristicas caracteristicaAGuardar= new Caracteristicas(4L,"Nuevo");
         caracteristicaService.guardarCaracteristica(caracteristicaAGuardar);
         assertEquals(1L,caracteristicaAGuardar.getId());
     }
@@ -57,7 +57,7 @@ public class CaracteristicaServiceTest {
             Caracteristicas caracteristicasAGuardar= new Caracteristicas(idABuscar);
             caracteristicaService.actualizarCaracteristicas(caracteristicasAGuardar);
             Optional<Caracteristicas> caracteristicaActualizado= caracteristicaService.buscarPorId(1L);
-            assertEquals("caract",caracteristicaActualizado.get().getId());
+            assertEquals("Nuevo",caracteristicaActualizado.get().getId());
 
         }
     }

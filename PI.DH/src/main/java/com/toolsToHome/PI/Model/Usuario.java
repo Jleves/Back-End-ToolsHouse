@@ -32,11 +32,21 @@ public class Usuario implements UserDetails {
     @Column(name = "email", unique = true)
     private String email;
 
+    public Usuario(Long id, String nombre, String apellido) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
     @Column
     private String ciudad;
 
     @Enumerated(EnumType.STRING)
     private UsuarioRole usuarioRole;
+
+    public Usuario(Long id) {
+        this.id = id;
+    }
 
     public void setUsuarioRole(UsuarioRole usuarioRole) {
         this.usuarioRole = usuarioRole;

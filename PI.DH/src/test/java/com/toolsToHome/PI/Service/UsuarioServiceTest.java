@@ -20,7 +20,7 @@ public class UsuarioServiceTest {
     @Test
     @Order(1)
     public void guardarUsuario(){
-        Usuario usuarioAGuardar= new Usuario();
+        Usuario usuarioAGuardar= new Usuario(7L,"Juan","Martinez");
         usuarioService.guardarUsuario(usuarioAGuardar);
         assertEquals(1L,usuarioAGuardar.getId());
     }

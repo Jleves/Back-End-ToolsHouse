@@ -24,6 +24,11 @@ public class Categoria {
     @Column
     private String icono;
 
+    public Categoria(Long id, String titulo) {
+        this.id = id;
+        this.titulo = titulo;
+    }
+
     public Categoria(Long id) {
         this.id = id;
     }

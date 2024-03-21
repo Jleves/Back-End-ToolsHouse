@@ -26,4 +26,12 @@ public class Imagen {
     @JoinColumn(name = "herramienta_id", referencedColumnName= "id")
     private Herramienta herramienta;
 
+    public Imagen(Long id, String url) {
+        this.id = id;
+        this.url = url;
+    }
+
+    public Imagen(Long id) {
+        this.id = id;
+    }
 }

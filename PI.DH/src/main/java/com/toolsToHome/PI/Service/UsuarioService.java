@@ -45,6 +45,8 @@ public class UsuarioService implements UserDetailsService {
     public void actualizarUsuario(Usuario usuario){
         usuarioRepository.save(usuario);
     }
+
+    public void guardarUsuario(Usuario usuario){ usuarioRepository.save(usuario);}
     public List<Usuario> listarTodos(){
         return usuarioRepository.findAll();
     }
@@ -77,8 +79,6 @@ public class UsuarioService implements UserDetailsService {
         Optional<Usuario> userOptional = usuarioRepository.findByEmail(email);
         return userOptional.map(UserDTO::fromUser);
     }
-
-
 
 
 

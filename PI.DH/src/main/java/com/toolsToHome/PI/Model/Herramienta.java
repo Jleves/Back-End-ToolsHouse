@@ -53,4 +53,7 @@ public class Herramienta {
     @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();
 
+    public Herramienta(Long id) {
+        this.id = id;
+    }
 }

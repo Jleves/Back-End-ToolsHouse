@@ -63,7 +63,7 @@ public class HerramientaServiceTest {
         Long idABuscar= 1L;
         Optional<Herramienta> herramienta= herramientaService.buscarPorId(idABuscar);
         if(herramienta.isPresent()){
-            Herramienta herramientaAGuardar=  herramienta;
+            Herramienta herramientaAGuardar= new Herramienta(idABuscar);
             herramientaService.actualizarHerramienta(herramientaAGuardar);
             Optional<Herramienta> herramientaActualizado= herramientaService.buscarPorId(1L);
             assertEquals("Martillo",herramientaActualizado.get().getNombre());

@@ -19,7 +19,7 @@ public class CategoriaServiceTest {
     @Test
     @Order(1)
     public void guardarCatergoria(){
-        Categoria categoriaAGuardar= new Categoria();
+        Categoria categoriaAGuardar= new Categoria(6L, "Maquinas");
         categoriaService.guardarCategoria(categoriaAGuardar);
         assertEquals(1L,categoriaAGuardar.getId());
     }

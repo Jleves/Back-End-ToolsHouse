@@ -18,7 +18,7 @@ public class ImagenServiceTest {
     @Test
     @Order(1)
     public void guardarImagen(){
-        Imagen imagenAGuardar= new Imagen();
+        Imagen imagenAGuardar= new Imagen(8L, "https://crossmaster.com.ar/wp-content/uploads/9970124.jpg");
         imagenService.guardarImagen(imagenAGuardar);
         assertEquals(1L,imagenAGuardar.getId());
     }

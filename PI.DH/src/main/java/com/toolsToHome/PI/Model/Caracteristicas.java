@@ -25,5 +25,12 @@ public class Caracteristicas {
     @ManyToMany(mappedBy = "caracteristicas")
     private List<Herramienta> herramientas = new ArrayList<>();
 
+    public Caracteristicas(Long id, String titulo) {
+        this.id = id;
+        this.titulo = titulo;
+    }
 
+    public Caracteristicas(Long id) {
+        this.id = id;
+    }
 }
