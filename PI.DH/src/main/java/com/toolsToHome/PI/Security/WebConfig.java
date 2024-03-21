@@ -64,6 +64,34 @@ public class WebConfig  {
                         .cors(cors ->
                                 cors
                                         .disable())
+                        .authorizeHttpRequests( authRequest ->
+                                        authRequest
+                                                .requestMatchers("/v2/api-docs", "/swagger-ui/**", "/swagger-resources/**").permitAll()
+                                                .requestMatchers("/auth/**", "/Herramientas/**", "/admin/**", "/user/**", "/Categorias/**", "/Caracteristicas/**", "/Reservas/**","Reseñas/**").permitAll()
+                                //.anyRequest().authenticated()
+                        )
+                        .sessionManagement(sessionManager ->
+                                sessionManager
+                                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                        )
+                        .authenticationProvider(daoAuthenticationProvider())
+                        .addFilterBefore(jwtRequestFilter,UsernamePasswordAuthenticationFilter.class)
+                        .build();
+
+
+
+
+    }
+
+
+    /*
+                http
+                        .csrf(csrf ->
+                                csrf
+                                        .disable())
+                        .cors(cors ->
+                                cors
+                                        .disable())
 
                         .authorizeHttpRequests( authRequest ->
                                 authRequest
@@ -87,8 +115,32 @@ public class WebConfig  {
                         .addFilterBefore(jwtRequestFilter,UsernamePasswordAuthenticationFilter.class)
 
                         .build();
+*/
 
-    }
+
+
+
+
+    /*public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
+    {
+        return
+                http
+                        .csrf(AbstractHttpConfigurer::disable)
+                        .cors(AbstractHttpConfigurer::disable)
+                        .authorizeHttpRequests( authRequest ->
+                                authRequest
+                                        .requestMatchers("/v2/api-docs", "/swagger-ui/**", "/swagger-resources/**").permitAll()
+                                        .requestMatchers("/auth/**", "/Herramientas/**", "/admin/**", "/user/**", "/Categorias/**", "/Caracteristicas/**", "/Reservas/**").permitAll()
+                                        //.anyRequest().authenticated()
+                        )
+                        .sessionManagement(sessionManager ->
+                                sessionManager
+                                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                        )
+                        .authenticationProvider(daoAuthenticationProvider())
+                        .addFilterBefore(jwtRequestFilter,UsernamePasswordAuthenticationFilter.class)
+                        .build();
+    }*/
     /*@Bean
     public void addCorsMappings(Cors registry) {
         registry.allowedOriginPatterns("/**")
