@@ -141,8 +141,7 @@ public class DataInitializer implements CommandLineRunner {
                 reserva2.setUsuarioId(superAdmin);
                 reserva2.setHerramientaId(herramienta1);
 
-                herramienta1.getReserva().add(reserva1);
-                herramienta1.getReserva().add(reserva2);
+
                 reservaRepository.save(reserva2);
                 reservaRepository.save(reserva1);
 

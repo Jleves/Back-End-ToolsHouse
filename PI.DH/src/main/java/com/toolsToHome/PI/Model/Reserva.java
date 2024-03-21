@@ -20,7 +20,7 @@ public class Reserva {
     private Long id;
 
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "Herramienta_id", referencedColumnName= "id")
+    @JoinColumn(name = "HerramientaId", referencedColumnName= "id")
     private Herramienta herramientaId;
 
 
@@ -30,6 +30,6 @@ public class Reserva {
     private LocalDate fechaDevolucion;
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "UsuarioID", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "UsuarioID", referencedColumnName = "id")
     private Usuario usuarioId;
 }

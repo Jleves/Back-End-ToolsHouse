@@ -78,20 +78,9 @@ public class HerramientaController {
         }
     }
 
-    private Herramienta getHerramienta(Herramienta herramienta, Optional<Herramienta> herramientaRequest) {
-        Herramienta updatedHerramienta = herramientaRequest.get();
-        updatedHerramienta.setCaracteristicas(herramienta.getCaracteristicas());
-        updatedHerramienta.setCategoria(categoriaService.guardarCategoria(herramienta.getCategoria()));
-        updatedHerramienta.setReserva(herramienta.getReserva());
-        updatedHerramienta.setImagenes(herramienta.getImagenes());
-        updatedHerramienta.setDescripcion(herramienta.getDescripcion());
-        updatedHerramienta.setStock(herramienta.getStock());
-        updatedHerramienta.setDisponibilidad(herramienta.isDisponibilidad());
-        updatedHerramienta.setPrecio(herramienta.getPrecio());
-        return updatedHerramienta;
-    }
 
-    @GetMapping ("buscar/{nombre}")
+
+    @GetMapping ("/buscar/{nombre}")
     public ResponseEntity<Optional<Herramienta>>buscarPorNombre (@PathVariable String nombre)throws ResourceNotFoundException{
         Optional<Herramienta>herramientaBuscada = herramientaService.buscarPorNombre(nombre);
                 if(herramientaBuscada.isPresent()){
