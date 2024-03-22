@@ -121,3 +121,61 @@
 [2024-03-21 21:24:08] [ INFO ] [HerramientaController:39] Get Herramienta
 [2024-03-21 21:41:09] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
 [2024-03-21 22:35:49] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-21 22:50:05] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
+[2024-03-21 22:50:17] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
+[2024-03-21 22:59:48] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-21 23:00:14] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-21 23:00:14] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-21 23:01:27] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-21 23:01:27] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-21 23:02:57] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-21 23:03:25] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-21 23:03:47] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-21 23:25:38] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-21 23:25:57] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-21 23:30:45] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-21 23:31:47] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-21 23:54:33] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 00:02:09] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 00:02:09] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 00:02:20] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 00:02:20] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 00:02:56] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 00:03:47] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 00:10:19] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 00:10:29] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 00:23:12] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 00:29:23] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 00:38:19] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 00:39:11] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 00:45:50] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
+[2024-03-22 00:46:00] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
+[2024-03-22 07:42:42] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 07:42:45] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 07:42:57] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 07:42:57] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 07:43:00] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 07:46:15] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
+[2024-03-22 07:47:01] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
+[2024-03-22 07:48:47] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
+[2024-03-22 07:51:28] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
+[2024-03-22 07:51:42] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
+[2024-03-22 08:22:11] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
+[2024-03-22 08:22:21] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
+[2024-03-22 08:22:33] [ INFO ] [Reseña:45] Reseña: Comentario de la reseña test 1, 2024-03-14, null
+[2024-03-22 08:25:14] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
+[2024-03-22 08:25:24] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
+[2024-03-22 08:26:08] [ INFO ] [Reseña:45] Reseña: Comentario de la reseña test 1, 2024-03-14, null
+[2024-03-22 08:30:04] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
+[2024-03-22 08:30:12] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
+[2024-03-22 08:30:23] [ INFO ] [Reseña:45] Reseña: Comentario de la reseña test 1, 2024-03-14, 3
+[2024-03-22 08:57:26] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 08:59:02] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 08:59:02] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 08:59:11] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 08:59:11] [ INFO ] [HerramientaController:34] Get Usuario
+[2024-03-22 08:59:22] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 08:59:45] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 08:59:46] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 08:59:56] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-22 08:59:56] [ INFO ] [HerramientaController:34] Get Usuario

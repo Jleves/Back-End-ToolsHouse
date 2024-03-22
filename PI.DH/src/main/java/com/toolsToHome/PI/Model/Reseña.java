@@ -22,7 +22,7 @@ private Herramienta herramienta_idReseña;
 @JoinColumn(name = "reserva_id")
 private Reserva reserva_id;
 @Column
-private Long raitng;
+private Long raiting;
 @Column
 private String comentario;
 @Column

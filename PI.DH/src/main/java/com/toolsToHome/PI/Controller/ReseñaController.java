@@ -4,6 +4,7 @@ import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Reseña;
 import com.toolsToHome.PI.Service.ReservaService;
 import com.toolsToHome.PI.Service.ReseñaService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,8 @@ import java.util.Optional;
 @CrossOrigin(origins = "*")
 @RequestMapping("/Reseñas")
 public class ReseñaController {
+
+    private static final Logger logger = Logger.getLogger(Reseña.class);
     private ReseñaService reseñaService;
     @Autowired
     public ReseñaController(ReseñaService reseñaService) {
@@ -39,6 +42,7 @@ public class ReseñaController {
 
 
             Reseña reseñaGuardada=reseñaService.guardarReseña(reseña);
+
             return ResponseEntity.ok(reseñaGuardada);
 
     }

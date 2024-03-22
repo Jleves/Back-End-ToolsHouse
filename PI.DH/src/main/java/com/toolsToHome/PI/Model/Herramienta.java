@@ -32,15 +32,16 @@ public class Herramienta {
     private Long precio;
 
 
-
-
-
     @Column(nullable = false)
     private boolean disponibilidad;
 
 
     @Column(nullable = false)
     private String nombre;
+
+    @Column(nullable = false)
+    private String descripcion;
+
 
 
     @JsonIgnore
@@ -54,8 +55,7 @@ public class Herramienta {
             inverseJoinColumns = @JoinColumn(name = "caracteristica_id"))
     private List<Caracteristicas> caracteristicas = new ArrayList<>();
 
-    @Column(nullable = false)
-    private String descripcion;
+
 
     @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();

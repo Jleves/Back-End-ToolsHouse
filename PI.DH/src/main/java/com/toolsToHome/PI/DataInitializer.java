@@ -24,14 +24,16 @@ public class DataInitializer implements CommandLineRunner {
         private final CaracteristicaRepository caracteristicaRepository;
         private final PasswordEncoder passwordEncoder;
         private final ReservaRepository reservaRepository;
+        private final ReseñaRepository reseñaRepository;
         @Autowired
-        public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository, UsuarioRepository usuarioRepository, CaracteristicaRepository caracteristicaRepository, PasswordEncoder passwordEncoder, ReservaRepository reservaRepository) {
+        public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository, UsuarioRepository usuarioRepository, CaracteristicaRepository caracteristicaRepository, PasswordEncoder passwordEncoder, ReservaRepository reservaRepository, ReseñaRepository reseñaRepository) {
                 this.herramientaRepository = herramientaRepository;
                 this.categoriaRepository = categoriaRepository;
                 this.usuarioRepository = usuarioRepository;
                 this.caracteristicaRepository = caracteristicaRepository;
                 this.passwordEncoder = passwordEncoder;
                 this.reservaRepository = reservaRepository;
+            this.reseñaRepository = reseñaRepository;
         }
 
         @Override
@@ -132,20 +134,11 @@ public class DataInitializer implements CommandLineRunner {
 
                 categoriaRepository.save(categoria1);
                 herramientaRepository.save(herramienta1);
-                Reserva reserva1= new Reserva();
-                reserva1.setFechaAlquiler(LocalDate.of(2024,03,14));
-                reserva1.setFechaDevolucion(LocalDate.of(2024,03,20));
-                reserva1.setUsuarioId(superAdmin);
-                reserva1.setHerramientaId(herramienta1);
-                Reserva reserva2=new Reserva();
-                reserva2.setFechaAlquiler(LocalDate.of(2024,04,15));
-                reserva2.setFechaDevolucion(LocalDate.of(2024,04,25));
-                reserva2.setUsuarioId(superAdmin);
-                reserva2.setHerramientaId(herramienta1);
 
 
-                reservaRepository.save(reserva2);
-                reservaRepository.save(reserva1);
+
+
+
 
                 //PALA
                 Herramienta herramienta2 = new Herramienta();
@@ -514,79 +507,177 @@ public class DataInitializer implements CommandLineRunner {
 
 
 
+
+
+                //Reservas
+
+
+                Reserva reserva1= new Reserva();
+                reserva1.setFechaAlquiler(LocalDate.of(2024,03,14));
+                reserva1.setFechaDevolucion(LocalDate.of(2024,03,20));
+                reserva1.setUsuarioId(superAdmin);
+                reserva1.setHerramientaId(herramienta1);
+                Reserva reserva2=new Reserva();
+                reserva2.setFechaAlquiler(LocalDate.of(2024,04,15));
+                reserva2.setFechaDevolucion(LocalDate.of(2024,04,25));
+                reserva2.setUsuarioId(superAdmin);
+                reserva2.setHerramientaId(herramienta1);
+
+
+                reservaRepository.save(reserva2);
+                reservaRepository.save(reserva1);
+
+
+                Reserva reserva3 = new Reserva();
+                reserva3.setFechaAlquiler(LocalDate.of(2024, 05, 10));
+                reserva3.setFechaDevolucion(LocalDate.of(2024, 05, 20));
+                reserva3.setUsuarioId(superAdmin);
+                reserva3.setHerramientaId(herramienta2);
+                reservaRepository.save(reserva3);
+
+                Reserva reserva4 = new Reserva();
+                reserva4.setFechaAlquiler(LocalDate.of(2024, 06, 8));
+                reserva4.setFechaDevolucion(LocalDate.of(2024, 06, 18));
+                reserva4.setUsuarioId(superAdmin);
+                reserva4.setHerramientaId(herramienta3);
+                reservaRepository.save(reserva4);
+
+                Reserva reserva5 = new Reserva();
+                reserva5.setFechaAlquiler(LocalDate.of(2024, 07, 6));
+                reserva5.setFechaDevolucion(LocalDate.of(2024, 07, 16));
+                reserva5.setUsuarioId(superAdmin);
+                reserva5.setHerramientaId(herramienta4);
+                reservaRepository.save(reserva5);
+
+                Reserva reserva6 = new Reserva();
+                reserva6.setFechaAlquiler(LocalDate.of(2024, 8, 4));
+                reserva6.setFechaDevolucion(LocalDate.of(2024, 8, 14));
+                reserva6.setUsuarioId(superAdmin);
+                reserva6.setHerramientaId(herramienta5);
+                reservaRepository.save(reserva6);
+
+                Reserva reserva7 = new Reserva();
+                reserva7.setFechaAlquiler(LocalDate.of(2024, 9, 2));
+                reserva7.setFechaDevolucion(LocalDate.of(2024, 9, 12));
+                reserva7.setUsuarioId(superAdmin);
+                reserva7.setHerramientaId(herramienta6);
+                reservaRepository.save(reserva7);
+
+
+                Reserva reserva8 = new Reserva();
+                reserva8.setFechaAlquiler(LocalDate.of(2024, 10, 1));
+                reserva8.setFechaDevolucion(LocalDate.of(2024, 10, 11));
+                reserva8.setUsuarioId(superAdmin);
+                reserva8.setHerramientaId(herramienta7);
+                reservaRepository.save(reserva8);
+
+                Reserva reserva9 = new Reserva();
+                reserva9.setFechaAlquiler(LocalDate.of(2024, 11, 29));
+                reserva9.setFechaDevolucion(LocalDate.of(2024, 12, 9));
+                reserva9.setUsuarioId(superAdmin);
+                reserva9.setHerramientaId(herramienta8);
+                reservaRepository.save(reserva9);
+
+                Reserva reserva10 = new Reserva();
+                reserva10.setFechaAlquiler(LocalDate.of(2025, 01, 27));
+                reserva10.setFechaDevolucion(LocalDate.of(2025, 02, 6));
+                reserva10.setUsuarioId(superAdmin);
+                reserva10.setHerramientaId(herramienta9);
+                reservaRepository.save(reserva10);
+
+
+
+
+                //Reseñas
+
                 Reseña reseña1= new Reseña();
                 reseña1.setComentario("La llave inglesa XYZ es genial. Su diseño ergonómico y ajuste rápido hacen que sea perfecta para cualquier trabajo en casa. Recomendada.");
-                reseña1.setRaitng(3L);
+                reseña1.setRaiting(3L);
                 reseña1.setReserva_id(reserva1);
                 reseña1.setHerramienta_idReseña(herramienta1);
                 reseña1.setFecha(LocalDate.of(2024,03,21));
 
                 Reseña reseña2= new Reseña();
-                reseña2.setComentario("¡La pala XYZ superó todas mis expectativas! Su diseño ergonómico hizo que trabajar en el jardín fuera mucho más cómodo, y la calidad de construcción es excepcional. Desde cavar hoyos para plantar hasta mover tierra, esta pala hizo el trabajo con facilidad. Definitivamente la recomendaría a cualquier persona que busque una herramienta confiable y resistente para sus proyectos al aire libre.");
-                reseña2.setRaitng(4L);
+                reseña2.setComentario("¡La pala XYZ superó todas mis expectativas! Su diseño ergonómico hizo que trabajar en el jardín fuera mucho más cómodo");
+                reseña2.setRaiting(4L);
                 reseña2.setReserva_id(reserva2);
                 reseña2.setHerramienta_idReseña(herramienta2);
                 reseña2.setFecha(LocalDate.of(2024,03,05));
 
                 Reseña reseña3= new Reseña();
-                reseña3.setComentario("¡La broca XYZ es simplemente impresionante! Su diseño robusto y afilado facilitó la perforación a través de diversos materiales, desde madera hasta metal. Me sorprendió gratamente lo rápido y limpio que hizo el trabajo, sin atascarse ni desgastarse fácilmente. ¡Definitivamente se ha convertido en mi broca favorita para todos mis proyectos de bricolaje y carpintería!");
-                reseña3.setRaitng(5L);
-                reseña3.setReserva_id(reserva1);
+                reseña3.setComentario("¡La broca XYZ es simplemente impresionante! Su diseño robusto y afilado facilitó la perforación a través de diversos materiales, desde madera hasta metal. ");
+                reseña3.setRaiting(5L);
+                reseña3.setReserva_id(reserva3);
                 reseña3.setHerramienta_idReseña(herramienta3);
                 reseña3.setFecha(LocalDate.of(2024,03,10));
 
                 Reseña reseña4= new Reseña();
                 reseña4.setComentario(
-                        "La cinta métrica XYZ es una verdadera joya en mi caja de herramientas. Su durabilidad y precisión han hecho que medir sea una tarea rápida y sencilla en cualquier proyecto. Además, su diseño compacto y fácil de manejar la convierten en mi elección número uno para mediciones precisas en cualquier lugar. ¡Una herramienta imprescindible para cualquier persona que valore la precisión y la fiabilidad en su trabajo!");
-                reseña4.setRaitng(4L);
-                reseña4.setReserva_id(reserva1);
+                        "La cinta métrica XYZ es una verdadera joya en mi caja de herramientas. Su durabilidad y precisión han hecho que medir sea una tarea rápida y sencilla en cualquier proyecto.");
+                reseña4.setRaiting(4L);
+                reseña4.setReserva_id(reserva4);
                 reseña4.setHerramienta_idReseña(herramienta4);
                 reseña4.setFecha(LocalDate.of(2024,03,11));
 
                 Reseña reseña5= new Reseña();
-                reseña5.setComentario("¡La lijadora XYZ ha sido un verdadero salvavidas en mis proyectos de bricolaje! Su potente motor y su diseño ergonómico hacen que lijar sea rápido y eficiente. Lo que más me impresiona es su capacidad para proporcionar un acabado suave y uniforme en todo tipo de superficies, desde madera hasta metal. ¡Definitivamente recomendaría esta lijadora a cualquier persona que busque resultados de calidad profesional en sus proyectos!");
-                reseña5.setRaitng(5l);
-                reseña5.setReserva_id(reserva2);
+                reseña5.setComentario("¡La lijadora XYZ ha sido un verdadero salvavidas en mis proyectos de bricolaje! Su potente motor y su diseño ergonómico hacen que lijar sea rápido y eficiente.");
+                reseña5.setRaiting(5l);
+                reseña5.setReserva_id(reserva5);
                 reseña5.setHerramienta_idReseña(herramienta5);
                 reseña5.setFecha(LocalDate.of(2024,03,7));
 
                 Reseña reseña6= new Reseña();
-                reseña6.setComentario("¡El nivel XYZ hizo que mi proyecto de construcción fuera increíblemente fácil! Su diseño robusto y la precisión de sus mediciones me dieron la confianza de que todo quedara perfectamente nivelado. ¡Definitivamente recomendaría este nivel a cualquier persona que busque resultados impecables en su trabajo!");
-                reseña6.setRaitng(3L);
-                reseña6.setReserva_id(reserva1);
+                reseña6.setComentario("¡El nivel XYZ hizo que mi proyecto de construcción fuera increíblemente fácil!");
+                reseña6.setRaiting(3L);
+                reseña6.setReserva_id(reserva6);
                 reseña6.setHerramienta_idReseña(herramienta6);
                 reseña6.setFecha(LocalDate.of(2024,03,2));
 
                 Reseña reseña7= new Reseña();
-                reseña7.setComentario("¡El taladro XYZ fue exactamente lo que necesitaba para mi proyecto en casa! Su potencia y precisión hicieron que perforar fuera rápido y sencillo. ¡Sin duda, este taladro es imprescindible para cualquier persona que busque un rendimiento excepcional en sus proyectos de bricolaje!");
-                reseña7.setRaitng(5L);
-                reseña7.setReserva_id(reserva1);
+                reseña7.setComentario("¡El taladro XYZ fue exactamente lo que necesitaba para mi proyecto en casa! Su potencia y precisión hicieron que perforar fuera rápido y sencillo.");
+                reseña7.setRaiting(5L);
+                reseña7.setReserva_id(reserva7);
                 reseña7.setHerramienta_idReseña(herramienta7);
                 reseña7.setFecha(LocalDate.of(2024,03,29));
 
 
 
                 Reseña reseña8= new Reseña();
-                reseña8.setComentario("La amoladora XYZ ha sido una verdadera revelación en mi taller. Su potencia y versatilidad la convierten en la herramienta perfecta para una amplia gama de tareas de corte y lijado. Estoy realmente impresionado con su rendimiento y facilidad de uso. ¡Definitivamente la recomendaría a cualquiera que busque una amoladora confiable y eficiente para sus proyectos!");
-                reseña8.setRaitng(5L);
-                reseña8.setReserva_id(reserva1);
+                reseña8.setComentario("La amoladora XYZ ha sido una verdadera revelación en mi taller. Su potencia y versatilidad la convierten en la herramienta perfecta para una amplia gama de tareas de corte y lijado. Estoy realmente impresionado con su rendimiento y facilidad de uso.");
+                reseña8.setRaiting(5L);
+                reseña8.setReserva_id(reserva8);
                 reseña8.setHerramienta_idReseña(herramienta8);
                 reseña8.setFecha(LocalDate.of(2024,03,03));
 
 
                 Reseña reseña9= new Reseña();
-                reseña9.setComentario("El destornillador XYZ hizo que mi proyecto de montaje fuera un juego de niños. Su diseño ergonómico y su potencia de torsión hicieron que quitar y poner tornillos fuera rápido y sin esfuerzo. ¡Definitivamente es una herramienta que recomendaría a cualquier persona que busque eficiencia y comodidad en sus trabajos de bricolaje!");
-                reseña9.setRaitng(2l);
-                reseña9.setReserva_id(reserva1);
+                reseña9.setComentario("El destornillador XYZ hizo que mi proyecto de montaje fuera un juego de niños. Su diseño ergonómico y su potencia de torsión hicieron que quitar y poner tornillos fuera rápido y sin esfuerzo.");
+                reseña9.setRaiting(2l);
+                reseña9.setReserva_id(reserva9);
                 reseña9.setHerramienta_idReseña(herramienta9);
                 reseña9.setFecha(LocalDate.of(2024,03,21));
 
 
                 Reseña reseña10= new Reseña();
-                reseña10.setComentario("El martillo XYZ ha sido una verdadera joya en mi caja de herramientas. Su peso perfectamente equilibrado y su mango ergonómico hicieron que cada golpe fuera preciso y efectivo. Desde clavar hasta demoler, este martillo demostró ser confiable y resistente en cada uso. ¡Definitivamente lo recomendaría a cualquier persona que busque un martillo de alta calidad para sus proyectos de construcción o renovación!");
-                reseña10.setRaitng(3L);
-                reseña10.setReserva_id(reserva2);
+                reseña10.setComentario("El martillo XYZ ha sido una verdadera joya en mi caja de herramientas.");
+                reseña10.setRaiting(3L);
+                reseña10.setReserva_id(reserva10);
                 reseña10.setHerramienta_idReseña(herramienta10);
                 reseña10.setFecha(LocalDate.of(2024,03,05));
+
+
+                reseñaRepository.save(reseña1);
+                reseñaRepository.save(reseña2);
+                reseñaRepository.save(reseña3);
+                reseñaRepository.save(reseña4);
+                reseñaRepository.save(reseña5);
+                reseñaRepository.save(reseña6);
+                reseñaRepository.save(reseña7);
+                reseñaRepository.save(reseña8);
+                reseñaRepository.save(reseña9);
+                reseñaRepository.save(reseña10);
+
+
+
         }
 }
