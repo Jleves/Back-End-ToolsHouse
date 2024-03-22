@@ -3,6 +3,7 @@ package com.toolsToHome.PI.Controller;
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Model.Reserva;
+import com.toolsToHome.PI.Model.Reseña;
 import com.toolsToHome.PI.Service.HerramientaService;
 import com.toolsToHome.PI.Service.ReservaService;
 import org.apache.log4j.Logger;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @CrossOrigin(origins = "*")
@@ -59,7 +61,10 @@ public class ReservaController {
 
 
 
-
+    }
+    @GetMapping
+    public ResponseEntity<List<Reserva>>listarReservas(){
+        return ResponseEntity.ok( reservaService.listarReservas());
     }
 
 
