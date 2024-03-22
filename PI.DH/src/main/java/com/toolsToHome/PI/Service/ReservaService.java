@@ -1,5 +1,6 @@
 package com.toolsToHome.PI.Service;
 
+import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Model.Reserva;
 import com.toolsToHome.PI.Repository.ReservaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,9 @@ public class ReservaService {
 
     public void eliminarReserva(Long id){reservaRepository.deleteById(id);}
 
-    public Optional<Reserva> buscarReserva(Long id){
+
+
+    public Optional<Reserva> BuscarPorId(Long id){
         return reservaRepository.findById(id);
     }
 

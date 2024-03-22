@@ -52,10 +52,10 @@ public class CaracteristicaController {
         if(buscarCaracteristicas.isEmpty()){
             Caracteristicas categoriaGuardada = caracteristicaService.guardarCaracteristica(caracteristicas);
 
-            logger.info("Categoria pasa por controller");
+            logger.info("Nueva Caracteristica, Controller");
             return ResponseEntity.ok(categoriaGuardada);
 
-        }else throw new ResourceNotFoundException("La Categoria ya existe");
+        }else throw new ResourceNotFoundException("La Caracteristica ya existe");
     }
 
     @DeleteMapping("/{id}")
@@ -63,7 +63,7 @@ public class CaracteristicaController {
         Optional<Caracteristicas>buscarCategoria = caracteristicaService.buscarPorId(id);
         if(buscarCategoria.isPresent()){
             caracteristicaService.eliminarCaracteristicas(id);
-            return ResponseEntity.ok("Herramienta Eliminada");
+            return ResponseEntity.ok("Caracteristica Eliminada");
         } else {
             throw new ResourceNotFoundException("No se encontró la caracteristica con el ID: " + id);
         }
@@ -74,16 +74,13 @@ public class CaracteristicaController {
         Optional<Caracteristicas> categoriaRequest = caracteristicaService.buscarPorId(caracteristicas.getId());
 
         if(categoriaRequest.isPresent()){
-            Caracteristicas updatedCaracteristicas = categoriaRequest.get();
-            updatedCaracteristicas.setIcono(caracteristicas.getIcono());
-            updatedCaracteristicas.setTitulo(caracteristicas.getTitulo());
-            updatedCaracteristicas.setHerramientas(caracteristicas.getHerramientas());
+           caracteristicaService.actualizarCaracteristicas(caracteristicas);
 
-            return ResponseEntity.ok("La categoria: " + caracteristicas.getTitulo() + " ha sido actualizada correctamente");
+            return ResponseEntity.ok("La Caracteristica: " + caracteristicas.getTitulo() + " ha sido actualizada correctamente");
         }
 
         else {
-            throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + caracteristicas.getId());
+            throw new ResourceNotFoundException("No se encontró la Caracteristica con el ID: " + caracteristicas.getId());
         }
     }
 
