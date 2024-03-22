@@ -43,6 +43,10 @@ public class Herramienta {
     private String nombre;
 
 
+    @JsonIgnore
+    @ManyToMany(mappedBy = "herramientasFavoritas")
+    private List<Usuario>  usuariosFavoritos = new ArrayList<>();
+
 
     @ManyToMany
     @JoinTable(name = "MuchosAMuchos",

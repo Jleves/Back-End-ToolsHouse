@@ -53,6 +53,8 @@ public class DataInitializer implements CommandLineRunner {
                 usuarioRepository.save(superAdmin);
 
 
+
+
                 Caracteristicas caracteristica1 = new Caracteristicas();
                 caracteristica1.setTitulo("Resistente al agua");
                 caracteristica1.setIcono("hammer");
@@ -511,5 +513,80 @@ public class DataInitializer implements CommandLineRunner {
                 herramientaRepository.save(herramienta10);
 
 
+
+                Reseña reseña1= new Reseña();
+                reseña1.setComentario("La llave inglesa XYZ es genial. Su diseño ergonómico y ajuste rápido hacen que sea perfecta para cualquier trabajo en casa. Recomendada.");
+                reseña1.setRaitng(3L);
+                reseña1.setReserva_id(reserva1);
+                reseña1.setHerramienta_idReseña(herramienta1);
+                reseña1.setFecha(LocalDate.of(2024,03,21));
+
+                Reseña reseña2= new Reseña();
+                reseña2.setComentario("¡La pala XYZ superó todas mis expectativas! Su diseño ergonómico hizo que trabajar en el jardín fuera mucho más cómodo, y la calidad de construcción es excepcional. Desde cavar hoyos para plantar hasta mover tierra, esta pala hizo el trabajo con facilidad. Definitivamente la recomendaría a cualquier persona que busque una herramienta confiable y resistente para sus proyectos al aire libre.");
+                reseña2.setRaitng(4L);
+                reseña2.setReserva_id(reserva2);
+                reseña2.setHerramienta_idReseña(herramienta2);
+                reseña2.setFecha(LocalDate.of(2024,03,05));
+
+                Reseña reseña3= new Reseña();
+                reseña3.setComentario("¡La broca XYZ es simplemente impresionante! Su diseño robusto y afilado facilitó la perforación a través de diversos materiales, desde madera hasta metal. Me sorprendió gratamente lo rápido y limpio que hizo el trabajo, sin atascarse ni desgastarse fácilmente. ¡Definitivamente se ha convertido en mi broca favorita para todos mis proyectos de bricolaje y carpintería!");
+                reseña3.setRaitng(5L);
+                reseña3.setReserva_id(reserva1);
+                reseña3.setHerramienta_idReseña(herramienta3);
+                reseña3.setFecha(LocalDate.of(2024,03,10));
+
+                Reseña reseña4= new Reseña();
+                reseña4.setComentario(
+                        "La cinta métrica XYZ es una verdadera joya en mi caja de herramientas. Su durabilidad y precisión han hecho que medir sea una tarea rápida y sencilla en cualquier proyecto. Además, su diseño compacto y fácil de manejar la convierten en mi elección número uno para mediciones precisas en cualquier lugar. ¡Una herramienta imprescindible para cualquier persona que valore la precisión y la fiabilidad en su trabajo!");
+                reseña4.setRaitng(4L);
+                reseña4.setReserva_id(reserva1);
+                reseña4.setHerramienta_idReseña(herramienta4);
+                reseña4.setFecha(LocalDate.of(2024,03,11));
+
+                Reseña reseña5= new Reseña();
+                reseña5.setComentario("¡La lijadora XYZ ha sido un verdadero salvavidas en mis proyectos de bricolaje! Su potente motor y su diseño ergonómico hacen que lijar sea rápido y eficiente. Lo que más me impresiona es su capacidad para proporcionar un acabado suave y uniforme en todo tipo de superficies, desde madera hasta metal. ¡Definitivamente recomendaría esta lijadora a cualquier persona que busque resultados de calidad profesional en sus proyectos!");
+                reseña5.setRaitng(5l);
+                reseña5.setReserva_id(reserva2);
+                reseña5.setHerramienta_idReseña(herramienta5);
+                reseña5.setFecha(LocalDate.of(2024,03,7));
+
+                Reseña reseña6= new Reseña();
+                reseña6.setComentario("¡El nivel XYZ hizo que mi proyecto de construcción fuera increíblemente fácil! Su diseño robusto y la precisión de sus mediciones me dieron la confianza de que todo quedara perfectamente nivelado. ¡Definitivamente recomendaría este nivel a cualquier persona que busque resultados impecables en su trabajo!");
+                reseña6.setRaitng(3L);
+                reseña6.setReserva_id(reserva1);
+                reseña6.setHerramienta_idReseña(herramienta6);
+                reseña6.setFecha(LocalDate.of(2024,03,2));
+
+                Reseña reseña7= new Reseña();
+                reseña7.setComentario("¡El taladro XYZ fue exactamente lo que necesitaba para mi proyecto en casa! Su potencia y precisión hicieron que perforar fuera rápido y sencillo. ¡Sin duda, este taladro es imprescindible para cualquier persona que busque un rendimiento excepcional en sus proyectos de bricolaje!");
+                reseña7.setRaitng(5L);
+                reseña7.setReserva_id(reserva1);
+                reseña7.setHerramienta_idReseña(herramienta7);
+                reseña7.setFecha(LocalDate.of(2024,03,29));
+
+
+
+                Reseña reseña8= new Reseña();
+                reseña8.setComentario("La amoladora XYZ ha sido una verdadera revelación en mi taller. Su potencia y versatilidad la convierten en la herramienta perfecta para una amplia gama de tareas de corte y lijado. Estoy realmente impresionado con su rendimiento y facilidad de uso. ¡Definitivamente la recomendaría a cualquiera que busque una amoladora confiable y eficiente para sus proyectos!");
+                reseña8.setRaitng(5L);
+                reseña8.setReserva_id(reserva1);
+                reseña8.setHerramienta_idReseña(herramienta8);
+                reseña8.setFecha(LocalDate.of(2024,03,03));
+
+
+                Reseña reseña9= new Reseña();
+                reseña9.setComentario("El destornillador XYZ hizo que mi proyecto de montaje fuera un juego de niños. Su diseño ergonómico y su potencia de torsión hicieron que quitar y poner tornillos fuera rápido y sin esfuerzo. ¡Definitivamente es una herramienta que recomendaría a cualquier persona que busque eficiencia y comodidad en sus trabajos de bricolaje!");
+                reseña9.setRaitng(2l);
+                reseña9.setReserva_id(reserva1);
+                reseña9.setHerramienta_idReseña(herramienta9);
+                reseña9.setFecha(LocalDate.of(2024,03,21));
+
+
+                Reseña reseña10= new Reseña();
+                reseña10.setComentario("El martillo XYZ ha sido una verdadera joya en mi caja de herramientas. Su peso perfectamente equilibrado y su mango ergonómico hicieron que cada golpe fuera preciso y efectivo. Desde clavar hasta demoler, este martillo demostró ser confiable y resistente en cada uso. ¡Definitivamente lo recomendaría a cualquier persona que busque un martillo de alta calidad para sus proyectos de construcción o renovación!");
+                reseña10.setRaitng(3L);
+                reseña10.setReserva_id(reserva2);
+                reseña10.setHerramienta_idReseña(herramienta10);
+                reseña10.setFecha(LocalDate.of(2024,03,05));
         }
 }

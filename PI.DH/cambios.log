@@ -118,3 +118,6 @@
 [2024-03-21 20:11:01] [ INFO ] [HerramientaController:32] Get Usuario
 [2024-03-21 20:11:14] [ INFO ] [HerramientaController:39] Get Herramienta
 [2024-03-21 20:11:14] [ INFO ] [HerramientaController:32] Get Usuario
+[2024-03-21 21:24:08] [ INFO ] [HerramientaController:39] Get Herramienta
+[2024-03-21 21:41:09] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
+[2024-03-21 22:35:49] [ INFO ] [HerramientaController:39] Get Herramienta
