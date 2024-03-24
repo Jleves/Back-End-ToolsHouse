@@ -42,15 +42,13 @@ public class Herramienta {
     @Column(nullable = false)
     private String descripcion;
 
-
-
     @JsonIgnore
     @ManyToMany(mappedBy = "herramientasFavoritas")
     private List<Usuario>  usuariosFavoritos = new ArrayList<>();
 
 
     @ManyToMany
-    @JoinTable(name = "MuchosAMuchos",
+    @JoinTable(name = "Herramienta_Categoria",
             joinColumns = @JoinColumn(name = "herramienta_id"),
             inverseJoinColumns = @JoinColumn(name = "caracteristica_id"))
     private List<Caracteristicas> caracteristicas = new ArrayList<>();
@@ -60,10 +58,56 @@ public class Herramienta {
     @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "herramientaId",cascade = CascadeType.MERGE)
+    private Set<Reserva> reserva = new HashSet<>();
 
     @OneToMany(mappedBy = "herramienta_idReseña",cascade = CascadeType.ALL)
     private Set<Reseña>reseñas=new HashSet<>();
 
+    @Column
+    private Double promedioRaiting;
+
+
+
+
+    public Double setPromedioRaiting() {
+        if (reseñas.isEmpty()) {
+            return null; // Retorna null si no hay reseñas
+        }
+
+        double sumaRatings = 0;
+        for (Reseña reseña : reseñas) {
+            sumaRatings += reseña.getRaiting();
+        }
+        return this.promedioRaiting=  sumaRatings / reseñas.size();
+    }
+
+
+
+    public Herramienta(Categoria categoria, Long stock, Long precio, String nombre, String descripcion, List<Imagen> imagenes) {
+        this.categoria = categoria;
+        this.stock = stock;
+        this.precio = precio;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.imagenes = imagenes;
+    }
+
+
+    public Herramienta(Categoria categoria, Long stock, Long precio, String nombre, String descripcion, List<Caracteristicas> caracteristicas, List<Imagen> imagenes) {
+        this.categoria = categoria;
+        this.stock = stock;
+        this.precio = precio;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.caracteristicas = caracteristicas;
+        this.imagenes = imagenes;
+    }
+
+    public Herramienta(Long id) {
+        this.id = id;
+    }
 }
 /*@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

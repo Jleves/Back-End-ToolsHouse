@@ -28,8 +28,14 @@ public class Reserva {
     private LocalDate fechaAlquiler;
     @Column
     private LocalDate fechaDevolucion;
-    @JsonIgnore
+
     @ManyToOne
     @JoinColumn(name = "UsuarioID", referencedColumnName = "id")
     private Usuario usuarioId;
+
+
+
+    public Reserva(Long id) {
+        this.id = id;
+    }
 }

@@ -66,6 +66,9 @@ public class Usuario implements UserDetails {
     }
 
 
+    public Usuario(Long id) {
+        this.id = id;
+    }
 
 
 

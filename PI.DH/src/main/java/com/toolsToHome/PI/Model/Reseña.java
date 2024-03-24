@@ -28,4 +28,14 @@ private String comentario;
 @Column
 private LocalDate fecha;
 
+ public Reseña(Reserva reserva_id, Long raiting, String comentario, LocalDate fecha) {
+  this.reserva_id = reserva_id;
+  this.raiting = raiting;
+  this.comentario = comentario;
+  this.fecha = fecha;
+ }
+
+ public Reseña(Long id) {
+  this.id = id;
+ }
 }
