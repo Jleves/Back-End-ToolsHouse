@@ -3,19 +3,22 @@ package com.toolsToHome.PI.DTO;
 import com.toolsToHome.PI.Model.Usuario;
 import com.toolsToHome.PI.Model.UsuarioRole;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@ApiModel(description = "Información de un usuario")
 public class UserDTO {
+    @ApiModelProperty(notes = "ID único del usuario")
     private Long id;
     private String nombre;
     private String apellido;
+    @ApiModelProperty(notes = "Correo electrónico del usuario")
     private String username;
     private UsuarioRole role;
 

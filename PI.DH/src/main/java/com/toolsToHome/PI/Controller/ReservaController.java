@@ -3,6 +3,7 @@ package com.toolsToHome.PI.Controller;
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Reserva;
 import com.toolsToHome.PI.Service.ReservaService;
+import io.swagger.annotations.Api;
 import org.apache.catalina.LifecycleState;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+@Api
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/reservas")
