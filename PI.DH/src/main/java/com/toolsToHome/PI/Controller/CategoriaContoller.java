@@ -2,17 +2,13 @@ package com.toolsToHome.PI.Controller;
 
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Categoria;
-import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Service.CategoriaService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import org.apache.log4j.Logger;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-@Api(tags = "Categoria")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/categorias")
@@ -26,13 +22,11 @@ public class CategoriaContoller {
         this.categoriaService = categoriaService;
     }
 
-    @ApiOperation(value = "Listar todas las categorías")
     @GetMapping
     public ResponseEntity<List<Categoria>>listarCategorias(){
         return ResponseEntity.ok(categoriaService.listarTodos());
     }
 
-    @ApiOperation(value = "Obtener categoría por ID")
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Categoria>> buscarCategoria(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Categoria> buscarcategoria = categoriaService.buscarPorId(id);
@@ -43,14 +37,12 @@ public class CategoriaContoller {
         }
     }
 
-    @ApiOperation(value = "Crear una categoría")
     @PostMapping("/create")
     public ResponseEntity<Categoria>guardarCategoria(@RequestBody Categoria categoria){
         Categoria newCategoria = categoriaService.guardarCategoria(categoria);
         return ResponseEntity.ok(categoria);
     }
 
-    @ApiOperation(value = "Eliminar una categoría por ID")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarCategoria(@PathVariable Long id) throws ResourceNotFoundException{
         Optional<Categoria>buscarCategoria = categoriaService.buscarPorId(id);
@@ -62,7 +54,6 @@ public class CategoriaContoller {
         }
     }
 
-    @ApiOperation(value = "Actualizar una categoría")
     @PutMapping("/update")
     public ResponseEntity<String>actualizarCategoria(@RequestBody Categoria categoria) throws ResourceNotFoundException{
         Optional<Categoria> categoriaRequest = categoriaService.buscarPorId(categoria.getId());

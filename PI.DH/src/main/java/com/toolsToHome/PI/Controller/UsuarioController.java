@@ -4,10 +4,7 @@ import com.toolsToHome.PI.DTO.UserDTO;
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Model.Usuario;
-import com.toolsToHome.PI.Model.UsuarioRole;
 import com.toolsToHome.PI.Service.UsuarioService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-@Api(tags = "Usuario")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/users")
@@ -32,14 +28,12 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
-    @ApiOperation(value = "Listar todos los usuarios")
     @GetMapping
     public ResponseEntity<List<Usuario>> listarUsuarios(){
         logger.info("Get Usuario");
         return ResponseEntity.ok(usuarioService.listarTodos());
     }
 
-    @ApiOperation(value = "Obtener los datos de un perfil de usuario autenticado")
     @GetMapping("/profile")
     public ResponseEntity<UserDTO> getUserProfile(@AuthenticationPrincipal UserDetails userDetails) {
         String username = userDetails.getUsername();
@@ -51,7 +45,6 @@ public class UsuarioController {
         }
     }
 
-    @ApiOperation(value = "Eliminar un usuario con su ID")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarUsuario(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<UserDTO> buscarUsuario = usuarioService.buscarPorId(id);
@@ -63,7 +56,6 @@ public class UsuarioController {
         }
     }
 
-    @ApiOperation(value = "Actualizar el rol de un usuario")
     @PutMapping("/update/{id}/usuarioRole")
     public ResponseEntity<?> updateRole(@PathVariable Long id,@RequestBody Usuario usuarioRole) {
         try {
@@ -77,7 +69,6 @@ public class UsuarioController {
     }
 
     /* FAVS */
-    @ApiOperation(value = "Agregar una herramienta por medio de su ID a un usuario autenticado")
     @PostMapping("/{id}/favs/{herramientaId}")
     public ResponseEntity<String> agregarHerramientaFavorita(@PathVariable Long id, @PathVariable Long herramientaId) {
         try {
@@ -103,7 +94,6 @@ public class UsuarioController {
 
     }
 
-    @ApiOperation(value = "Eliminar una herramienta de favoritos por medio de su ID, de un usuario autenticado")
     @DeleteMapping("/{id}/favs/{herramientaId}")
     public ResponseEntity<String> eliminarHerramientaFavorita(@PathVariable Long id, @PathVariable Long herramientaId)
     {
@@ -130,7 +120,6 @@ public class UsuarioController {
         }
     }
 
-    @ApiOperation(value = "Listar las herramientas favoritas de un usuario autenticado")
     @GetMapping("/{id}/favs")
     public ResponseEntity<List<Herramienta>> listarHerramientasFavoritas(@PathVariable Long id) {
         try {

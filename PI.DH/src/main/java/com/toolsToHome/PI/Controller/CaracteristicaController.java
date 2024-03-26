@@ -2,11 +2,8 @@ package com.toolsToHome.PI.Controller;
 
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Caracteristicas;
-import com.toolsToHome.PI.Model.Categoria;
 import com.toolsToHome.PI.Service.CaracteristicaService;
-import com.toolsToHome.PI.Service.CategoriaService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-@Api(tags = "Caracteristica")
+@Tag(name = "caracteristicas", description = "Endpoint de características")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/caracteristicas")
@@ -28,13 +25,11 @@ public class CaracteristicaController {
         this.caracteristicaService = categoriaService;
     }
 
-    @ApiOperation(value = "Listar todas las características")
     @GetMapping
     public ResponseEntity<List<Caracteristicas>>listarHerramientas(){
         return ResponseEntity.ok(caracteristicaService.listarTodos());
     }
 
-    @ApiOperation(value = "Obtener característica por ID")
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Caracteristicas>> buscarCaracteristicas(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Caracteristicas> buscarCaracteristicas = caracteristicaService.buscarPorId(id);
@@ -45,7 +40,6 @@ public class CaracteristicaController {
         }
     }
 
-    @ApiOperation(value = "Crear una característica")
     @PostMapping("/create")
     public ResponseEntity<Caracteristicas>guardarCaracteristicas(@RequestBody Caracteristicas caracteristicas)throws ResourceNotFoundException{
         Optional<Caracteristicas>buscarCaracteristicas= caracteristicaService.buscarPorCaracteristicas(caracteristicas.getTitulo());
@@ -58,7 +52,6 @@ public class CaracteristicaController {
         }else throw new ResourceNotFoundException("La Caracteristica ya existe");
     }
 
-    @ApiOperation(value = "Eliminar una característica")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarCaracteristicas(@PathVariable Long id) throws ResourceNotFoundException{
         Optional<Caracteristicas>buscarCategoria = caracteristicaService.buscarPorId(id);
@@ -70,7 +63,6 @@ public class CaracteristicaController {
         }
     }
 
-    @ApiOperation(value = "Actualizar una característica")
     @PutMapping("/update")
     public ResponseEntity<String>actualizarCaracteristicas(@RequestBody Caracteristicas caracteristicas) throws ResourceNotFoundException{
         Optional<Caracteristicas> categoriaRequest = caracteristicaService.buscarPorId(caracteristicas.getId());

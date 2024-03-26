@@ -64,7 +64,10 @@ public class WebConfig  {
                         .cors(AbstractHttpConfigurer::disable)
                         .authorizeHttpRequests( authRequest ->
                                 authRequest
-                                        .requestMatchers("/contexto/**", "/contexto/swagger-ui/**").permitAll()
+                                        .requestMatchers("/swagger-ui/**",
+                                                "/swagger-resources/*",
+                                                "/v3/api-docs/**").permitAll()
+                                        .requestMatchers("/contexto/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                                         .requestMatchers("/auth/**", "/herramientas/**", "/admin/**", "/users/**", "/categorias/**", "/caracteristicas/**", "/reservas/**").permitAll()
                                         .anyRequest().authenticated()
                         )
