@@ -6,6 +6,7 @@ import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Model.Usuario;
 import com.toolsToHome.PI.Model.UsuarioRole;
 import com.toolsToHome.PI.Service.UsuarioService;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/user")
@@ -79,6 +81,7 @@ public class UsuarioController {
 
 
     /* FAVS */
+
     @PostMapping("/{id}/favs/{herramientaId}")
     public ResponseEntity<String> agregarHerramientaFavorita(@PathVariable Long id, @PathVariable Long herramientaId) {
         try {

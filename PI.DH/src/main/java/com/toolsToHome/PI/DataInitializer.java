@@ -25,6 +25,8 @@ public class DataInitializer implements CommandLineRunner {
         private final PasswordEncoder passwordEncoder;
         private final ReservaRepository reservaRepository;
         private final ReseñaRepository reseñaRepository;
+
+        //Repositorys
         @Autowired
         public DataInitializer(HerramientaRepository herramientaRepository, CategoriaRepository categoriaRepository, UsuarioRepository usuarioRepository, CaracteristicaRepository caracteristicaRepository, PasswordEncoder passwordEncoder, ReservaRepository reservaRepository, ReseñaRepository reseñaRepository) {
                 this.herramientaRepository = herramientaRepository;
@@ -41,7 +43,7 @@ public class DataInitializer implements CommandLineRunner {
 
 
 
-
+                //Creacion De superAdmin
 
                 Usuario superAdmin = Usuario.builder()
                         .email("superadmin@toolshouse.com")
@@ -55,6 +57,7 @@ public class DataInitializer implements CommandLineRunner {
                 usuarioRepository.save(superAdmin);
 
 
+                //Caracteristicas (5)
 
 
                 Caracteristicas caracteristica1 = new Caracteristicas();
@@ -109,7 +112,7 @@ public class DataInitializer implements CommandLineRunner {
 
 
                 herramienta1.setDescripcion("La llave inglesa, tu solución todo en uno para ajustes precisos.");
-
+                //Imagenes Primera Herramienta
                 Imagen imagenH1a = new Imagen();
                 imagenH1a.setUrl("https://www.shutterstock.com/image-photo/adjustable-spanner-isolated-on-white-260nw-1794553030.jpg");
                 imagenH1a.setHerramienta(herramienta1);
@@ -157,7 +160,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta2.setNombre("Pala");
 
                 herramienta2.setDescripcion("La pala, tu compañera confiable para cualquier trabajo de jardinería y construcción.");
-
+                //Imagenes Segunda Herramienta
                 Imagen imagenH2a = new Imagen();
                 imagenH2a.setUrl("https://www.incom.mx/img_catalog/SURTEK_130600-PALA_REDONDA_DE_30-F1.webp");
                 imagenH2a.setHerramienta(herramienta2);
@@ -200,7 +203,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta3.setNombre("Broca");
 
                 herramienta3.setDescripcion("La broca, tu herramienta imprescindible para perforar agujeros precisos en una variedad de materiales.");
-
+                //Imagenes Tercera Herramienta
                 Imagen imagenH3a = new Imagen();
                 imagenH3a.setUrl("https://img.lojadomecanico.com.br/IMAGENS/37/778/113406/Broca-Aco-Rapido-para-Metal-25mm-irwin-18349281.JPG");
                 imagenH3a.setHerramienta(herramienta3);
@@ -240,7 +243,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta4.setNombre("Cinta métrica");
 
                 herramienta4.setDescripcion("La cinta métrica, tu aliada indispensable para mediciones precisas en cualquier proyecto.");
-
+                //Imagenes Cuarta Herramienta
                 Imagen imagenH4a = new Imagen();
                 imagenH4a.setUrl("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stanley_dynagrip_5_m_%C3%97_19_mm_33-684_01.jpg/800px-Stanley_dynagrip_5_m_%C3%97_19_mm_33-684_01.jpg");
                 imagenH4a.setHerramienta(herramienta4);
@@ -281,7 +284,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta5.setNombre("Lijadora");
 
                 herramienta5.setDescripcion("La lijadora, tu herramienta esencial para obtener acabados suaves y profesionales en tus proyectos de carpintería y bricolaje.");
-
+                //Imagenes Quinta Herramienta
                 Imagen imagenH5a = new Imagen();
                 imagenH5a.setUrl("https://http2.mlstatic.com/D_NQ_NP_944268-MLU73207877259_122023-O.webp");
                 imagenH5a.setHerramienta(herramienta5);
@@ -321,7 +324,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta6.setNombre("Nivel");
 
                 herramienta6.setDescripcion("El nivel, tu socio confiable para asegurar la precisión en cualquier proyecto de construcción y decoración.");
-
+                //Imagenes Tercera Herramienta
                 Imagen imagenH6a = new Imagen();
                 imagenH6a.setUrl("https://upload.wikimedia.org/wikipedia/commons/4/41/Water_level_1.jpg");
                 imagenH6a.setHerramienta(herramienta6);
@@ -360,7 +363,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta7.setNombre("Taladro");
 
                 herramienta7.setDescripcion("El taladro, el motor de tus proyectos más ambiciosos. Con su potencia y precisión, el taladro perfora superficies con facilidad.");
-
+                //Imagenes Septima Herramienta
                 Imagen imagenH7a = new Imagen();
                 imagenH7a.setUrl("https://agrostore.co/1310-large_default/taladro-inalambrico-a-bateria-ducati-dud1012ls.jpg");
                 imagenH7a.setHerramienta(herramienta7);
@@ -400,7 +403,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta8.setNombre("Amoladora");
 
                 herramienta8.setDescripcion("La amoladora, la herramienta imprescindible para dar forma y pulir tus creaciones con facilidad.");
-
+                //Imagenes Octava Herramienta
                 Imagen imagenH8a = new Imagen();
                 imagenH8a.setUrl("https://i0.wp.com/www.litoralstore.com.ar/wp-content/uploads/2022/05/G720-amoladora-4.jpg?fit=1200%2C801&ssl=1");
                 imagenH8a.setHerramienta(herramienta8);
@@ -441,7 +444,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta9.setNombre("Destornillador");
 
                 herramienta9.setDescripcion("El destornillador, el héroe discreto de cualquier caja de herramientas.");
-
+                //Imagenes Novena Herramienta
                 Imagen imagenH9a = new Imagen();
                 imagenH9a.setUrl("https://http2.mlstatic.com/D_NQ_NP_836970-MLA40777106135_022020-O.webp");
                 imagenH9a.setHerramienta(herramienta9);
@@ -480,7 +483,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta10.setNombre("Martillo");
 
                 herramienta10.setDescripcion("El martillo, un aliado esencial en todo proyecto de construcción y bricolaje.");
-
+                //Imagenes Decima Herramienta
                 Imagen imagenH10a = new Imagen();
                 imagenH10a.setUrl("https://tecnitool.es/images/2022/09/tipos-de-martillos.jpg");
                 imagenH10a.setHerramienta(herramienta10);

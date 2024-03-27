@@ -4,6 +4,7 @@ import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Reseña;
 import com.toolsToHome.PI.Service.ReservaService;
 import com.toolsToHome.PI.Service.ReseñaService;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +38,8 @@ public class ReseñaController {
             return ResponseEntity.ok(buscarReseña);
         }else throw new ResourceNotFoundException("No se encontro reserva con id: " + id);
     }
+
+
     @PostMapping
     public ResponseEntity<Reseña>guardarReseña(@RequestBody Reseña reseña)throws ResourceNotFoundException{
 
@@ -46,6 +49,7 @@ public class ReseñaController {
             return ResponseEntity.ok(reseñaGuardada);
 
     }
+
     @DeleteMapping("{id}")
     public ResponseEntity<String> eliminarReseña(@PathVariable Long id) throws ResourceNotFoundException{
         Optional<Reseña>buscarReseña= reseñaService.BuscarPorId(id);
