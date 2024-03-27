@@ -1,5 +1,6 @@
 package com.toolsToHome.PI.Model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
@@ -18,9 +19,9 @@ public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "HerramientaId", referencedColumnName= "id")
+    @JsonBackReference
+    @ManyToOne
+    @JoinColumn(name = "HerramientaId")
     private Herramienta herramientaId;
 
 
@@ -37,5 +38,11 @@ public class Reserva {
 
     public Reserva(Long id) {
         this.id = id;
+    }
+
+    public Reserva(LocalDate fechaAlquiler, LocalDate fechaDevolucion, Usuario usuarioId) {
+        this.fechaAlquiler = fechaAlquiler;
+        this.fechaDevolucion = fechaDevolucion;
+        this.usuarioId = usuarioId;
     }
 }

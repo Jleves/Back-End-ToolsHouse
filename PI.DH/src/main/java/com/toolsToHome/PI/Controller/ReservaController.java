@@ -32,9 +32,10 @@ public class ReservaController {
     @PostMapping
     public ResponseEntity<Reserva> guardarReserva(@RequestBody Reserva reserva)throws ResourceNotFoundException{
 
-            logger.info("Procede informacion a Service Reserva");
+
             Reserva guardarReserva = reservaService.guardarReserva(reserva);
             guardarReserva.setHerramientaId(reserva.getHerramientaId());
+        logger.info("Usuario Id : "+reserva.getUsuarioId()+"  Herramienta:  "  + reserva.getHerramientaId()+"  Herramienta Id "+"Procede informacion a Service Reserva");
             return ResponseEntity.ok(guardarReserva);
 
     }

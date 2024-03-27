@@ -2,10 +2,7 @@ package com.toolsToHome.PI.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -61,6 +58,8 @@ public class Usuario implements UserDetails {
         this.herramientasFavoritas = herramientasFavoritas;
     }
 
+
+
     public void setUsuarioRole(UsuarioRole usuarioRole) {
         this.usuarioRole = usuarioRole;
     }
@@ -70,7 +69,22 @@ public class Usuario implements UserDetails {
         this.id = id;
     }
 
+    public Usuario(Long id, String nombre, String apellido, String password, String email, String ciudad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.password = password;
+        this.email = email;
+        this.ciudad = ciudad;
+    }
 
+    public Long getId() {
+        return id;
+    }
+
+    public UsuarioRole getUsuarioRole() {
+        return usuarioRole;
+    }
 
 
     @Override
@@ -82,13 +96,7 @@ public class Usuario implements UserDetails {
 
 
 
-    public Long getId() {
-        return id;
-    }
 
-    public UsuarioRole getUsuarioRole() {
-        return usuarioRole;
-    }
 
     @Override
     public String getPassword() {

@@ -25,6 +25,7 @@ public class UserDTO {
         userDTO.setId(user.getId());
         userDTO.setNombre(user.getNombre());
         userDTO.setApellido(user.getApellido());
+        userDTO.setUsername(user.getUsername());
         userDTO.setRole(user.getUsuarioRole());
         return userDTO;
     }

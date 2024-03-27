@@ -1,6 +1,7 @@
 package com.toolsToHome.PI.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,7 +14,10 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @Table(name = "Herramientas")
+
 public class Herramienta {
 
     @Id
@@ -58,30 +62,12 @@ public class Herramienta {
     @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "herramientaId",cascade = CascadeType.MERGE)
+    @JsonManagedReference
+    @OneToMany(mappedBy = "herramientaId", fetch = FetchType.LAZY)
     private Set<Reserva> reserva = new HashSet<>();
 
     @OneToMany(mappedBy = "herramienta_idReseña",cascade = CascadeType.ALL)
     private Set<Reseña>reseñas=new HashSet<>();
-
-    @Column
-    private Double promedioRaiting;
-
-
-
-
-    public Double setPromedioRaiting() {
-        if (reseñas.isEmpty()) {
-            return null; // Retorna null si no hay reseñas
-        }
-
-        double sumaRatings = 0;
-        for (Reseña reseña : reseñas) {
-            sumaRatings += reseña.getRaiting();
-        }
-        return this.promedioRaiting=  sumaRatings / reseñas.size();
-    }
 
 
 
