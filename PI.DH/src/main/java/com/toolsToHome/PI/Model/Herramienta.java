@@ -59,7 +59,7 @@ public class Herramienta {
     private List<Caracteristicas> caracteristicas = new ArrayList<>();
 
 
-
+    @JsonManagedReference
     @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();
 
