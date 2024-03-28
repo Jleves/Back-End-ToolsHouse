@@ -35,7 +35,7 @@ public class DataInitializer implements CommandLineRunner {
                 this.caracteristicaRepository = caracteristicaRepository;
                 this.passwordEncoder = passwordEncoder;
                 this.reservaRepository = reservaRepository;
-            this.reseñaRepository = reseñaRepository;
+                this.reseñaRepository = reseñaRepository;
         }
 
         @Override
@@ -111,10 +111,11 @@ public class DataInitializer implements CommandLineRunner {
 
 
 
-                herramienta1.setDescripcion("La llave inglesa, tu solución todo en uno para ajustes precisos.");
+                herramienta1.setDescripcion("\n" +
+                        "¡Presentamos la Llave Ajustable ProGrip, tu compañera confiable para enfrentar una amplia gama de tareas mecánicas con facilidad! Diseñada para durabilidad y precisión, esta versátil llave es un complemento indispensable para cualquier caja de herramientas.");
                 //Imagenes Primera Herramienta
                 Imagen imagenH1a = new Imagen();
-                imagenH1a.setUrl("https://www.shutterstock.com/image-photo/adjustable-spanner-isolated-on-white-260nw-1794553030.jpg");
+                imagenH1a.setUrl("https://http2.mlstatic.com/D_NQ_NP_603946-MLA31563822315_072019-O.webp");
                 imagenH1a.setHerramienta(herramienta1);
                 Imagen imagenH1b = new Imagen();
                 imagenH1b.setUrl("https://media.adeo.com/marketplace/MKP/85294392/01113b4aa9b94eeb4ecbd15c8625e14b.jpeg?width=3000&height=3000&format=jpg&quality=80&fit=bounds");
@@ -159,13 +160,14 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta2.setDisponibilidad(true);
                 herramienta2.setNombre("Pala");
 
-                herramienta2.setDescripcion("La pala, tu compañera confiable para cualquier trabajo de jardinería y construcción.");
+                herramienta2.setDescripcion("\n" +
+                        "¡Descubre la Pala de Jardinería ProDig, tu herramienta indispensable para trabajar la tierra con eficacia y comodidad! Esta pala robusta y confiable está diseñada para enfrentar una variedad de tareas de jardinería y paisajismo con facilidad.");
                 //Imagenes Segunda Herramienta
                 Imagen imagenH2a = new Imagen();
-                imagenH2a.setUrl("https://www.incom.mx/img_catalog/SURTEK_130600-PALA_REDONDA_DE_30-F1.webp");
+                imagenH2a.setUrl("https://http2.mlstatic.com/D_NQ_NP_785864-MLA31225252482_062019-O.webp");
                 imagenH2a.setHerramienta(herramienta2);
                 Imagen imagenH2b = new Imagen();
-                imagenH2b.setUrl("https://www.doitcenter.com.pa/cdn/shop/products/31211321.jpg?v=1703190981");
+                imagenH2b.setUrl("https://http2.mlstatic.com/D_NQ_NP_773441-MLA42754261815_072020-O.webp");
                 imagenH2b.setHerramienta(herramienta2);
                 Imagen imagenH2c = new Imagen();
                 imagenH2c.setUrl("https://promart.vteximg.com.br/arquivos/ids/637523-1000-1000/112646.jpg?v=637438522285000000");
@@ -202,7 +204,8 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta3.setDisponibilidad(true);
                 herramienta3.setNombre("Broca");
 
-                herramienta3.setDescripcion("La broca, tu herramienta imprescindible para perforar agujeros precisos en una variedad de materiales.");
+                herramienta3.setDescripcion("\n" +
+                        "¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable.");
                 //Imagenes Tercera Herramienta
                 Imagen imagenH3a = new Imagen();
                 imagenH3a.setUrl("https://img.lojadomecanico.com.br/IMAGENS/37/778/113406/Broca-Aco-Rapido-para-Metal-25mm-irwin-18349281.JPG");
@@ -242,7 +245,8 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta4.setDisponibilidad(true);
                 herramienta4.setNombre("Cinta métrica");
 
-                herramienta4.setDescripcion("La cinta métrica, tu aliada indispensable para mediciones precisas en cualquier proyecto.");
+                herramienta4.setDescripcion("\n" +
+                        "¡Presentamos la Cinta Métrica ProMeasure, tu herramienta confiable para mediciones precisas en cualquier proyecto! Diseñada para durabilidad y precisión, esta cinta métrica versátil es una adición esencial a cualquier caja de herramientas.");
                 //Imagenes Cuarta Herramienta
                 Imagen imagenH4a = new Imagen();
                 imagenH4a.setUrl("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Stanley_dynagrip_5_m_%C3%97_19_mm_33-684_01.jpg/800px-Stanley_dynagrip_5_m_%C3%97_19_mm_33-684_01.jpg");
@@ -283,7 +287,8 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta5.setDisponibilidad(true);
                 herramienta5.setNombre("Lijadora");
 
-                herramienta5.setDescripcion("La lijadora, tu herramienta esencial para obtener acabados suaves y profesionales en tus proyectos de carpintería y bricolaje.");
+                herramienta5.setDescripcion("\n" +
+                        "¡Descubre la Lijadora Orbital ProSander, tu aliada para lograr superficies lisas y pulidas en tus proyectos de carpintería y bricolaje! Esta potente herramienta combina rendimiento, comodidad y versatilidad para satisfacer las necesidades de los profesionales y entusiastas por igual.");
                 //Imagenes Quinta Herramienta
                 Imagen imagenH5a = new Imagen();
                 imagenH5a.setUrl("https://http2.mlstatic.com/D_NQ_NP_944268-MLU73207877259_122023-O.webp");
@@ -323,7 +328,8 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta6.setDisponibilidad(true);
                 herramienta6.setNombre("Nivel");
 
-                herramienta6.setDescripcion("El nivel, tu socio confiable para asegurar la precisión en cualquier proyecto de construcción y decoración.");
+                herramienta6.setDescripcion("\n" +
+                        "¡Presentamos el Nivelador de Obra ProLine, la herramienta esencial para garantizar la precisión en tus proyectos de construcción! Diseñado para proporcionar mediciones exactas y una nivelación perfecta, este nivelador es la opción ideal para profesionales de la construcción y aficionados por igual.");
                 //Imagenes Tercera Herramienta
                 Imagen imagenH6a = new Imagen();
                 imagenH6a.setUrl("https://upload.wikimedia.org/wikipedia/commons/4/41/Water_level_1.jpg");
@@ -362,7 +368,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta7.setDisponibilidad(true);
                 herramienta7.setNombre("Taladro");
 
-                herramienta7.setDescripcion("El taladro, el motor de tus proyectos más ambiciosos. Con su potencia y precisión, el taladro perfora superficies con facilidad.");
+                herramienta7.setDescripcion("\n" + "¡Descubre el Taladro Eléctrico ProDrill, tu compañero confiable para todo tipo de perforaciones! Este potente taladro combina rendimiento, durabilidad y versatilidad para satisfacer las demandas de los proyectos más exigentes.");
                 //Imagenes Septima Herramienta
                 Imagen imagenH7a = new Imagen();
                 imagenH7a.setUrl("https://agrostore.co/1310-large_default/taladro-inalambrico-a-bateria-ducati-dud1012ls.jpg");
@@ -402,22 +408,22 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta8.setDisponibilidad(true);
                 herramienta8.setNombre("Amoladora");
 
-                herramienta8.setDescripcion("La amoladora, la herramienta imprescindible para dar forma y pulir tus creaciones con facilidad.");
+                herramienta8.setDescripcion("La amoladora, la herramienta imprescindible para dar forma y pulir tus creaciones con facilidad. Excelente estado, sin uso. La amoladora, la herramienta imprescindible para dar forma y pulir tus creaciones con facilidad.");
                 //Imagenes Octava Herramienta
                 Imagen imagenH8a = new Imagen();
-                imagenH8a.setUrl("https://i0.wp.com/www.litoralstore.com.ar/wp-content/uploads/2022/05/G720-amoladora-4.jpg?fit=1200%2C801&ssl=1");
+                imagenH8a.setUrl("https://i0.wp.com/www.litoralstore.com.ar/wp-content/uploads/2022/05/G720-amoladora-4.jpg");
                 imagenH8a.setHerramienta(herramienta8);
                 Imagen imagenH8b = new Imagen();
-                imagenH8b.setUrl("https://masonlineprod.vtexassets.com/arquivos/ids/305910/Amoladora-Black-Decker-12-Discos-Maletin-G720k12-Ar-1-42972.jpg?v=638350005718170000");
+                imagenH8b.setUrl("https://masonlineprod.vtexassets.com/arquivos/ids/305910/Amoladora-Black-Decker-12-Discos-Maletin-G720k12-Ar-1-42972.jpg");
                 imagenH8b.setHerramienta(herramienta8);
                 Imagen imagenH8c = new Imagen();
                 imagenH8c.setUrl("https://www.centrogar.com.ar/6454-medium_default/amoladora-bd-g720-41-2-379.jpg");
                 imagenH8c.setHerramienta(herramienta8);
                 Imagen imagenH8d = new Imagen();
-                imagenH8d.setUrl("https://masonlineprod.vtexassets.com/arquivos/ids/305906/Amoladora-Black-Decker-12-Discos-Maletin-G720k12-Ar-3-42972.jpg?v=638350005703070000");
+                imagenH8d.setUrl("https://masonlineprod.vtexassets.com/arquivos/ids/305906/Amoladora-Black-Decker-12-Discos-Maletin-G720k12-Ar-3-42972.jpg");
                 imagenH8d.setHerramienta(herramienta8);
                 Imagen imagenH8e = new Imagen();
-                imagenH8e.setUrl("https://ar.blackanddecker.global/LAG/PRODUCT/IMAGES/HIRES/G650K5-AR/G650K5_1.jpg?resize=530x530");
+                imagenH8e.setUrl("https://ar.blackanddecker.global/LAG/PRODUCT/IMAGES/HIRES/G650K5-AR/G650K5_1.jpg");
                 imagenH8e.setHerramienta(herramienta8);
 
                 herramienta8.getImagenes().add(imagenH8a);
@@ -443,7 +449,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta9.setDisponibilidad(true);
                 herramienta9.setNombre("Destornillador");
 
-                herramienta9.setDescripcion("El destornillador, el héroe discreto de cualquier caja de herramientas.");
+                herramienta9.setDescripcion("¡Descubre el Destornillador de Precisión ProTech, tu herramienta indispensable para trabajos delicados! Este destornillador de alta calidad está diseñado para brindar precisión y durabilidad en cada uso. Con una punta magnética de precisión, este destornillador facilita la manipulación de tornillos pequeños en dispositivos electrónicos, gafas, juguetes y más.");
                 //Imagenes Novena Herramienta
                 Imagen imagenH9a = new Imagen();
                 imagenH9a.setUrl("https://http2.mlstatic.com/D_NQ_NP_836970-MLA40777106135_022020-O.webp");
@@ -458,7 +464,7 @@ public class DataInitializer implements CommandLineRunner {
                 imagenH9d.setUrl("https://http2.mlstatic.com/D_NQ_NP_784932-MLA47149212072_082021-O.webp");
                 imagenH9d.setHerramienta(herramienta9);
                 Imagen imagenH9e = new Imagen();
-                imagenH9e.setUrl("https://http2.mlstatic.com/D_NQ_NP_982719-MLA28984973985_122018-O.webp");
+                imagenH9e.setUrl("https://m.media-amazon.com/images/I/61jshsidJLL._AC_UF894,1000_QL80_.jpg");
                 imagenH9e.setHerramienta(herramienta9);
 
                 herramienta9.getImagenes().add(imagenH9a);
@@ -482,19 +488,19 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta10.setDisponibilidad(true);
                 herramienta10.setNombre("Martillo");
 
-                herramienta10.setDescripcion("El martillo, un aliado esencial en todo proyecto de construcción y bricolaje.");
+                herramienta10.setDescripcion("\n" + "¡Presentamos el Martillo ProStrike, tu herramienta resistente y confiable para una variedad de tareas de construcción y bricolaje! Este martillo está diseñado para ofrecer un rendimiento excepcional y una durabilidad duradera en cualquier proyecto.");
                 //Imagenes Decima Herramienta
                 Imagen imagenH10a = new Imagen();
-                imagenH10a.setUrl("https://tecnitool.es/images/2022/09/tipos-de-martillos.jpg");
+                imagenH10a.setUrl("https://cdn.vallejosmateriales.com.ar/720/webp/2022/12/1671799364763-lg-51-274.jpg");
                 imagenH10a.setHerramienta(herramienta10);
                 Imagen imagenH10b = new Imagen();
                 imagenH10b.setUrl("https://m.media-amazon.com/images/I/81zFH45axiL.jpg");
                 imagenH10b.setHerramienta(herramienta10);
                 Imagen imagenH10c = new Imagen();
-                imagenH10c.setUrl("Poner otra URL más corta"); //Agrgegar aqui otra URL luego :,vv - Angel
+                imagenH10c.setUrl("https://http2.mlstatic.com/D_NQ_NP_960514-MLA74423546180_022024-O.webp");
                 imagenH10c.setHerramienta(herramienta10);
                 Imagen imagenH10d = new Imagen();
-                imagenH10d.setUrl("https://i0.wp.com/blog.claroshop.com/wp-content/uploads/2021/08/img_martillo-clavar-1280x720-1.jpg?resize=616%2C347&ssl=1");
+                imagenH10d.setUrl("https://http2.mlstatic.com/D_NQ_NP_996428-MLU74471169023_022024-O.webp");
                 imagenH10d.setHerramienta(herramienta10);
                 Imagen imagenH10e = new Imagen();
                 imagenH10e.setUrl("https://www.wurth.com.ar/blog/wp-content/uploads/2022/11/martillo-de-carpintero.jpg");
@@ -510,11 +516,7 @@ public class DataInitializer implements CommandLineRunner {
 
 
 
-
-
                 //Reservas
-
-
                 Reserva reserva1= new Reserva();
                 reserva1.setFechaAlquiler(LocalDate.of(2024,03,14));
                 reserva1.setFechaDevolucion(LocalDate.of(2024,03,20));
@@ -592,7 +594,6 @@ public class DataInitializer implements CommandLineRunner {
 
 
                 //Reseñas
-
                 Reseña reseña1= new Reseña();
                 reseña1.setComentario("La llave inglesa XYZ es genial. Su diseño ergonómico y ajuste rápido hacen que sea perfecta para cualquier trabajo en casa. Recomendada.");
                 reseña1.setRaiting(3L);

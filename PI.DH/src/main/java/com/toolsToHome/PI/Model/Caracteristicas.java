@@ -9,7 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 @Tag(name = "caracteristicas", description = "Endpoint de características")
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name ="Caracteristicas")

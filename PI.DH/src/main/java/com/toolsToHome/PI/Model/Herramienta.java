@@ -1,6 +1,7 @@
 package com.toolsToHome.PI.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -36,14 +37,14 @@ public class Herramienta {
     private Long precio;
 
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 1000)
     private boolean disponibilidad;
 
 
     @Column(nullable = false)
     private String nombre;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 1000)
     private String descripcion;
 
     @JsonIgnore
@@ -65,11 +66,21 @@ public class Herramienta {
     @JsonManagedReference
     @OneToMany(mappedBy = "herramientaId", fetch = FetchType.LAZY)
     private Set<Reserva> reserva = new HashSet<>();
-
-    @OneToMany(mappedBy = "herramienta_idReseña",cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("herramienta_idReseña")
+    @OneToMany(mappedBy = "herramienta_idReseña", fetch = FetchType.LAZY)
     private Set<Reseña>reseñas=new HashSet<>();
 
 
+    public Herramienta(Categoria categoria, Long stock, Long precio, String nombre, String descripcion, List<Caracteristicas> caracteristicas, List<Imagen> imagenes, Set<Reseña> reseñas) {
+        this.categoria = categoria;
+        this.stock = stock;
+        this.precio = precio;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.caracteristicas = caracteristicas;
+        this.imagenes = imagenes;
+        this.reseñas = reseñas;
+    }
 
     public Herramienta(Categoria categoria, Long stock, Long precio, String nombre, String descripcion, List<Imagen> imagenes) {
         this.categoria = categoria;
@@ -90,6 +101,7 @@ public class Herramienta {
         this.caracteristicas = caracteristicas;
         this.imagenes = imagenes;
     }
+
 
     public Herramienta(Long id) {
         this.id = id;
