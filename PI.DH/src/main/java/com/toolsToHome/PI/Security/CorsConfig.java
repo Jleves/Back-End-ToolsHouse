@@ -20,5 +20,10 @@ public class CorsConfig implements WebMvcConfigurer {
                 .allowedMethods("*")
                 .allowedHeaders("*");
 
+        registry.addMapping("http://localhost:8080/swagger-ui.html")
+                .allowedOrigins("*")
+                .allowedMethods("*")
+                .allowedHeaders("*");
+
     }
 }

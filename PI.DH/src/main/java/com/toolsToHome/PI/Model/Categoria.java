@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name ="Categoria")
@@ -23,4 +24,8 @@ public class Categoria {
     private String titulo;
     @Column
     private String icono;
+
+    public Categoria(Long id) {
+        this.id = id;
+    }
 }

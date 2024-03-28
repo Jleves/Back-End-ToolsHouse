@@ -66,9 +66,12 @@ public class WebConfig  {
                                         .disable())
                         .authorizeHttpRequests( authRequest ->
                                         authRequest
-                                                .requestMatchers("/v2/api-docs", "/swagger-ui/**", "/swagger-resources/**").permitAll()
+
+
+                                                .requestMatchers("/swagger-ui/**", "/swagger-resources/*", "/v3/api-docs/**").permitAll()
+                                                .requestMatchers( "/swagger-ui/**", "/swagger-ui.html").permitAll()
                                                 .requestMatchers("/auth/**", "/Herramientas/**", "/admin/**", "/user/**", "/Categorias/**", "/Caracteristicas/**", "/Reservas/**","Reseñas/**").permitAll()
-                                //.anyRequest().authenticated()
+                                .anyRequest().authenticated()
                         )
                         .sessionManagement(sessionManager ->
                                 sessionManager

@@ -5,6 +5,7 @@ import com.toolsToHome.PI.Model.Caracteristicas;
 import com.toolsToHome.PI.Model.Categoria;
 import com.toolsToHome.PI.Service.CaracteristicaService;
 import com.toolsToHome.PI.Service.CategoriaService;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/Caracteristicas")
@@ -25,7 +27,7 @@ public class CaracteristicaController {
         this.caracteristicaService = categoriaService;
     }
 
-    @CrossOrigin(origins = "*")
+
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Caracteristicas>> buscarCaracteristicas(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Caracteristicas> buscarCaracteristicas = caracteristicaService.buscarPorId(id);
@@ -35,7 +37,7 @@ public class CaracteristicaController {
             throw new ResourceNotFoundException("No se encontró la categoria con el ID: " + id);
         }
     }
-    @CrossOrigin(origins = "*")
+
     @GetMapping
     public ResponseEntity<List<Caracteristicas>>listarHerramientas(){
         return ResponseEntity.ok(caracteristicaService.listarTodos());

@@ -1,6 +1,8 @@
 package com.toolsToHome.PI.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,7 +15,10 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @Table(name = "Herramientas")
+
 public class Herramienta {
 
     @Id
@@ -32,34 +37,75 @@ public class Herramienta {
     private Long precio;
 
 
-
-
-
-    @Column(nullable = false)
+    @Column(nullable = false, length = 1000)
     private boolean disponibilidad;
 
 
     @Column(nullable = false)
     private String nombre;
 
+    @Column(nullable = false, length = 1000)
+    private String descripcion;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "herramientasFavoritas")
+    private List<Usuario>  usuariosFavoritos = new ArrayList<>();
 
 
     @ManyToMany
-    @JoinTable(name = "MuchosAMuchos",
+    @JoinTable(name = "Herramienta_Categoria",
             joinColumns = @JoinColumn(name = "herramienta_id"),
             inverseJoinColumns = @JoinColumn(name = "caracteristica_id"))
     private List<Caracteristicas> caracteristicas = new ArrayList<>();
 
-    @Column(nullable = false)
-    private String descripcion;
+
 
     @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();
 
-
-    @OneToMany(mappedBy = "herramienta_idReseña",cascade = CascadeType.ALL)
+    @JsonManagedReference
+    @OneToMany(mappedBy = "herramientaId", fetch = FetchType.LAZY)
+    private Set<Reserva> reserva = new HashSet<>();
+    @JsonIgnoreProperties("herramienta_idReseña")
+    @OneToMany(mappedBy = "herramienta_idReseña", fetch = FetchType.LAZY)
     private Set<Reseña>reseñas=new HashSet<>();
 
+
+    public Herramienta(Categoria categoria, Long stock, Long precio, String nombre, String descripcion, List<Caracteristicas> caracteristicas, List<Imagen> imagenes, Set<Reseña> reseñas) {
+        this.categoria = categoria;
+        this.stock = stock;
+        this.precio = precio;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.caracteristicas = caracteristicas;
+        this.imagenes = imagenes;
+        this.reseñas = reseñas;
+    }
+
+    public Herramienta(Categoria categoria, Long stock, Long precio, String nombre, String descripcion, List<Imagen> imagenes) {
+        this.categoria = categoria;
+        this.stock = stock;
+        this.precio = precio;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.imagenes = imagenes;
+    }
+
+
+    public Herramienta(Categoria categoria, Long stock, Long precio, String nombre, String descripcion, List<Caracteristicas> caracteristicas, List<Imagen> imagenes) {
+        this.categoria = categoria;
+        this.stock = stock;
+        this.precio = precio;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.caracteristicas = caracteristicas;
+        this.imagenes = imagenes;
+    }
+
+
+    public Herramienta(Long id) {
+        this.id = id;
+    }
 }
 /*@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
