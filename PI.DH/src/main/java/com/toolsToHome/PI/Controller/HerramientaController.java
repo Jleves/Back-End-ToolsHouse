@@ -83,17 +83,17 @@ public class HerramientaController {
         }
     }
 
-/*
 
-    @GetMapping ("/buscar/{nombre}/{fechaAlquiler}/{fechaDevolucion}")
-    public ResponseEntity<Optional<Herramienta>>buscarPorNombre (@PathVariable String nombre, @PathVariable LocalDate fechaAlquiler, @PathVariable LocalDate fechaDevolucion)throws ResourceNotFoundException{
+
+  @GetMapping ("/buscar/{nombre}")
+    public ResponseEntity<Optional<Herramienta>>buscarPorNombre (@PathVariable String nombre)throws ResourceNotFoundException{
         Optional<Herramienta>herramientaBuscada = herramientaService.buscarPorNombre(nombre);
-                if(herramientaBuscada.isPresent()){
-                    return ResponseEntity.ok(herramientaBuscada);
-                }else throw new ResourceNotFoundException("No se encontro la herramienta especificada con el nombre:  "+ nombre);
+        if(herramientaBuscada.isPresent()){
+            return ResponseEntity.ok(herramientaBuscada);
+        }else throw new ResourceNotFoundException("No se encontro la herramienta especificada con el nombre:  "+ nombre);
     }
 
-    */
+
 
     @GetMapping("/buscar/{nombre}/{fechaAlquiler}/{fechaDevolucion}")
     public ResponseEntity<List<Herramienta>> buscarPorNombreYDisponibilidad(

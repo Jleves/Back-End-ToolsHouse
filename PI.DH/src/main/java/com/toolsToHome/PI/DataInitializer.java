@@ -682,6 +682,600 @@ public class DataInitializer implements CommandLineRunner {
                 reseñaRepository.save(reseña10);
 
 
+                //Gonza
+
+                //LLAVE INGLESA
+                Herramienta herramienta11 = new Herramienta();
+
+                herramienta11.getCaracteristicas().add(caracteristica1);
+                herramienta11.getCaracteristicas().add(caracteristica2);
+                herramienta11.getCaracteristicas().add(caracteristica3);
+                herramienta11.getCaracteristicas().add(caracteristica4);
+                herramienta11.getCaracteristicas().add(caracteristica5);
+                herramienta11.setCategoria(categoria1);
+                herramienta11.setStock(10L);
+                herramienta11.setPrecio(50L);
+                herramienta11.setDisponibilidad(true);
+                herramienta11.setNombre("Llave inglesa");
+
+
+
+
+
+
+                herramienta11.setDescripcion("\n" +
+                        "¡Te presentamos la Llave GripMaster: tu aliada confiable para tareas mecánicas! Con durabilidad y precisión, es imprescindible en cualquier caja de herramientas. Ajusta fácilmente su tamaño para adaptarse a cualquier tarea. Perfecta para proyectos en casa, bricolaje o trabajo. ¡Confía en su firmeza para realizar el trabajo con maestría!");
+
+                Imagen imagenH11a = new Imagen();
+                imagenH11a.setUrl("https://eadn-wc02-6245241.nxedge.io/cdn/media/amasty/webp/catalog/product/cache/95aae7ce13a353d20b736b25a0c71a20/7/5/7501081011068_1_jpg.webp");
+                imagenH11a.setHerramienta(herramienta11);
+                Imagen imagenH11b = new Imagen();
+                imagenH11b.setUrl("https://http2.mlstatic.com/D_NQ_NP_972157-MLM70330901871_072023-O.webp");
+                imagenH11b.setHerramienta(herramienta11);
+                Imagen imagenH11c = new Imagen();
+                imagenH11c.setUrl("https://http2.mlstatic.com/D_NQ_NP_986699-MLM73286730249_122023-O.webp");
+                imagenH11c.setHerramienta(herramienta11);
+                Imagen imagenH11d = new Imagen();
+                imagenH11d.setUrl("https://http2.mlstatic.com/D_NQ_NP_824168-MLA49842484888_052022-O.webp");
+                imagenH11d.setHerramienta(herramienta11);
+                Imagen imagenH11e = new Imagen();
+                imagenH11e.setUrl("https://ronixtools.com/img/media/products/rh-2401/original-637604114727568645.webp");
+                imagenH11e.setHerramienta(herramienta11);
+
+                herramienta11.getImagenes().add(imagenH11a);
+                herramienta11.getImagenes().add(imagenH11b);
+                herramienta11.getImagenes().add(imagenH11c);
+                herramienta11.getImagenes().add(imagenH11d);
+                herramienta11.getImagenes().add(imagenH11e);
+
+                categoriaRepository.save(categoria1);
+                herramientaRepository.save(herramienta11);
+
+
+
+
+
+
+                //PALA
+                Herramienta herramienta12 = new Herramienta();
+                herramienta12.getCaracteristicas().add(caracteristica1);
+                herramienta12.getCaracteristicas().add(caracteristica2);
+                herramienta12.getCaracteristicas().add(caracteristica3);
+                herramienta12.getCaracteristicas().add(caracteristica4);
+                herramienta12.getCaracteristicas().add(caracteristica5);
+                herramienta12.setCategoria(categoria2);
+                herramienta12.setStock(12L);
+                herramienta12.setPrecio(50L);
+                herramienta12.setDisponibilidad(true);
+                herramienta12.setNombre("Pala");
+
+                herramienta12.setDescripcion("\n" +
+
+                        "¡Presentamos la Pala TerraGrip: tu herramienta esencial para la jardinería eficiente! Resistente y confiable, esta pala está diseñada para enfrentar una variedad de tareas de jardinería y paisajismo con facilidad.");
+
+                Imagen imagenH12a = new Imagen();
+                imagenH12a.setUrl("https://http2.mlstatic.com/D_NQ_NP_754068-MLM42764300444_072020-O.webp");
+                imagenH12a.setHerramienta(herramienta12);
+                Imagen imagenH12b = new Imagen();
+                imagenH12b.setUrl("https://http2.mlstatic.com/D_NQ_NP_758300-MLU74727299592_032024-O.webp");
+                imagenH12b.setHerramienta(herramienta12);
+                Imagen imagenH12c = new Imagen();
+                imagenH12c.setUrl("https://http2.mlstatic.com/D_NQ_NP_995499-MLU73663377343_122023-O.webp");
+                imagenH12c.setHerramienta(herramienta12);
+                Imagen imagenH12d = new Imagen();
+                imagenH12d.setUrl("https://http2.mlstatic.com/D_NQ_NP_760727-MLU74824657428_032024-O.webp");
+                imagenH12d.setHerramienta(herramienta12);
+                Imagen imagenH12e = new Imagen();
+                imagenH12e.setUrl("https://http2.mlstatic.com/D_NQ_NP_700237-MLU73681224131_122023-O.webp");
+                imagenH12e.setHerramienta(herramienta12);
+
+                herramienta12.getImagenes().add(imagenH12a);
+                herramienta12.getImagenes().add(imagenH12b);
+                herramienta12.getImagenes().add(imagenH12c);
+                herramienta12.getImagenes().add(imagenH12d);
+                herramienta12.getImagenes().add(imagenH12e);
+                categoriaRepository.save(categoria2);
+                herramientaRepository.save(herramienta12);
+
+
+                //BROCA
+                Herramienta herramienta13 = new Herramienta();
+
+                herramienta13.getCaracteristicas().add(caracteristica1);
+                herramienta13.getCaracteristicas().add(caracteristica2);
+                herramienta13.getCaracteristicas().add(caracteristica3);
+                herramienta13.getCaracteristicas().add(caracteristica4);
+                herramienta13.getCaracteristicas().add(caracteristica5);
+                herramienta13.setCategoria(categoria3);
+                herramienta13.setStock(12L);
+                herramienta13.setPrecio(50L);
+                herramienta13.setDisponibilidad(true);
+                herramienta13.setNombre("Broca");
+
+                herramienta13.setDescripcion("\n" +
+                        "¡Descubre la Broca TurboPerf, la revolucionaria herramienta que transformará tus proyectos de perforación! Diseñada con la última tecnología en mente, la Broca TurboPerf te ofrece una combinación perfecta de precisión, potencia y durabilidad. Su diseño aerodinámico y afilado garantiza perforaciones limpias y rápidas.");
+                Imagen imagenH13a = new Imagen();
+                imagenH13a.setUrl("https://http2.mlstatic.com/D_NQ_NP_732174-MLU75178804671_032024-O.webp");
+                imagenH13a.setHerramienta(herramienta13);
+                Imagen imagenH13b = new Imagen();
+                imagenH13b.setUrl("https://http2.mlstatic.com/D_NQ_NP_627310-MLU75258125940_032024-O.webp");
+                imagenH13b.setHerramienta(herramienta13);
+                Imagen imagenH13c = new Imagen();
+                imagenH13c.setUrl("https://http2.mlstatic.com/D_NQ_NP_620673-MLU75178804647_032024-O.webp");
+                imagenH13c.setHerramienta(herramienta13);
+                Imagen imagenH13d = new Imagen();
+                imagenH13d.setUrl("https://http2.mlstatic.com/D_NQ_NP_635177-MLU75358819189_032024-O.webp");
+                imagenH13d.setHerramienta(herramienta13);
+                Imagen imagenH13e = new Imagen();
+                imagenH13e.setUrl("https://http2.mlstatic.com/D_NQ_NP_897206-MLU75021602757_032024-O.webp");
+                imagenH13e.setHerramienta(herramienta13);
+
+                herramienta13.getImagenes().add(imagenH13a);
+                herramienta13.getImagenes().add(imagenH13b);
+                herramienta13.getImagenes().add(imagenH13c);
+                herramienta13.getImagenes().add(imagenH13d);
+                herramienta13.getImagenes().add(imagenH13e);
+                categoriaRepository.save(categoria3);
+                herramientaRepository.save(herramienta13);
+
+
+                //CINTA METRICA
+                Herramienta herramienta14 = new Herramienta();
+                herramienta14.setCategoria(categoria3);
+                herramienta14.getCaracteristicas().add(caracteristica1);
+                herramienta14.getCaracteristicas().add(caracteristica2);
+                herramienta14.getCaracteristicas().add(caracteristica3);
+                herramienta14.getCaracteristicas().add(caracteristica4);
+                herramienta14.getCaracteristicas().add(caracteristica5);
+                herramienta14.setStock(15L);
+                herramienta14.setPrecio(75L);
+                herramienta14.setDisponibilidad(true);
+                herramienta14.setNombre("Cinta métrica");
+
+                herramienta14.setDescripcion("\n" +
+
+                        "¡Descubre la nueva Cinta Métrica UltraMeasure, tu aliada confiable para mediciones precisas en todo tipo de proyectos! Con un diseño robusto y ergonómico, esta cinta métrica te brinda la precisión y durabilidad que necesitas en cada tarea.");
+
+                Imagen imagenH14a = new Imagen();
+                imagenH14a.setUrl("https://http2.mlstatic.com/D_NQ_NP_933510-MLU69867882484_062023-O.webp");
+                imagenH14a.setHerramienta(herramienta14);
+                Imagen imagenH14b = new Imagen();
+                imagenH14b.setUrl("https://http2.mlstatic.com/D_NQ_NP_987896-MLU72530832192_102023-O.webp");
+                imagenH14b.setHerramienta(herramienta14);
+                Imagen imagenH14c = new Imagen();
+                imagenH14c.setUrl("https://http2.mlstatic.com/D_NQ_NP_963845-MLU75157859539_032024-O.webp");
+                imagenH14c.setHerramienta(herramienta14);
+                Imagen imagenH14d = new Imagen();
+                imagenH14d.setUrl("https://http2.mlstatic.com/D_NQ_NP_687547-MLU75158144843_032024-O.webp");
+                imagenH14d.setHerramienta(herramienta14);
+                Imagen imagenH14e = new Imagen();
+                imagenH14e.setUrl("https://http2.mlstatic.com/D_NQ_NP_780465-MLU75359055097_032024-O.webp");
+                imagenH14e.setHerramienta(herramienta14);
+
+                herramienta14.getImagenes().add(imagenH14a);
+                herramienta14.getImagenes().add(imagenH14b);
+                herramienta14.getImagenes().add(imagenH14c);
+                herramienta14.getImagenes().add(imagenH14d);
+                herramienta14.getImagenes().add(imagenH14e);
+
+                herramientaRepository.save(herramienta14);
+
+
+
+                //LIJADORA
+                Herramienta herramienta15 = new Herramienta();
+                herramienta15.getCaracteristicas().add(caracteristica1);
+                herramienta15.getCaracteristicas().add(caracteristica2);
+                herramienta15.getCaracteristicas().add(caracteristica3);
+                herramienta15.getCaracteristicas().add(caracteristica4);
+                herramienta15.getCaracteristicas().add(caracteristica5);
+                herramienta15.setCategoria(categoria3);
+                herramienta15.setStock(15L);
+                herramienta15.setPrecio(75L);
+                herramienta15.setDisponibilidad(true);
+                herramienta15.setNombre("Lijadora");
+
+                herramienta15.setDescripcion("\n" +
+                        "¡Conoce la Lijadora UltraLiso, tu mejor aliada para obtener superficies suaves y pulidas en tus proyectos de carpintería y bricolaje! Esta increíble herramienta combina potencia, confort y versatilidad para brindarte resultados impecables en cada tarea");
+
+                Imagen imagenH15a = new Imagen();
+                imagenH15a.setUrl("https://http2.mlstatic.com/D_NQ_NP_992511-MLU75358480457_032024-O.webp");
+                imagenH15a.setHerramienta(herramienta15);
+                Imagen imagenH15b = new Imagen();
+                imagenH15b.setUrl("https://http2.mlstatic.com/D_NQ_NP_995234-MLU69810667546_062023-O.webp");
+                imagenH15b.setHerramienta(herramienta15);
+                Imagen imagenH15c = new Imagen();
+                imagenH15c.setUrl("https://http2.mlstatic.com/D_NQ_NP_957299-MLU72929402047_112023-O.webp");
+                imagenH15c.setHerramienta(herramienta15);
+                Imagen imagenH15d = new Imagen();
+                imagenH15d.setUrl("https://http2.mlstatic.com/D_NQ_NP_634182-MLU69810667554_062023-O.webp");
+                imagenH15d.setHerramienta(herramienta15);
+                Imagen imagenH15e = new Imagen();
+                imagenH15e.setUrl("https://http2.mlstatic.com/D_NQ_NP_781476-MLU75210326170_032024-O.webp");
+                imagenH15e.setHerramienta(herramienta15);
+
+                herramienta15.getImagenes().add(imagenH15a);
+                herramienta15.getImagenes().add(imagenH15b);
+                herramienta15.getImagenes().add(imagenH15c);
+                herramienta15.getImagenes().add(imagenH15d);
+                herramienta15.getImagenes().add(imagenH15e);
+
+                herramientaRepository.save(herramienta15);
+
+
+                //NIVEL
+                Herramienta herramienta16 = new Herramienta();
+                herramienta16.setCategoria(categoria3);
+                herramienta16.getCaracteristicas().add(caracteristica1);
+                herramienta16.getCaracteristicas().add(caracteristica2);
+                herramienta16.getCaracteristicas().add(caracteristica3);
+                herramienta16.getCaracteristicas().add(caracteristica4);
+                herramienta16.getCaracteristicas().add(caracteristica5);
+                herramienta16.setStock(15L);
+                herramienta16.setPrecio(75L);
+                herramienta16.setDisponibilidad(true);
+                herramienta16.setNombre("Nivel");
+
+                herramienta16.setDescripcion("\n" +
+                        "¡Descubre el MasterLevel, tu clave para precisión absoluta en cada construcción! Este instrumento garantiza mediciones exactas y una nivelación impecable, siendo esencial para profesionales y aficionados.");
+                //Imagenes Tercera Herramienta
+                Imagen imagenH16a = new Imagen();
+                imagenH16a.setUrl("https://http2.mlstatic.com/D_NQ_NP_841257-MLU74161176845_012024-O.webp");
+                imagenH16a.setHerramienta(herramienta16);
+                Imagen imagenH16b = new Imagen();
+                imagenH16b.setUrl("https://http2.mlstatic.com/D_NQ_NP_974482-MLU75133311637_032024-O.webp");
+                imagenH16b.setHerramienta(herramienta16);
+                Imagen imagenH16c = new Imagen();
+                imagenH16c.setUrl("https://http2.mlstatic.com/D_NQ_NP_641995-MLU75133311643_032024-O.webp");
+                imagenH16c.setHerramienta(herramienta16);
+                Imagen imagenH16d = new Imagen();
+                imagenH16d.setUrl("https://http2.mlstatic.com/D_NQ_NP_718097-MLU75027530962_032024-O.webp");
+                imagenH16d.setHerramienta(herramienta16);
+                Imagen imagenH16e = new Imagen();
+                imagenH16e.setUrl("https://http2.mlstatic.com/D_NQ_NP_788296-MLU74162101599_012024-O.webp");
+                imagenH16e.setHerramienta(herramienta16);
+
+                herramienta16.getImagenes().add(imagenH16a);
+                herramienta16.getImagenes().add(imagenH16b);
+                herramienta16.getImagenes().add(imagenH16c);
+                herramienta16.getImagenes().add(imagenH16d);
+                herramienta16.getImagenes().add(imagenH16e);
+
+                herramientaRepository.save(herramienta16);
+
+                //TALADRO
+                Herramienta herramienta17 = new Herramienta();
+                herramienta17.setCategoria(categoria3);
+                herramienta17.getCaracteristicas().add(caracteristica1);
+                herramienta17.getCaracteristicas().add(caracteristica2);
+                herramienta17.getCaracteristicas().add(caracteristica3);
+                herramienta17.getCaracteristicas().add(caracteristica4);
+                herramienta17.getCaracteristicas().add(caracteristica5);
+                herramienta17.setStock(15L);
+                herramienta17.setPrecio(75L);
+                herramienta17.setDisponibilidad(true);
+                herramienta17.setNombre("Taladro");
+
+                herramienta17.setDescripcion("\n" +
+                        "¡Conoce el PowerDrill, tu aliado confiable para perforaciones de todo tipo! Este taladro eléctrico potente te ofrece rendimiento, durabilidad y versatilidad en un paquete compacto. Desde reparaciones en casa hasta proyectos profesionales.");
+                //Imagenes Septima Herramienta
+                Imagen imagenH17a = new Imagen();
+                imagenH17a.setUrl("https://http2.mlstatic.com/D_NQ_NP_940549-MLA42693899652_072020-O.webp");
+                imagenH17a.setHerramienta(herramienta17);
+                Imagen imagenH17b = new Imagen();
+                imagenH17b.setUrl("https://http2.mlstatic.com/D_NQ_NP_851954-MLA51774981235_092022-O.webp");
+                imagenH17b.setHerramienta(herramienta17);
+                Imagen imagenH17c = new Imagen();
+                imagenH17c.setUrl("https://http2.mlstatic.com/D_NQ_NP_809296-MLA51774945177_092022-O.webp");
+                imagenH17c.setHerramienta(herramienta17);
+                Imagen imagenH17d = new Imagen();
+                imagenH17d.setUrl("https://http2.mlstatic.com/D_NQ_NP_900481-MLA51774945222_092022-O.webp");
+                imagenH17d.setHerramienta(herramienta17);
+                Imagen imagenH17e = new Imagen();
+                imagenH17e.setUrl("https://http2.mlstatic.com/D_NQ_NP_874629-MLA51774945223_092022-O.webp");
+                imagenH17e.setHerramienta(herramienta17);
+
+                herramienta17.getImagenes().add(imagenH17a);
+                herramienta17.getImagenes().add(imagenH17b);
+                herramienta17.getImagenes().add(imagenH17c);
+                herramienta17.getImagenes().add(imagenH17d);
+                herramienta17.getImagenes().add(imagenH17e);
+
+                herramientaRepository.save(herramienta17);
+
+
+                //AMOLADORA
+                Herramienta herramienta18 = new Herramienta();
+                herramienta18.setCategoria(categoria1);
+                herramienta18.getCaracteristicas().add(caracteristica1);
+                herramienta18.getCaracteristicas().add(caracteristica2);
+                herramienta18.getCaracteristicas().add(caracteristica3);
+                herramienta18.getCaracteristicas().add(caracteristica4);
+                herramienta18.getCaracteristicas().add(caracteristica5);
+                herramienta18.setStock(15L);
+                herramienta18.setPrecio(75L);
+                herramienta18.setDisponibilidad(true);
+                herramienta18.setNombre("Amoladora");
+
+                herramienta18.setDescripcion("\n" +
+                        "¡Presentamos la Máquina de Pulir PrimeShape, la clave para esculpir y darle brillo a tus creaciones con facilidad! En perfecto estado y sin uso previo, esta máquina de pulir ofrece resultados excepcionales en cada aplicación");
+                //Imagenes Octava Herramienta
+                Imagen imagenH18a = new Imagen();
+                imagenH18a.setUrl("https://http2.mlstatic.com/D_NQ_NP_634645-MLU72847339069_112023-O.webp");
+                imagenH18a.setHerramienta(herramienta18);
+                Imagen imagenH18b = new Imagen();
+                imagenH18b.setUrl("https://http2.mlstatic.com/D_NQ_NP_998608-MLU74244275555_012024-O.webp");
+                imagenH18b.setHerramienta(herramienta18);
+                Imagen imagenH18c = new Imagen();
+                imagenH18c.setUrl("https://http2.mlstatic.com/D_NQ_NP_997303-MLU72771033846_112023-O.webp");
+                imagenH18c.setHerramienta(herramienta18);
+                Imagen imagenH18d = new Imagen();
+                imagenH18d.setUrl("https://http2.mlstatic.com/D_NQ_NP_857625-MLA50333771165_062022-O.webp");
+                imagenH18d.setHerramienta(herramienta18);
+                Imagen imagenH18e = new Imagen();
+                imagenH18e.setUrl("https://http2.mlstatic.com/D_NQ_NP_745686-MLU69827894891_062023-O.webp");
+                imagenH18e.setHerramienta(herramienta18);
+
+                herramienta18.getImagenes().add(imagenH18a);
+                herramienta18.getImagenes().add(imagenH18b);
+                herramienta18.getImagenes().add(imagenH18c);
+                herramienta18.getImagenes().add(imagenH18d);
+                herramienta18.getImagenes().add(imagenH18e);
+
+                herramientaRepository.save(herramienta18);
+
+
+
+                //DESTORNILLADOR
+                Herramienta herramienta19 = new Herramienta();
+                herramienta19.getCaracteristicas().add(caracteristica1);
+                herramienta19.getCaracteristicas().add(caracteristica2);
+                herramienta19.getCaracteristicas().add(caracteristica3);
+                herramienta19.getCaracteristicas().add(caracteristica4);
+                herramienta19.getCaracteristicas().add(caracteristica5);
+                herramienta19.setCategoria(categoria1);
+                herramienta19.setStock(15L);
+                herramienta19.setPrecio(75L);
+                herramienta19.setDisponibilidad(true);
+                herramienta19.setNombre("Destornillador");
+
+                herramienta19.setDescripcion("\n" +
+                        "¡Presentamos el UltraGrip, la elección perfecta para trabajos de precisión! Este destornillador de alta calidad te ofrece la precisión y durabilidad que necesitas en cada tarea.Simplifica tus proyectos con el UltraGrip y lleva tu artesanía al siguiente nivel. ¡Hazte con el tuyo hoy mismo y descubre la diferencia!");
+                //Imagenes Novena Herramienta
+                Imagen imagenH19a = new Imagen();
+                imagenH19a.setUrl("https://http2.mlstatic.com/D_NQ_NP_799090-MLA75070872062_032024-O.webp");
+                imagenH19a.setHerramienta(herramienta19);
+                Imagen imagenH19b = new Imagen();
+                imagenH19b.setUrl("https://http2.mlstatic.com/D_NQ_NP_805072-MLA75071017260_032024-O.webp");
+                imagenH19b.setHerramienta(herramienta19);
+                Imagen imagenH19c = new Imagen();
+                imagenH19c.setUrl("https://http2.mlstatic.com/D_NQ_NP_735157-MLA75070988518_032024-O.webp");
+                imagenH19c.setHerramienta(herramienta19);
+                Imagen imagenH19d = new Imagen();
+                imagenH19d.setUrl("https://http2.mlstatic.com/D_NQ_NP_663133-MLU74181372217_012024-O.webp");
+                imagenH19d.setHerramienta(herramienta19);
+                Imagen imagenH19e = new Imagen();
+                imagenH19e.setUrl("https://http2.mlstatic.com/D_NQ_NP_928608-MLU74123413101_012024-O.webp");
+                imagenH19e.setHerramienta(herramienta19);
+
+                herramienta19.getImagenes().add(imagenH19a);
+                herramienta19.getImagenes().add(imagenH19b);
+                herramienta19.getImagenes().add(imagenH19c);
+                herramienta19.getImagenes().add(imagenH19d);
+                herramienta19.getImagenes().add(imagenH19e);
+
+                herramientaRepository.save(herramienta19);
+
+                // MARTILLO
+                Herramienta herramienta20 = new Herramienta();
+                herramienta20.getCaracteristicas().add(caracteristica1);
+                herramienta20.getCaracteristicas().add(caracteristica2);
+                herramienta20.getCaracteristicas().add(caracteristica3);
+                herramienta20.getCaracteristicas().add(caracteristica4);
+                herramienta20.getCaracteristicas().add(caracteristica5);
+                herramienta20.setCategoria(categoria3);
+                herramienta20.setStock(15L);
+                herramienta20.setPrecio(75L);
+                herramienta20.setDisponibilidad(true);
+                herramienta20.setNombre("Martillo");
+
+                herramienta20.setDescripcion("\n" + "¡Descubre el ThunderHammer, la herramienta definitiva para cualquier proyecto de construcción! Este martillo de alta calidad te ofrece potencia y durabilidad inigualables en cada golpe. Con su mango ergonómico y cabeza de acero forjado");
+                //Imagenes Decima Herramienta
+                Imagen imagenH20a = new Imagen();
+                imagenH20a.setUrl("https://http2.mlstatic.com/D_NQ_NP_772723-MLU73209854815_122023-O.webp");
+                imagenH20a.setHerramienta(herramienta20);
+                Imagen imagenH20b = new Imagen();
+                imagenH20b.setUrl("https://http2.mlstatic.com/D_NQ_NP_633564-MLU72612921101_112023-O.webp");
+                imagenH20b.setHerramienta(herramienta20);
+                Imagen imagenH20c = new Imagen();
+                imagenH20c.setUrl("https://http2.mlstatic.com/D_NQ_NP_660053-MLU70406708314_072023-O.webp");
+                imagenH20c.setHerramienta(herramienta20);
+                Imagen imagenH20d = new Imagen();
+                imagenH20d.setUrl("https://http2.mlstatic.com/D_NQ_NP_835567-MLU74089579428_012024-O.webp");
+                imagenH20d.setHerramienta(herramienta20);
+                Imagen imagenH20e = new Imagen();
+                imagenH20e.setUrl("https://http2.mlstatic.com/D_NQ_NP_812758-MLU70415548245_072023-O.webp");
+                imagenH20e.setHerramienta(herramienta20);
+
+                herramienta20.getImagenes().add(imagenH20a);
+                herramienta20.getImagenes().add(imagenH20b);
+                herramienta20.getImagenes().add(imagenH20c);
+                herramienta20.getImagenes().add(imagenH20d);
+                herramienta20.getImagenes().add(imagenH20e);
+
+                herramientaRepository.save(herramienta20);
+
+
+
+                //Reservas
+                Reserva reserva11= new Reserva();
+                reserva11.setFechaAlquiler(LocalDate.of(2024,04,18));
+                reserva11.setFechaDevolucion(LocalDate.of(2024,04,28));
+                reserva11.setUsuarioId(superAdmin);
+                reserva11.setHerramientaId(herramienta11);
+                reservaRepository.save(reserva11);
+
+                Reserva reserva12= new Reserva();
+                reserva12.setFechaAlquiler(LocalDate.of(2024,05,14));
+                reserva12.setFechaDevolucion(LocalDate.of(2024,05,18));
+                reserva12.setUsuarioId(superAdmin);
+                reserva12.setHerramientaId(herramienta11);
+                reservaRepository.save(reserva12);
+
+                Reserva reserva13 = new Reserva();
+                reserva13.setFechaAlquiler(LocalDate.of(2024, 06, 8));
+                reserva13.setFechaDevolucion(LocalDate.of(2024, 06, 18));
+                reserva13.setUsuarioId(superAdmin);
+                reserva13.setHerramientaId(herramienta12);
+                reservaRepository.save(reserva13);
+
+                Reserva reserva14 = new Reserva();
+                reserva14.setFechaAlquiler(LocalDate.of(2024, 06, 10));
+                reserva14.setFechaDevolucion(LocalDate.of(2024, 06, 20));
+                reserva14.setUsuarioId(superAdmin);
+                reserva14.setHerramientaId(herramienta13);
+                reservaRepository.save(reserva14);
+
+                Reserva reserva15 = new Reserva();
+                reserva15.setFechaAlquiler(LocalDate.of(2024, 07, 9));
+                reserva15.setFechaDevolucion(LocalDate.of(2024, 07, 19));
+                reserva15.setUsuarioId(superAdmin);
+                reserva15.setHerramientaId(herramienta14);
+                reservaRepository.save(reserva15);
+
+                Reserva reserva16 = new Reserva();
+                reserva16.setFechaAlquiler(LocalDate.of(2024, 8, 5));
+                reserva16.setFechaDevolucion(LocalDate.of(2024, 8, 15));
+                reserva16.setUsuarioId(superAdmin);
+                reserva16.setHerramientaId(herramienta15);
+                reservaRepository.save(reserva16);
+
+                Reserva reserva17 = new Reserva();
+                reserva17.setFechaAlquiler(LocalDate.of(2024, 10, 10));
+                reserva17.setFechaDevolucion(LocalDate.of(2024, 10, 20));
+                reserva17.setUsuarioId(superAdmin);
+                reserva17.setHerramientaId(herramienta16);
+                reservaRepository.save(reserva17);
+
+
+                Reserva reserva18 = new Reserva();
+                reserva18.setFechaAlquiler(LocalDate.of(2024, 10, 21));
+                reserva18.setFechaDevolucion(LocalDate.of(2024, 10, 31));
+                reserva18.setUsuarioId(superAdmin);
+                reserva18.setHerramientaId(herramienta17);
+                reservaRepository.save(reserva18);
+
+                Reserva reserva19 = new Reserva();
+                reserva19.setFechaAlquiler(LocalDate.of(2024, 11, 9));
+                reserva19.setFechaDevolucion(LocalDate.of(2024, 11, 19));
+                reserva19.setUsuarioId(superAdmin);
+                reserva19.setHerramientaId(herramienta18);
+                reservaRepository.save(reserva19);
+
+                Reserva reserva20 = new Reserva();
+                reserva20.setFechaAlquiler(LocalDate.of(2025, 01, 20));
+                reserva20.setFechaDevolucion(LocalDate.of(2025, 02, 1));
+                reserva20.setUsuarioId(superAdmin);
+                reserva20.setHerramientaId(herramienta19);
+                reservaRepository.save(reserva20);
+
+                Reserva reserva21=new Reserva();
+                reserva21.setFechaAlquiler(LocalDate.of(2024,06,28));
+                reserva21.setFechaDevolucion(LocalDate.of(2024,07,5));
+                reserva21.setUsuarioId(superAdmin);
+                reserva21.setHerramientaId(herramienta20);
+                reservaRepository.save(reserva21);
+
+
+                //Reseñas
+                Reseña reseña11= new Reseña();
+                reseña11.setComentario("La llave inglesa GripMaster es genial,su material parece ser de gran durabilidad.");
+                reseña11.setRaiting(3L);
+                reseña11.setReserva_id(reserva11);
+                reseña11.setHerramienta_idReseña(herramienta11);
+                reseña11.setFecha(LocalDate.of(2024,04,29));
+
+                Reseña reseña12= new Reseña();
+                reseña12.setComentario("¡La pala TerraGrip es insuperable, su rendimiento es impresionante.Imprescindible para cualquier proyecto de jardinería o construcción.");
+                reseña12.setRaiting(4L);
+                reseña12.setReserva_id(reserva12);
+                reseña12.setHerramienta_idReseña(herramienta12);
+                reseña12.setFecha(LocalDate.of(2024,06,20));
+
+                Reseña reseña13= new Reseña();
+                reseña13.setComentario("¡La broca TurboPerf tiene un diseño afilado y duradero, me permite perforaciones limpias y precisas en una variedad de materiales, recomendada. ");
+                reseña13.setRaiting(5L);
+                reseña13.setReserva_id(reserva13);
+                reseña13.setHerramienta_idReseña(herramienta13);
+                reseña13.setFecha(LocalDate.of(2024,06,25));
+
+                Reseña reseña14= new Reseña();
+                reseña14.setComentario("La cinta UltraMeasure es simplemente asombrosa,su longitud generosa la hace perfecta para una amplia gama de proyectos.");
+                reseña14.setRaiting(4L);
+                reseña14.setReserva_id(reserva14);
+                reseña14.setHerramienta_idReseña(herramienta14);
+                reseña14.setFecha(LocalDate.of(2024,07,22));
+
+                Reseña reseña15= new Reseña();
+                reseña15.setComentario("¡La lijadora UltraLiso tiene una potencia y diseño ergonómico perfectos, es como tener un as bajo la manga para cualquier proyecto de bricolaje. Además, ¡es super fácil de usar! ");
+                reseña15.setRaiting(5l);
+                reseña15.setReserva_id(reserva15);
+                reseña15.setHerramienta_idReseña(herramienta15);
+                reseña15.setFecha(LocalDate.of(2024,8,18));
+
+                Reseña reseña16= new Reseña();
+                reseña16.setComentario("¡El nivel MasterLevel es genial! Es como tener a tu propio asistente de nivelación. ");
+                reseña16.setRaiting(3L);
+                reseña16.setReserva_id(reserva16);
+                reseña16.setHerramienta_idReseña(herramienta16);
+                reseña16.setFecha(LocalDate.of(2024,10,30));
+
+                Reseña reseña17= new Reseña();
+                reseña17.setComentario("¡El taladro PowerDrill es tu compañero perfecto, es una bestia! ");
+                reseña17.setRaiting(5L);
+                reseña17.setReserva_id(reserva17);
+                reseña17.setHerramienta_idReseña(herramienta17);
+                reseña17.setFecha(LocalDate.of(2024,11,5));
+
+
+
+                Reseña reseña18= new Reseña();
+                reseña18.setComentario("La amoladora PrimeShape es tu mejor aliada en cualquier tarea de reparación o mejora en casa. ¡Prepárate para hacer maravillas con tus proyectos!");
+                reseña18.setRaiting(5L);
+                reseña18.setReserva_id(reserva18);
+                reseña18.setHerramienta_idReseña(herramienta18);
+                reseña18.setFecha(LocalDate.of(2024,03,03));
+
+
+                Reseña reseña19= new Reseña();
+                reseña19.setComentario("Con su diseño compacto y fácil agarre este Destornillador es genial, ¡es como tener un superpoder en la palma de tu mano! ");
+                reseña19.setRaiting(2l);
+                reseña19.setReserva_id(reserva19);
+                reseña19.setHerramienta_idReseña(herramienta19);
+                reseña19.setFecha(LocalDate.of(2025,03,1));
+
+
+                Reseña reseña20= new Reseña();
+                reseña20.setComentario("El martillo te hace sentir como un superhéroe cada vez que lo usas, Ya sea para clavar clavos o romper cosas, este martillo es tu mejor amigo en el taller ");
+                reseña20.setRaiting(3L);
+                reseña20.setReserva_id(reserva20);
+                reseña20.setHerramienta_idReseña(herramienta20);
+                reseña20.setFecha(LocalDate.of(2024,07,15));
+
+
+                reseñaRepository.save(reseña11);
+                reseñaRepository.save(reseña12);
+                reseñaRepository.save(reseña13);
+                reseñaRepository.save(reseña14);
+                reseñaRepository.save(reseña15);
+                reseñaRepository.save(reseña16);
+                reseñaRepository.save(reseña17);
+                reseñaRepository.save(reseña18);
+                reseñaRepository.save(reseña19);
+                reseñaRepository.save(reseña20);
+
+
+
 
         }
 }
