@@ -7,9 +7,11 @@ import com.toolsToHome.PI.Service.HerramientaService;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -81,15 +83,33 @@ public class HerramientaController {
         }
     }
 
+/*
 
-
-    @GetMapping ("/buscar/{nombre}")
-    public ResponseEntity<Optional<Herramienta>>buscarPorNombre (@PathVariable String nombre)throws ResourceNotFoundException{
+    @GetMapping ("/buscar/{nombre}/{fechaAlquiler}/{fechaDevolucion}")
+    public ResponseEntity<Optional<Herramienta>>buscarPorNombre (@PathVariable String nombre, @PathVariable LocalDate fechaAlquiler, @PathVariable LocalDate fechaDevolucion)throws ResourceNotFoundException{
         Optional<Herramienta>herramientaBuscada = herramientaService.buscarPorNombre(nombre);
                 if(herramientaBuscada.isPresent()){
                     return ResponseEntity.ok(herramientaBuscada);
                 }else throw new ResourceNotFoundException("No se encontro la herramienta especificada con el nombre:  "+ nombre);
     }
+
+    */
+
+    @GetMapping("/buscar/{nombre}/{fechaAlquiler}/{fechaDevolucion}")
+    public ResponseEntity<List<Herramienta>> buscarPorNombreYDisponibilidad(
+            @PathVariable String nombre,
+            @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaAlquiler,
+            @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaDevolucion) throws ResourceNotFoundException {
+
+        List<Herramienta> herramientas = herramientaService.buscarPorNombreYDisponibilidad(nombre, fechaAlquiler, fechaDevolucion);
+
+        if (!herramientas.isEmpty()) {
+            return ResponseEntity.ok(herramientas);
+        } else {
+            throw new ResourceNotFoundException("No se encontraron herramientas disponibles con el nombre: " + nombre + " para las fechas especificadas.");
+        }
+    }
+
 
 
 }
