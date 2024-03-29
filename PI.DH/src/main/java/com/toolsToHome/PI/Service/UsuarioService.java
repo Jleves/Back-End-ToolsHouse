@@ -9,6 +9,8 @@ import com.toolsToHome.PI.Model.Usuario;
 import com.toolsToHome.PI.Model.UsuarioRole;
 import com.toolsToHome.PI.Repository.HerramientaRepository;
 import com.toolsToHome.PI.Repository.UsuarioRepository;
+import com.toolsToHome.PI.email.Confirmation;
+import com.toolsToHome.PI.email.repositoryEmail.ConfirmationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -23,10 +25,12 @@ public class UsuarioService implements UserDetailsService {
 
     private UsuarioRepository usuarioRepository;
     private final HerramientaRepository herramientaRepository;
+    private final ConfirmationRepository confirmationRepository;
     @Autowired
-    public UsuarioService(UsuarioRepository usuarioRepository, HerramientaRepository herramientaRepository) {
+    public UsuarioService(UsuarioRepository usuarioRepository, HerramientaRepository herramientaRepository, ConfirmationRepository confirmationRepository) {
         this.usuarioRepository = usuarioRepository;
         this.herramientaRepository = herramientaRepository;
+        this.confirmationRepository = confirmationRepository;
     }
 
     @Override
@@ -120,7 +124,15 @@ public class UsuarioService implements UserDetailsService {
         return usuario.getHerramientasFavoritas();
     }
 
+    public Boolean verifyToken(String token) throws ResourceNotFoundException {
+        Confirmation confirmation = confirmationRepository.findByToken(token);
+        Usuario user = usuarioRepository.findByEmail(confirmation.getUser().getUsername()).orElse(null);
 
+        user.setConfirmacion(true);
+       usuarioRepository.save(user);
+        //confirmationRepository.delete(confirmation);
+        return Boolean.TRUE;
+    }
 
 
 }

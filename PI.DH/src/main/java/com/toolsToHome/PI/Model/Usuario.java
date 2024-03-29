@@ -11,6 +11,8 @@ import java.util.*;
 
 @Entity
 @Builder
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 
@@ -41,6 +43,8 @@ public class Usuario implements UserDetails {
     @OneToMany(mappedBy = "usuarioId", cascade = CascadeType.ALL)
     private Set<Reserva> reserva= new HashSet<>();
 
+    @Column
+    private boolean confirmacion;
 
 
     @ManyToMany
@@ -87,6 +91,7 @@ public class Usuario implements UserDetails {
     }
 
 
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         SimpleGrantedAuthority grantedAuthority = new SimpleGrantedAuthority(usuarioRole.name());
@@ -125,6 +130,6 @@ public class Usuario implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return this.confirmacion;
     }
 }

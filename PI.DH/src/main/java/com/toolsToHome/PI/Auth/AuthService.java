@@ -5,6 +5,9 @@ import com.toolsToHome.PI.Model.UsuarioRole;
 import com.toolsToHome.PI.Repository.UsuarioRepository;
 import com.toolsToHome.PI.Security.JwtUtil;
 import com.toolsToHome.PI.Security.PasswordEncoder;
+import com.toolsToHome.PI.email.Confirmation;
+import com.toolsToHome.PI.email.EmailServices.EmailServiceImpl;
+import com.toolsToHome.PI.email.repositoryEmail.ConfirmationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -18,6 +21,9 @@ public class AuthService {
     private final UsuarioRepository usuarioRepository;  //Para buscar el usuario
     private final JwtUtil jwtUtil;  //Para generar el token
     private final PasswordEncoder passwordEncoder; //Encriptar el TOKEN
+    private final ConfirmationRepository confirmationRepository;
+    private final EmailServiceImpl emailService;
+
 
     @Autowired
     private final AuthenticationManager authenticationManager; // Para que se autentique
@@ -38,9 +44,13 @@ public class AuthService {
                 .email(registerRequest.getEmail())
                 .ciudad(registerRequest.getCiudad())
                 .usuarioRole(UsuarioRole.USER)
+                .confirmacion(false)
                 .build();
+        Confirmation confirmation = new Confirmation(user);
 
+        emailService.sendSimpleMailMessage(user.getNombre(),user.getEmail(),confirmation.getToken());
         usuarioRepository.save(user);
+        confirmationRepository.save(confirmation);
         return AuthResponse.builder()
                 .token(jwtUtil.generateToken(user))   //Tenemos que devolver el token que se genera en jwtUtil
                 .build();
