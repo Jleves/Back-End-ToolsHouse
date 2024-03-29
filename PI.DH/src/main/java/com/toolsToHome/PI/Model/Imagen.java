@@ -18,7 +18,7 @@ public class Imagen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 3000)
     private String url;
 
     @JsonIgnore
@@ -26,10 +26,13 @@ public class Imagen {
     @JoinColumn(name = "herramienta_id", referencedColumnName= "id")
     private Herramienta herramienta;
 
+<<<<<<< HEAD
     public Imagen(Long id, String url) {
         this.id = id;
         this.url = url;
     }
+=======
+>>>>>>> 170a6db611478c52f6694a7574cfa9a45c89c966
 
     public Imagen(Long id) {
         this.id = id;

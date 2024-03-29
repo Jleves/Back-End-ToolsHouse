@@ -4,8 +4,10 @@ package com.toolsToHome.PI.Service;
 
 import com.toolsToHome.PI.DTO.UserDTO;
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
+import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Model.Usuario;
 import com.toolsToHome.PI.Model.UsuarioRole;
+import com.toolsToHome.PI.Repository.HerramientaRepository;
 import com.toolsToHome.PI.Repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,9 +22,11 @@ import java.util.Optional;
 public class UsuarioService implements UserDetailsService {
 
     private UsuarioRepository usuarioRepository;
+    private final HerramientaRepository herramientaRepository;
     @Autowired
-    public UsuarioService(UsuarioRepository usuarioRepository) {
+    public UsuarioService(UsuarioRepository usuarioRepository, HerramientaRepository herramientaRepository) {
         this.usuarioRepository = usuarioRepository;
+        this.herramientaRepository = herramientaRepository;
     }
 
     @Override
@@ -80,6 +84,43 @@ public class UsuarioService implements UserDetailsService {
         return userOptional.map(UserDTO::fromUser);
     }
 
+/*Favs Angel*/
+
+    /* FAVS */
+    public boolean isUsuarioCorreo(String email, Long id) {
+        Optional<Usuario> usuario = usuarioRepository.findById(id);
+        return usuario.isPresent() && usuario.get().getUsername().equals(email);
+    }
+
+    public void agregarHerramientaFavorita(Long usuarioId, Long herramientaId) throws ResourceNotFoundException {
+        Usuario usuario = usuarioRepository.findById(usuarioId)
+                .orElseThrow(() -> new ResourceNotFoundException("No se encontró al usuario con el ID proporcionado"));
+
+        Herramienta herramienta = herramientaRepository.findById(herramientaId)
+                .orElseThrow(() -> new ResourceNotFoundException("No se encontró la herramienta con el ID proporcionado"));
+
+        if (!usuario.getHerramientasFavoritas().contains(herramienta)) {
+            usuario.getHerramientasFavoritas().add(herramienta);
+            usuarioRepository.save(usuario);
+        }
+    }
+
+    public void eliminarHerramientaFavorita(Long usuarioId, Long herramientaId) throws ResourceNotFoundException {
+        Usuario usuario = usuarioRepository.findById(usuarioId)
+                .orElseThrow(() -> new ResourceNotFoundException("No se encontró al usuario con el ID proporcionado"));
+
+        Herramienta herramienta = herramientaRepository.findById(herramientaId)
+                .orElseThrow(() -> new ResourceNotFoundException("No se encontró la herramienta con el ID proporcionado"));
+
+        usuario.getHerramientasFavoritas().removeIf(h -> h.getId().equals(herramientaId));
+        usuarioRepository.save(usuario);
+    }
+
+    public List<Herramienta> getHerramientasFavoritas(Long usuarioId) throws ResourceNotFoundException {
+        Usuario usuario = usuarioRepository.findById(usuarioId)
+                .orElseThrow(() -> new ResourceNotFoundException("No se encontró al usuario con el ID proporcionado"));
+        return usuario.getHerramientasFavoritas();
+    }
 
 
 }

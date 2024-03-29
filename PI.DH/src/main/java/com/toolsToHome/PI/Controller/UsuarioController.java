@@ -6,16 +6,20 @@ import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Model.Usuario;
 import com.toolsToHome.PI.Model.UsuarioRole;
 import com.toolsToHome.PI.Service.UsuarioService;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/user")
@@ -66,4 +70,91 @@ public class UsuarioController {
             throw new ResourceNotFoundException("No se encontró el usuario con el ID: " + id);
         }
     }
+
+
+
+
+    /* ANGEL */
+
+
+
+
+
+    /* FAVS */
+
+    @PostMapping("/{id}/favs/{herramientaId}")
+    public ResponseEntity<String> agregarHerramientaFavorita(@PathVariable Long id, @PathVariable Long herramientaId) {
+        try {
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            if (authentication != null && authentication.isAuthenticated()) {
+                UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+                String email = userDetails.getUsername();
+
+                if (usuarioService.isUsuarioCorreo(email, id)) {
+                    usuarioService.agregarHerramientaFavorita(id, herramientaId);
+                    return ResponseEntity.ok("Herramienta agregada a favoritos");
+                } else {
+                    return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Acceso denegado");
+                }
+            } else {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuario no autenticado");
+            }
+        } catch (ResourceNotFoundException ex) {
+            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+
+    }
+
+    @DeleteMapping("/{id}/favs/{herramientaId}")
+    public ResponseEntity<String> eliminarHerramientaFavorita(@PathVariable Long id, @PathVariable Long herramientaId)
+    {
+        try
+        {
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            if (authentication != null && authentication.isAuthenticated()) {
+                UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+                String email = userDetails.getUsername();
+
+                if (usuarioService.isUsuarioCorreo(email, id)) {
+                    usuarioService.eliminarHerramientaFavorita(id, herramientaId);
+                    return ResponseEntity.ok("Herramienta eliminada de favoritos");
+                } else {
+                    return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Acceso no permitido");
+                }
+            } else {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("No autenticado");
+            }
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @GetMapping("/{id}/favs")
+    public ResponseEntity<List<Herramienta>> listarHerramientasFavoritas(@PathVariable Long id) {
+        try {
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            if (authentication != null && authentication.isAuthenticated()) {
+                UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+                String email = userDetails.getUsername();
+
+                if (usuarioService.isUsuarioCorreo(email, id)) {
+                    List<Herramienta> herramientasFavoritas = usuarioService.getHerramientasFavoritas(id);
+                    return ResponseEntity.ok(herramientasFavoritas);
+                } else {
+                    return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
+                }
+            } else {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+            }
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
+    }
+
 }

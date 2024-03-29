@@ -4,12 +4,14 @@ import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Categoria;
 import com.toolsToHome.PI.Model.Herramienta;
 import com.toolsToHome.PI.Service.CategoriaService;
+
 import org.apache.log4j.Logger;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/Categorias")
@@ -22,7 +24,7 @@ public class CategoriaContoller {
     public CategoriaContoller(CategoriaService categoriaService) {
         this.categoriaService = categoriaService;
     }
-    @CrossOrigin(origins = "*")
+
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Categoria>> buscarCategoria(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Categoria> buscarcategoria = categoriaService.buscarPorId(id);
@@ -33,6 +35,7 @@ public class CategoriaContoller {
         }
     }
     @CrossOrigin(origins = "*")
+
     @GetMapping
     public ResponseEntity<List<Categoria>>listarCategorias(){
         return ResponseEntity.ok(categoriaService.listarTodos());
@@ -62,10 +65,10 @@ public class CategoriaContoller {
         Optional<Categoria> categoriaRequest = categoriaService.buscarPorId(categoria.getId());
 
         if(categoriaRequest.isPresent()){
-            Categoria updatedCategoria = categoriaRequest.get();
-            updatedCategoria.setTitulo(categoria.getTitulo());
-            updatedCategoria.setHerramienta(categoria.getHerramienta());
-            return ResponseEntity.ok("La categoria: " + categoria.getTitulo() + " ha sido actualizada correctamente");
+
+            categoriaService.actualizarCategoria(categoria);
+
+            return ResponseEntity.ok("La categoria: " + categoria.getId() + " ha sido actualizada correctamente");
         }
         else {
             throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + categoria.getId());

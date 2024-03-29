@@ -2,23 +2,31 @@ package com.toolsToHome.PI.Controller;
 
 import com.toolsToHome.PI.Exceptions.ResourceNotFoundException;
 import com.toolsToHome.PI.Model.Herramienta;
+import com.toolsToHome.PI.Service.CategoriaService;
 import com.toolsToHome.PI.Service.HerramientaService;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+
+
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/Herramientas")
 public class HerramientaController {
     private static final Logger logger = Logger.getLogger(HerramientaController.class);
     private HerramientaService herramientaService;
+    private CategoriaService categoriaService;
     @Autowired
-    public HerramientaController(HerramientaService herramientaService) {
+    public HerramientaController(HerramientaService herramientaService, CategoriaService categoriaService) {
         this.herramientaService = herramientaService;
+        this.categoriaService = categoriaService;
     }
 
     @GetMapping("/{id}")
@@ -65,18 +73,43 @@ public class HerramientaController {
         Optional<Herramienta> herramientaRequest = herramientaService.buscarPorId(herramienta.getId());
 
         if(herramientaRequest.isPresent()){
-            Herramienta updatedHerramienta = herramientaRequest.get();
-            updatedHerramienta.setStock(herramienta.getStock());
-            updatedHerramienta.setDisponibilidad(herramienta.isDisponibilidad());
-            updatedHerramienta.setPrecio(herramienta.getPrecio());
-            herramientaService.actualizarHerramienta(updatedHerramienta);
-            return ResponseEntity.ok("La herramienta con el ID: " + updatedHerramienta.getId() + " ha sido actualizada correctamente");
+
+            herramientaService.actualizarHerramienta(herramienta);
+            return ResponseEntity.ok("La herramienta con el ID: " + herramienta.getId() + " ha sido actualizada correctamente");
         }
 
         else {
             throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + herramienta.getId());
         }
     }
+
+
+
+  @GetMapping ("/buscar/{nombre}")
+    public ResponseEntity<Optional<Herramienta>>buscarPorNombre (@PathVariable String nombre)throws ResourceNotFoundException{
+        Optional<Herramienta>herramientaBuscada = herramientaService.buscarPorNombre(nombre);
+        if(herramientaBuscada.isPresent()){
+            return ResponseEntity.ok(herramientaBuscada);
+        }else throw new ResourceNotFoundException("No se encontro la herramienta especificada con el nombre:  "+ nombre);
+    }
+
+
+
+    @GetMapping("/buscar/{nombre}/{fechaAlquiler}/{fechaDevolucion}")
+    public ResponseEntity<List<Herramienta>> buscarPorNombreYDisponibilidad(
+            @PathVariable String nombre,
+            @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaAlquiler,
+            @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaDevolucion) throws ResourceNotFoundException {
+
+        List<Herramienta> herramientas = herramientaService.buscarPorNombreYDisponibilidad(nombre, fechaAlquiler, fechaDevolucion);
+
+        if (!herramientas.isEmpty()) {
+            return ResponseEntity.ok(herramientas);
+        } else {
+            throw new ResourceNotFoundException("No se encontraron herramientas disponibles con el nombre: " + nombre + " para las fechas especificadas.");
+        }
+    }
+
 
 
 }
