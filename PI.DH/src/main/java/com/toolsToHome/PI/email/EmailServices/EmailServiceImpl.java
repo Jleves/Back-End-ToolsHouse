@@ -147,7 +147,7 @@ public class EmailServiceImpl  {
             helper.setSubject(NEW_USER_ACCOUNT_VERIFICATION);
             helper.setFrom(fromEmail);
             helper.setTo(to);
-            //helper.setText(text, true);
+            //helper.setText("", true);
             Context context = new Context();
             context.setVariables(Map.of("name", name, "url", getVerificationUrl(host, token)));
             String text = templateEngine.process(EMAIL_TEMPLATE, context);
@@ -160,7 +160,7 @@ public class EmailServiceImpl  {
 
             // Add images to the email body
             BodyPart imageBodyPart = new MimeBodyPart();
-            DataSource dataSource = new FileDataSource(System.getProperty("user.home") + "/Downloads/images/dog.jpg");
+            DataSource dataSource = new FileDataSource(System.getProperty("usuario.soporte") + "/Descargas/imagen/Email.jpg");
             imageBodyPart.setDataHandler(new DataHandler(dataSource));
             imageBodyPart.setHeader("Content-ID", "image");
             mimeMultipart.addBodyPart(imageBodyPart);

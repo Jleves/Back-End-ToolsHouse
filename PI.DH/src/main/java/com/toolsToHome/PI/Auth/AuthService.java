@@ -8,6 +8,7 @@ import com.toolsToHome.PI.Security.PasswordEncoder;
 import com.toolsToHome.PI.email.Confirmation;
 import com.toolsToHome.PI.email.EmailServices.EmailServiceImpl;
 import com.toolsToHome.PI.email.repositoryEmail.ConfirmationRepository;
+import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -36,6 +37,7 @@ public class AuthService {
                 .build();
     }
 
+
     public AuthResponse register(RegisterRequest registerRequest) {
         Usuario user = Usuario.builder()
                 .nombre(registerRequest.getNombre())
@@ -46,13 +48,15 @@ public class AuthService {
                 .usuarioRole(UsuarioRole.USER)
                 .confirmacion(false)
                 .build();
-        Confirmation confirmation = new Confirmation(user);
 
-        emailService.sendSimpleMailMessage(user.getNombre(),user.getEmail(),confirmation.getToken());
+        String token = jwtUtil.generateToken(user);
+        Confirmation confirmation = new Confirmation(user,token);
+
+        emailService.sendHtmlEmail(user.getNombre(),user.getEmail(),confirmation.getToken());
         usuarioRepository.save(user);
         confirmationRepository.save(confirmation);
         return AuthResponse.builder()
-                .token(jwtUtil.generateToken(user))   //Tenemos que devolver el token que se genera en jwtUtil
+                .token(token)   //Tenemos que devolver el token que se genera en jwtUtil
                 .build();
     }
 }

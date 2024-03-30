@@ -10,12 +10,7 @@ import org.springframework.data.annotation.CreatedDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-/**
- * @author Junior RT
- * @version 1.0
- * @license Get Arrays, LLC (https://getarrays.io)
- * @since 6/24/2023
- */
+
 
 @NoArgsConstructor
 @Setter
@@ -36,9 +31,9 @@ public class Confirmation {
     @JoinColumn(nullable = false, name = "user_id")
     private Usuario user;
 
-    public Confirmation(Usuario user) {
+    public Confirmation(Usuario user, String token) {
         this.user = user;
         this.createdDate = LocalDateTime.now();
-        this.token = UUID.randomUUID().toString();
+        this.token = token;
     }
 }

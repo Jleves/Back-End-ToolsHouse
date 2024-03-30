@@ -1,11 +1,6 @@
 package com.toolsToHome.PI.email.utils;
 
-/**
- * @author Junior RT
- * @version 1.0
- * @license Get Arrays, LLC (https://getarrays.io)
- * @since 6/25/2023
- */
+
 public class EmailUtils {
 
     public static String getEmailMessage(String name, String host, String token) {
@@ -14,6 +9,6 @@ public class EmailUtils {
     }
 
     public static String getVerificationUrl(String host, String token) {
-        return host + "/users?token=" + token;
+        return host + "/auth/check?token=" + token;
     }
 }

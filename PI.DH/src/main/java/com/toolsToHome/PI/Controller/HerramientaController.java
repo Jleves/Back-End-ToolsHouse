@@ -8,6 +8,7 @@ import com.toolsToHome.PI.Service.HerramientaService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -96,7 +97,7 @@ public class HerramientaController {
 
 
     @GetMapping("/buscar/{nombre}/{fechaAlquiler}/{fechaDevolucion}")
-    public ResponseEntity<List<Herramienta>> buscarPorNombreYDisponibilidad(
+    public ResponseEntity<?> buscarPorNombreYDisponibilidad(
             @PathVariable String nombre,
             @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaAlquiler,
             @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaDevolucion) throws ResourceNotFoundException {
@@ -106,7 +107,8 @@ public class HerramientaController {
         if (!herramientas.isEmpty()) {
             return ResponseEntity.ok(herramientas);
         } else {
-            throw new ResourceNotFoundException("No se encontraron herramientas disponibles con el nombre: " + nombre + " para las fechas especificadas.");
+            String mensaje = "No se encontraron herramientas disponibles con el nombre: " + nombre + " para las fechas especificadas.";
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(mensaje);
         }
     }
 

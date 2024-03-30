@@ -7,12 +7,7 @@ import org.springframework.http.HttpStatus;
 
 import java.util.Map;
 
-/**
- * @author Junior RT
- * @version 1.0
- * @license Get Arrays, LLC (https://getarrays.io)
- * @since 6/24/2023
- */
+
 
 @Data
 @SuperBuilder
