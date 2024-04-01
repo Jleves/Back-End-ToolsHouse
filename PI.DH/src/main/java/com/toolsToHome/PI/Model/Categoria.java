@@ -25,14 +25,13 @@ public class Categoria {
     @Column
     private String icono;
 
-<<<<<<< HEAD
+
     public Categoria(Long id, String titulo) {
         this.id = id;
         this.titulo = titulo;
     }
 
-=======
->>>>>>> 170a6db611478c52f6694a7574cfa9a45c89c966
+
     public Categoria(Long id) {
         this.id = id;
     }
