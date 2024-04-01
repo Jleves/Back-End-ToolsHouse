@@ -47,7 +47,7 @@ public class HerramientaService {
 
 
     public List<Herramienta> buscarPorNombreYDisponibilidad(String nombre, LocalDate fechaAlquiler, LocalDate fechaDevolucion) {
-        List<Herramienta> herramientas = herramientaRepository.findByNombreAndDisponibilidad(nombre, true);
+        List<Herramienta> herramientas = herramientaRepository.findByNombreContainingIgnoreCaseAndDisponibilidad(nombre, true);
         List<Reserva> reservas = reservaRepository.findByFechaAlquilerBetweenAndFechaDevolucionBetween(fechaAlquiler, fechaDevolucion, fechaAlquiler, fechaDevolucion);
 
         List<Herramienta> herramientasDisponibles = new ArrayList<>();

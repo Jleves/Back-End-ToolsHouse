@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.time.LocalDateTime;
 import java.util.Map;
@@ -34,20 +35,17 @@ public class AuthController {
     }
 
     @GetMapping("/check")
-    public ResponseEntity<HttpResponse> confirmUserAccount(@RequestParam("token") String token) throws ResourceNotFoundException {
+    public ModelAndView confirmUserAccount(@RequestParam("token") String token) throws ResourceNotFoundException {
         String username = jwtUtil.extractUserName(token);
         UserDetails userDetails = usuarioService.loadUserByUsername(username);
         boolean verificar = false;
         if (jwtUtil.validateToken(token, userDetails))
             verificar = true;
-        return ResponseEntity.ok().body(
-                HttpResponse.builder()
-                        .timeStamp(LocalDateTime.now().toString())
-                        .data(Map.of("Success", verificar))
-                        .message("Account Verified")
-                        .status(HttpStatus.OK)
-                        .statusCode(HttpStatus.OK.value())
-                        .build()
-        );
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("Confirmacion"); // Nombre de la plantilla HTML
+        modelAndView.addObject("verificar", verificar); // Pasar datos a la plantilla si es necesario
+        modelAndView.addObject("timeStamp", LocalDateTime.now().toString()); // Ejemplo de pasar datos a la plantilla
+
+        return modelAndView;
     }
 }

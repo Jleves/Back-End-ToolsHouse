@@ -101,7 +101,7 @@ public class HerramientaController {
             @PathVariable String nombre,
             @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaAlquiler,
             @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaDevolucion) throws ResourceNotFoundException {
-
+        nombre = nombre.trim().toLowerCase();
         List<Herramienta> herramientas = herramientaService.buscarPorNombreYDisponibilidad(nombre, fechaAlquiler, fechaDevolucion);
 
         if (!herramientas.isEmpty()) {
