@@ -69,7 +69,7 @@ public class WebConfig  {
                                         authRequest
                                                 /* RUTAS PUBLICAS */
                                                 .requestMatchers("/swagger-ui/**", "/swagger-resources/*", "/v3/api-docs/**", "/auth/**",
-                                                        "/Herramientas/list", "/Herramientas/list/**",
+                                                        "/Herramientas/list", "/Herramientas/list/**", "/Herramientas/buscar/**",
                                                         "/Reseñas/list", "/Reseñas/list/**",
                                                         "/Categorias/list", "/Categorias/list/**",
                                                         "/Caraceristicas/list", "/Catacteristicas/list/**").permitAll()
@@ -81,17 +81,17 @@ public class WebConfig  {
 
                                                 /* RUTAS PROTEGIDAS */
                                                 .requestMatchers(HttpMethod.GET, "/User/profile").authenticated()
-                                                .requestMatchers(HttpMethod.POST, "/Reseñas/create").hasAnyRole("USER", "ADMIN", "SUPERADMIN")
+                                                .requestMatchers(HttpMethod.POST, "/Reseñas/create").hasAnyRole("ADMIN", "SUPERADMIN")
                                                 .requestMatchers(HttpMethod.POST, "/Reservas/create").hasAnyRole("USER", "ADMIN", "SUPERADMIN")
 
                                                 /* RUTAS DE ADMINISTRACIÓN */
-                                                .requestMatchers("/Herramientas/create", "/Herramientas/delete/**", "/Herramientas/update",
+                                                .requestMatchers("/Herramientas/create/**", "/Herramientas/delete/**",
                                                         "/Herramientas/update/**",
                                                         "/Reservas/list", "/Reservas/list/**", "/Reservas/delete/**",
-                                                        "/Categorias/create", "/Categorias/delete/**", "/Categorias/update",
+                                                        "/Categorias/create/**", "/Categorias/delete/**", "/Categorias/update",
                                                         "/Caracteristicas/update", "/Caracteristicas/delete/**", "/Caracteristicas/create",
                                                         "/User/list", "/User/list/**", "/User/delete/**")
-                                                .hasAnyRole("ADMIN", "SUPERADMIN")
+                                                .hasAnyRole("ADMIN","SUPERADMIN")
 
                                                 /* RUTAS DEL SUPERADMIN */
                                                 .requestMatchers("/User/updateRole/**").hasRole("SUPERADMIN")
