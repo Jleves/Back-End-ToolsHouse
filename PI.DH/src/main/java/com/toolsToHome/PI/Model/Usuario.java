@@ -29,14 +29,13 @@ public class Usuario implements UserDetails {
     @Column(name = "email", unique = true)
     private String email;
 
-<<<<<<< HEAD
+
     public Usuario(Long id, String nombre, String apellido) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
     }
-=======
->>>>>>> 170a6db611478c52f6694a7574cfa9a45c89c966
+
 
     @Column
     private String ciudad;
@@ -44,12 +43,8 @@ public class Usuario implements UserDetails {
     @Enumerated(EnumType.STRING)
     private UsuarioRole usuarioRole;
 
-<<<<<<< HEAD
-    public Usuario(Long id) {
-        this.id = id;
-    }
 
-=======
+
 
     @JsonIgnore
     @OneToMany(mappedBy = "usuarioId", cascade = CascadeType.ALL)
@@ -74,7 +69,7 @@ public class Usuario implements UserDetails {
 
 
 
->>>>>>> 170a6db611478c52f6694a7574cfa9a45c89c966
+
     public void setUsuarioRole(UsuarioRole usuarioRole) {
         this.usuarioRole = usuarioRole;
     }

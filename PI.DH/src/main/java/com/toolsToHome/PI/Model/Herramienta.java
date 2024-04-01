@@ -25,14 +25,13 @@ public class Herramienta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-<<<<<<< HEAD
+
     public Herramienta(Long id, Long stock, String nombre) {
         this.id = id;
         this.stock = stock;
         this.nombre = nombre;
     }
-=======
->>>>>>> 170a6db611478c52f6694a7574cfa9a45c89c966
+
 
     @ManyToOne
     @JoinColumn(name = "Categoria_id", referencedColumnName= "id")
@@ -114,8 +113,8 @@ public class Herramienta {
     public Herramienta(Long id) {
         this.id = id;
     }
-}
-/*@Id
+/*
+@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
@@ -145,13 +144,11 @@ public class Herramienta {
     @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();
 
-<<<<<<< HEAD
-    public Herramienta(Long id) {
-        this.id = id;
-    }
-}
-=======
+
+
     @JsonIgnore
     @ManyToMany(mappedBy = "herramientasFavoritas")
-    private List<Usuario>  usuariosFavoritos = new ArrayList<>();*/
->>>>>>> 170a6db611478c52f6694a7574cfa9a45c89c966
+    private List<Usuario>  usuariosFavoritos = new ArrayList<>();
+
+*/
+}

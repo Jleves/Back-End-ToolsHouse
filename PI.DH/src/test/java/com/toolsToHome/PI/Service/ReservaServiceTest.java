@@ -20,7 +20,7 @@ public class ReservaServiceTest {
     @Test
     @Order(1)
     public void guardarReserva(){
-        Reserva reservaAGuardar= new Reserva(7L,"Juan",2L);
+        Reserva reservaAGuardar= new Reserva(2L);
         reservaService.guardarReserva(reservaAGuardar);
         assertEquals(1L,reservaAGuardar.getId());
     }
