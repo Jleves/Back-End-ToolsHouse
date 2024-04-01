@@ -30,7 +30,7 @@ public class HerramientaController {
         this.categoriaService = categoriaService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/list/{id}")
     public ResponseEntity<Optional<Herramienta>>buscarHerramienta(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Herramienta>buscarHerramienta = herramientaService.buscarPorId(id);
         if (buscarHerramienta.isPresent()){
@@ -40,13 +40,13 @@ public class HerramientaController {
         }
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<List<Herramienta>>listarHerramientas(){
         logger.info("Get Herramienta");
         return ResponseEntity.ok(herramientaService.listarTodos());
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Herramienta>guardarHerramienta(@RequestBody Herramienta herramienta)throws ResourceNotFoundException{
         Optional<Herramienta>buscarHerramienta= herramientaService.buscarPorNombre(herramienta.getNombre());
         if(buscarHerramienta.isEmpty()){
@@ -58,7 +58,7 @@ public class HerramientaController {
         }else throw new ResourceNotFoundException("La Herramienta ya existe");
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarHerramienta(@PathVariable Long id) throws ResourceNotFoundException{
         Optional<Herramienta>buscarHerramienta = herramientaService.buscarPorId(id);
         if(buscarHerramienta.isPresent()){
@@ -69,7 +69,7 @@ public class HerramientaController {
         }
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public ResponseEntity<String>actualizarHerramienta(@RequestBody Herramienta herramienta) throws ResourceNotFoundException{
         Optional<Herramienta> herramientaRequest = herramientaService.buscarPorId(herramienta.getId());
 
@@ -86,7 +86,7 @@ public class HerramientaController {
 
 
 
-  @GetMapping ("/buscar/{nombre}")
+  @GetMapping ("/list/{nombre}")
     public ResponseEntity<Optional<Herramienta>>buscarPorNombre (@PathVariable String nombre)throws ResourceNotFoundException{
         Optional<Herramienta>herramientaBuscada = herramientaService.buscarPorNombre(nombre);
         if(herramientaBuscada.isPresent()){

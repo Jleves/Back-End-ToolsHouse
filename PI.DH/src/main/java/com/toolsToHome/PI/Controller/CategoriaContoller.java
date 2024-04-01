@@ -25,7 +25,7 @@ public class CategoriaContoller {
         this.categoriaService = categoriaService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/list/{id}")
     public ResponseEntity<Optional<Categoria>> buscarCategoria(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Categoria> buscarcategoria = categoriaService.buscarPorId(id);
         if (buscarcategoria.isPresent()) {
@@ -36,12 +36,12 @@ public class CategoriaContoller {
     }
     @CrossOrigin(origins = "*")
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<List<Categoria>>listarCategorias(){
         return ResponseEntity.ok(categoriaService.listarTodos());
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Categoria>guardarCategoria(@RequestBody Categoria categoria){
 
         Categoria newCategoria = categoriaService.guardarCategoria(categoria);
@@ -49,7 +49,7 @@ public class CategoriaContoller {
         return ResponseEntity.ok(categoria);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarCategoria(@PathVariable Long id) throws ResourceNotFoundException{
         Optional<Categoria>buscarCategoria = categoriaService.buscarPorId(id);
         if(buscarCategoria.isPresent()){
@@ -60,7 +60,7 @@ public class CategoriaContoller {
         }
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public ResponseEntity<String>actualizarCategoria(@RequestBody Categoria categoria) throws ResourceNotFoundException{
         Optional<Categoria> categoriaRequest = categoriaService.buscarPorId(categoria.getId());
 

@@ -31,12 +31,12 @@ public class ReseñaController {
         this.herramientaService = herramientaService;
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<List<Reseña>>listarReseñas(){
     return ResponseEntity.ok( reseñaService.listarReseñas());
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/list/{id}")
     public ResponseEntity<Optional<Reseña>>buscarPorId(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Reseña>buscarReseña= reseñaService.BuscarPorId(id);
         if(buscarReseña.isPresent()){
@@ -45,7 +45,7 @@ public class ReseñaController {
     }
 
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Reseña>guardarReseña(@RequestBody Reseña reseña)throws ResourceNotFoundException{
 
 
@@ -55,7 +55,7 @@ public class ReseñaController {
 
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarReseña(@PathVariable Long id) throws ResourceNotFoundException{
         Optional<Reseña>buscarReseña= reseñaService.BuscarPorId(id);
         if(buscarReseña.isPresent()){

@@ -4,6 +4,7 @@ import com.toolsToHome.PI.Service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 
@@ -66,12 +67,35 @@ public class WebConfig  {
                                         .disable())
                         .authorizeHttpRequests( authRequest ->
                                         authRequest
+                                                /* RUTAS PUBLICAS */
+                                                .requestMatchers("/swagger-ui/**", "/swagger-resources/*", "/v3/api-docs/**", "/auth/**",
+                                                        "/Herramientas/list", "/Herramientas/list/**",
+                                                        "/Reseñas/list", "/Reseñas/list/**",
+                                                        "/Categorias/list", "/Categorias/list/**",
+                                                        "/Caraceristicas/list", "/Catacteristicas/list/**").permitAll()
 
+                                                /* RUTAS PARA FAVORITOS */
+                                                .requestMatchers(HttpMethod.POST, "/User/*/favs/*").authenticated()
+                                                .requestMatchers(HttpMethod.GET, "/User/*/favs").authenticated()
+                                                .requestMatchers(HttpMethod.DELETE, "/User/*/favs/*").authenticated()
 
-                                                .requestMatchers("/swagger-ui/**", "/swagger-resources/*", "/v3/api-docs/**").permitAll()
-                                                .requestMatchers( "/swagger-ui/**", "/swagger-ui.html").permitAll()
-                                                .requestMatchers("/auth/**", "/Herramientas/**", "/admin/**", "/user/**", "/Categorias/**", "/Caracteristicas/**", "/Reservas/**","Reseñas/**").permitAll()
-                                .anyRequest().authenticated()
+                                                /* RUTAS PROTEGIDAS */
+                                                .requestMatchers(HttpMethod.GET, "/User/profile").authenticated()
+                                                .requestMatchers(HttpMethod.POST, "/Reseñas/create").hasAnyRole("USER", "ADMIN", "SUPERADMIN")
+                                                .requestMatchers(HttpMethod.POST, "/Reservas/create").hasAnyRole("USER", "ADMIN", "SUPERADMIN")
+
+                                                /* RUTAS DE ADMINISTRACIÓN */
+                                                .requestMatchers("/Herramientas/create", "/Herramientas/delete/**", "/Herramientas/update",
+                                                        "/Herramientas/update/**",
+                                                        "/Reservas/list", "/Reservas/list/**", "/Reservas/delete/**",
+                                                        "/Categorias/create", "/Categorias/delete/**", "/Categorias/update",
+                                                        "/Caracteristicas/update", "/Caracteristicas/delete/**", "/Caracteristicas/create",
+                                                        "/User/list", "/User/list/**", "/User/delete/**")
+                                                .hasAnyRole("ADMIN", "SUPERADMIN")
+
+                                                /* RUTAS DEL SUPERADMIN */
+                                                .requestMatchers("/User/updateRole/**").hasRole("SUPERADMIN")
+                                                .anyRequest().authenticated()
                         )
                         .sessionManagement(sessionManager ->
                                 sessionManager
