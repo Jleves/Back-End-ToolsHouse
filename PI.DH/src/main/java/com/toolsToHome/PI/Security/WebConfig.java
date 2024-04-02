@@ -66,35 +66,14 @@ public class WebConfig  {
                                 cors
                                         .disable())
                         .authorizeHttpRequests( authRequest ->
-                                        authRequest
-                                                /* RUTAS PUBLICAS */
-                                                .requestMatchers("/swagger-ui/**", "/swagger-resources/*", "/v3/api-docs/**", "/auth/**",
-                                                        "/Herramientas/list", "/Herramientas/list/**", "/Herramientas/buscar/**",
-                                                        "/Reseñas/list", "/Reseñas/list/**",
-                                                        "/Categorias/list", "/Categorias/list/**",
-                                                        "/Caraceristicas/list", "/Catacteristicas/list/**").permitAll()
-
-                                                /* RUTAS PARA FAVORITOS */
-                                                .requestMatchers(HttpMethod.POST, "/User/*/favs/*").authenticated()
-                                                .requestMatchers(HttpMethod.GET, "/User/*/favs").authenticated()
-                                                .requestMatchers(HttpMethod.DELETE, "/User/*/favs/*").authenticated()
-
-                                                /* RUTAS PROTEGIDAS */
-                                                .requestMatchers(HttpMethod.GET, "/User/profile").authenticated()
-                                                .requestMatchers(HttpMethod.POST, "/Reseñas/create").hasAnyRole("ADMIN", "SUPERADMIN")
-                                                .requestMatchers(HttpMethod.POST, "/Reservas/create").hasAnyRole("USER", "ADMIN", "SUPERADMIN")
-
-                                                /* RUTAS DE ADMINISTRACIÓN */
-                                                .requestMatchers("/Herramientas/create/**", "/Herramientas/delete/**",
-                                                        "/Herramientas/update/**",
-                                                        "/Reservas/list", "/Reservas/list/**", "/Reservas/delete/**",
-                                                        "/Categorias/create/**", "/Categorias/delete/**", "/Categorias/update",
-                                                        "/Caracteristicas/update", "/Caracteristicas/delete/**", "/Caracteristicas/create",
-                                                        "/User/list", "/User/list/**", "/User/delete/**")
-                                                .hasAnyRole("ADMIN","SUPERADMIN")
-
-                                                /* RUTAS DEL SUPERADMIN */
-                                                .requestMatchers("/User/updateRole/**").hasRole("SUPERADMIN")
+                                        authRequest /* RUTAS PUBLICAS */
+                                                .requestMatchers("/swagger-ui/**", "/swagger-resources/*", "/v3/api-docs/**", "/auth/**").permitAll()
+                                                .requestMatchers( "/Herramientas/**").permitAll()
+                                                .requestMatchers("/Reseñas/**").permitAll()
+                                                .requestMatchers("/Categorias/**").permitAll()
+                                                .requestMatchers( "/Caraceristicas/**").permitAll()
+                                                .requestMatchers( "/Reservas/**").permitAll()
+                                                .requestMatchers( "/User/**").permitAll()
                                                 .anyRequest().authenticated()
                         )
                         .sessionManagement(sessionManager ->
