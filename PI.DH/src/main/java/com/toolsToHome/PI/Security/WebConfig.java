@@ -71,7 +71,7 @@ public class WebConfig  {
                                                 .requestMatchers( "/Herramientas/**").permitAll()
                                                 .requestMatchers("/Reseñas/**").permitAll()
                                                 .requestMatchers("/Categorias/**").permitAll()
-                                                .requestMatchers( "/Caraceristicas/**").permitAll()
+                                                .requestMatchers( "/Caracteristicas/**").permitAll()
                                                 .requestMatchers( "/Reservas/**").permitAll()
                                                 .requestMatchers( "/User/**").permitAll()
                                                 .anyRequest().authenticated()
