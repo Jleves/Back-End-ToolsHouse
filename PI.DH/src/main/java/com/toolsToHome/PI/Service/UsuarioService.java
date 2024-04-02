@@ -78,6 +78,7 @@ public class UsuarioService implements UserDetailsService {
         userDTO.setApellido(usuario.getApellido());
         userDTO.setUsername(usuario.getUsername());
         userDTO.setRole(usuario.getUsuarioRole());
+        userDTO.setReserva(usuario.getReserva());
 
         return userDTO;
     }
