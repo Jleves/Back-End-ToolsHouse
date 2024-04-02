@@ -32,6 +32,7 @@ public class HerramientaService {
         return herramientaRepository.findById(id);
     }
     public Optional<Herramienta>buscarPorNombre(String nombre){
+
         return herramientaRepository.findByNombre(nombre);
     }
 

@@ -51,6 +51,7 @@ public class UsuarioController {
     @PutMapping("/updateRole/{id}/usuarioRole")
     public ResponseEntity<?> updateRole(@PathVariable Long id,@RequestBody Usuario usuarioRole) {
         try {
+            logger.info("id usuario:  "+ id+ "Rol:  "+ usuarioRole);
             usuarioService.updateRole(id, usuarioRole);
             return ResponseEntity.ok().build();
         } catch (ResourceNotFoundException e) {

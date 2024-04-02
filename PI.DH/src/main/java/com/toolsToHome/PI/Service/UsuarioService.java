@@ -58,6 +58,7 @@ public class UsuarioService implements UserDetailsService {
     }
 
     public void updateRole(Long id, Usuario usuarioRole) throws ResourceNotFoundException {
+
         Optional<UserDTO> usuarioRequest = buscarPorId(id);
         if(usuarioRequest.isPresent()){
             Usuario user = usuarioRepository.findByEmail(usuarioRequest.get().getUsername())
