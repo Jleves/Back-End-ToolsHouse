@@ -66,8 +66,9 @@ public class Herramienta {
 
 
 
-    @JsonManagedReference
-    @OneToMany(mappedBy = "herramientaId", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+
+    @JsonIgnoreProperties("herramientaId")
+    @OneToMany(mappedBy = "herramientaId",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<Reserva> reserva = new HashSet<>();
 
 
