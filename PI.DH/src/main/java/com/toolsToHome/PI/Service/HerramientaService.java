@@ -31,9 +31,9 @@ public class HerramientaService {
     public Optional<Herramienta> buscarPorId(Long id){
         return herramientaRepository.findById(id);
     }
-    public Optional<Herramienta>buscarPorNombre(String nombre){
+    public List<Herramienta>buscarPorNombre(String nombre){
 
-        return herramientaRepository.findByNombre(nombre);
+        return herramientaRepository.findByNombreContainingIgnoreCase(nombre);
     }
 
     public void eliminarHerramienta(Long id){

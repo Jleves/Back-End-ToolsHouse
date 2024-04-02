@@ -48,7 +48,7 @@ public class HerramientaController {
 
     @PostMapping("/create")
     public ResponseEntity<Herramienta>guardarHerramienta(@RequestBody Herramienta herramienta)throws ResourceNotFoundException{
-        Optional<Herramienta>buscarHerramienta= herramientaService.buscarPorNombre(herramienta.getNombre());
+        List<Herramienta>buscarHerramienta= herramientaService.buscarPorNombre(herramienta.getNombre());
         if(buscarHerramienta.isEmpty()){
             Herramienta herramientaGuardada = herramientaService.guardarHerramienta(herramienta);
 
@@ -87,10 +87,10 @@ public class HerramientaController {
 
 
   @GetMapping ("/buscar/nombre/{nombre}")
-    public ResponseEntity<Optional<Herramienta>>buscarPorNombre (@PathVariable String nombre)throws ResourceNotFoundException{
+    public ResponseEntity<List<Herramienta>>buscarPorNombre (@PathVariable String nombre)throws ResourceNotFoundException{
         nombre=nombre.trim().toLowerCase();
-        Optional<Herramienta>herramientaBuscada = herramientaService.buscarPorNombre(nombre);
-        if(herramientaBuscada.isPresent()){
+        List<Herramienta>herramientaBuscada = herramientaService.buscarPorNombre(nombre);
+        if(herramientaBuscada.size()>0){
             return ResponseEntity.ok(herramientaBuscada);
         }else throw new ResourceNotFoundException("No se encontro la herramienta especificada con el nombre:  "+ nombre);
     }
