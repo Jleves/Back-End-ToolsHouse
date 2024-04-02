@@ -86,7 +86,7 @@ public class HerramientaController {
 
 
 
-  @GetMapping ("/list/{nombre}")
+  @GetMapping ("/list/nombre/{nombre}")
     public ResponseEntity<Optional<Herramienta>>buscarPorNombre (@PathVariable String nombre)throws ResourceNotFoundException{
         Optional<Herramienta>herramientaBuscada = herramientaService.buscarPorNombre(nombre);
         if(herramientaBuscada.isPresent()){
