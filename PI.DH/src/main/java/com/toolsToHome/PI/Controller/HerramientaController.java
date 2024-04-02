@@ -8,6 +8,7 @@ import com.toolsToHome.PI.Service.HerramientaService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,7 +30,7 @@ public class HerramientaController {
         this.categoriaService = categoriaService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/list/{id}")
     public ResponseEntity<Optional<Herramienta>>buscarHerramienta(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Herramienta>buscarHerramienta = herramientaService.buscarPorId(id);
         if (buscarHerramienta.isPresent()){
@@ -39,13 +40,13 @@ public class HerramientaController {
         }
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<List<Herramienta>>listarHerramientas(){
         logger.info("Get Herramienta");
         return ResponseEntity.ok(herramientaService.listarTodos());
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Herramienta>guardarHerramienta(@RequestBody Herramienta herramienta)throws ResourceNotFoundException{
         Optional<Herramienta>buscarHerramienta= herramientaService.buscarPorNombre(herramienta.getNombre());
         if(buscarHerramienta.isEmpty()){
@@ -57,7 +58,7 @@ public class HerramientaController {
         }else throw new ResourceNotFoundException("La Herramienta ya existe");
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarHerramienta(@PathVariable Long id) throws ResourceNotFoundException{
         Optional<Herramienta>buscarHerramienta = herramientaService.buscarPorId(id);
         if(buscarHerramienta.isPresent()){
@@ -68,7 +69,7 @@ public class HerramientaController {
         }
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public ResponseEntity<String>actualizarHerramienta(@RequestBody Herramienta herramienta) throws ResourceNotFoundException{
         Optional<Herramienta> herramientaRequest = herramientaService.buscarPorId(herramienta.getId());
 
@@ -85,8 +86,9 @@ public class HerramientaController {
 
 
 
-  @GetMapping ("/buscar/{nombre}")
+  @GetMapping ("/buscar/nombre/{nombre}")
     public ResponseEntity<Optional<Herramienta>>buscarPorNombre (@PathVariable String nombre)throws ResourceNotFoundException{
+        nombre=nombre.trim().toLowerCase();
         Optional<Herramienta>herramientaBuscada = herramientaService.buscarPorNombre(nombre);
         if(herramientaBuscada.isPresent()){
             return ResponseEntity.ok(herramientaBuscada);
@@ -96,17 +98,18 @@ public class HerramientaController {
 
 
     @GetMapping("/buscar/{nombre}/{fechaAlquiler}/{fechaDevolucion}")
-    public ResponseEntity<List<Herramienta>> buscarPorNombreYDisponibilidad(
+    public ResponseEntity<?> buscarPorNombreYDisponibilidad(
             @PathVariable String nombre,
             @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaAlquiler,
             @PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate fechaDevolucion) throws ResourceNotFoundException {
-
+        nombre = nombre.trim().toLowerCase();
         List<Herramienta> herramientas = herramientaService.buscarPorNombreYDisponibilidad(nombre, fechaAlquiler, fechaDevolucion);
 
         if (!herramientas.isEmpty()) {
             return ResponseEntity.ok(herramientas);
         } else {
-            throw new ResourceNotFoundException("No se encontraron herramientas disponibles con el nombre: " + nombre + " para las fechas especificadas.");
+            String mensaje = "No se encontraron herramientas disponibles con el nombre: " + nombre + " para las fechas especificadas.";
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(mensaje);
         }
     }
 

@@ -28,7 +28,7 @@ public class CaracteristicaController {
     }
 
 
-    @GetMapping("/{id}")
+    @GetMapping("/list/{id}")
     public ResponseEntity<Optional<Caracteristicas>> buscarCaracteristicas(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Caracteristicas> buscarCaracteristicas = caracteristicaService.buscarPorId(id);
         if (buscarCaracteristicas.isPresent()) {
@@ -38,7 +38,7 @@ public class CaracteristicaController {
         }
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<List<Caracteristicas>>listarHerramientas(){
         return ResponseEntity.ok(caracteristicaService.listarTodos());
     }
@@ -48,7 +48,7 @@ public class CaracteristicaController {
 
 
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Caracteristicas>guardarCaracteristicas(@RequestBody Caracteristicas caracteristicas)throws ResourceNotFoundException{
         Optional<Caracteristicas>buscarCaracteristicas= caracteristicaService.buscarPorCaracteristicas(caracteristicas.getTitulo());
         if(buscarCaracteristicas.isEmpty()){
@@ -60,7 +60,7 @@ public class CaracteristicaController {
         }else throw new ResourceNotFoundException("La Caracteristica ya existe");
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarCaracteristicas(@PathVariable Long id) throws ResourceNotFoundException{
         Optional<Caracteristicas>buscarCategoria = caracteristicaService.buscarPorId(id);
         if(buscarCategoria.isPresent()){
@@ -71,7 +71,7 @@ public class CaracteristicaController {
         }
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public ResponseEntity<String>actualizarCaracteristicas(@RequestBody Caracteristicas caracteristicas) throws ResourceNotFoundException{
         Optional<Caracteristicas> categoriaRequest = caracteristicaService.buscarPorId(caracteristicas.getId());
 

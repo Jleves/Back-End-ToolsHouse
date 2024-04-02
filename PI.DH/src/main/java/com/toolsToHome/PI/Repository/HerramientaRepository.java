@@ -12,4 +12,5 @@ public interface HerramientaRepository extends JpaRepository<Herramienta, Long> 
     Optional<Herramienta>findByNombre(String string);
     List<Herramienta> findByNombreAndDisponibilidad(String nombre, boolean disponibilidad);
 
+    List<Herramienta> findByNombreContainingIgnoreCaseAndDisponibilidad(String nombre, boolean b);
 }

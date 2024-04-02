@@ -16,13 +16,23 @@ public class Reseña {
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
  private Long id;
+
+
+ @JsonBackReference("reseñasReference")
  @JsonIgnoreProperties("reseñas")
- @ManyToOne
+ @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.REMOVE})
  @JoinColumn(name = "herramienta_id")
  private Herramienta herramienta_idReseña;
- @OneToOne
- @JoinColumn(name = "reserva_id")
+
+
+
+ @JsonBackReference
+ @OneToOne(cascade = CascadeType.DETACH)
+ @JoinColumn(name = "reserva_id",referencedColumnName = "id")
  private Reserva reserva_id;
+
+
+
  @Column
  private Long raiting;
  @Column

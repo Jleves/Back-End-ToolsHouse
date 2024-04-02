@@ -684,7 +684,7 @@ public class DataInitializer implements CommandLineRunner {
 
                 //Gonza
 
-                //LLAVE INGLESA
+                //LLAVE INGLESA 2
                 Herramienta herramienta11 = new Herramienta();
 
                 herramienta11.getCaracteristicas().add(caracteristica1);
@@ -696,7 +696,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta11.setStock(10L);
                 herramienta11.setPrecio(50L);
                 herramienta11.setDisponibilidad(true);
-                herramienta11.setNombre("Llave inglesa");
+                herramienta11.setNombre("Llave inglesa Virax");
 
 
 
@@ -707,16 +707,16 @@ public class DataInitializer implements CommandLineRunner {
                         "¡Te presentamos la Llave GripMaster: tu aliada confiable para tareas mecánicas! Con durabilidad y precisión, es imprescindible en cualquier caja de herramientas. Ajusta fácilmente su tamaño para adaptarse a cualquier tarea. Perfecta para proyectos en casa, bricolaje o trabajo. ¡Confía en su firmeza para realizar el trabajo con maestría!");
 
                 Imagen imagenH11a = new Imagen();
-                imagenH11a.setUrl("https://eadn-wc02-6245241.nxedge.io/cdn/media/amasty/webp/catalog/product/cache/95aae7ce13a353d20b736b25a0c71a20/7/5/7501081011068_1_jpg.webp");
+                imagenH11a.setUrl("https://www.virax.com/media/catalog/product/cache/9ceffc1a1584e2467259181601dfd4db/3/4/34166-017031.webp");
                 imagenH11a.setHerramienta(herramienta11);
                 Imagen imagenH11b = new Imagen();
-                imagenH11b.setUrl("https://http2.mlstatic.com/D_NQ_NP_972157-MLM70330901871_072023-O.webp");
+                imagenH11b.setUrl("https://www.virax.com/media/catalog/product/cache/9ceffc1a1584e2467259181601dfd4db/0/1/017055_pack.webp");
                 imagenH11b.setHerramienta(herramienta11);
                 Imagen imagenH11c = new Imagen();
-                imagenH11c.setUrl("https://http2.mlstatic.com/D_NQ_NP_986699-MLM73286730249_122023-O.webp");
+                imagenH11c.setUrl("https://www.virax.com/media/catalog/product/cache/9ceffc1a1584e2467259181601dfd4db/3/4/34189-017022.webp");
                 imagenH11c.setHerramienta(herramienta11);
                 Imagen imagenH11d = new Imagen();
-                imagenH11d.setUrl("https://http2.mlstatic.com/D_NQ_NP_824168-MLA49842484888_052022-O.webp");
+                imagenH11d.setUrl("https://www.virax.com/media/catalog/product/cache/9ceffc1a1584e2467259181601dfd4db/3/4/34189-017022.webp");
                 imagenH11d.setHerramienta(herramienta11);
                 Imagen imagenH11e = new Imagen();
                 imagenH11e.setUrl("https://ronixtools.com/img/media/products/rh-2401/original-637604114727568645.webp");
@@ -736,7 +736,7 @@ public class DataInitializer implements CommandLineRunner {
 
 
 
-                //PALA
+                //PALA 2
                 Herramienta herramienta12 = new Herramienta();
                 herramienta12.getCaracteristicas().add(caracteristica1);
                 herramienta12.getCaracteristicas().add(caracteristica2);
@@ -747,7 +747,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta12.setStock(12L);
                 herramienta12.setPrecio(50L);
                 herramienta12.setDisponibilidad(true);
-                herramienta12.setNombre("Pala");
+                herramienta12.setNombre("Pala Opack");
 
                 herramienta12.setDescripcion("\n" +
 
@@ -790,18 +790,18 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta13.setStock(12L);
                 herramienta13.setPrecio(50L);
                 herramienta13.setDisponibilidad(true);
-                herramienta13.setNombre("Broca");
+                herramienta13.setNombre("Broca Sima");
 
                 herramienta13.setDescripcion("\n" +
                         "¡Descubre la Broca TurboPerf, la revolucionaria herramienta que transformará tus proyectos de perforación! Diseñada con la última tecnología en mente, la Broca TurboPerf te ofrece una combinación perfecta de precisión, potencia y durabilidad. Su diseño aerodinámico y afilado garantiza perforaciones limpias y rápidas.");
                 Imagen imagenH13a = new Imagen();
-                imagenH13a.setUrl("https://http2.mlstatic.com/D_NQ_NP_732174-MLU75178804671_032024-O.webp");
+                imagenH13a.setUrl("https://images.pexels.com/photos/6942294/pexels-photo-6942294.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
                 imagenH13a.setHerramienta(herramienta13);
                 Imagen imagenH13b = new Imagen();
-                imagenH13b.setUrl("https://http2.mlstatic.com/D_NQ_NP_627310-MLU75258125940_032024-O.webp");
+                imagenH13b.setUrl("https://tubagua.es/wp-content/uploads/2023/02/POST-BLOG-TUBAGUA-1.png");
                 imagenH13b.setHerramienta(herramienta13);
                 Imagen imagenH13c = new Imagen();
-                imagenH13c.setUrl("https://http2.mlstatic.com/D_NQ_NP_620673-MLU75178804647_032024-O.webp");
+                imagenH13c.setUrl("https://www.shutterstock.com/image-photo/metal-drill-bit-make-holes-600nw-2148293791.jpg");
                 imagenH13c.setHerramienta(herramienta13);
                 Imagen imagenH13d = new Imagen();
                 imagenH13d.setUrl("https://http2.mlstatic.com/D_NQ_NP_635177-MLU75358819189_032024-O.webp");
@@ -830,7 +830,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta14.setStock(15L);
                 herramienta14.setPrecio(75L);
                 herramienta14.setDisponibilidad(true);
-                herramienta14.setNombre("Cinta métrica");
+                herramienta14.setNombre("Cinta métrica Felo");
 
                 herramienta14.setDescripcion("\n" +
 
@@ -873,7 +873,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta15.setStock(15L);
                 herramienta15.setPrecio(75L);
                 herramienta15.setDisponibilidad(true);
-                herramienta15.setNombre("Lijadora");
+                herramienta15.setNombre("Lijadora Bosh");
 
                 herramienta15.setDescripcion("\n" +
                         "¡Conoce la Lijadora UltraLiso, tu mejor aliada para obtener superficies suaves y pulidas en tus proyectos de carpintería y bricolaje! Esta increíble herramienta combina potencia, confort y versatilidad para brindarte resultados impecables en cada tarea");
@@ -914,7 +914,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta16.setStock(15L);
                 herramienta16.setPrecio(75L);
                 herramienta16.setDisponibilidad(true);
-                herramienta16.setNombre("Nivel");
+                herramienta16.setNombre("Nivel  ICS");
 
                 herramienta16.setDescripcion("\n" +
                         "¡Descubre el MasterLevel, tu clave para precisión absoluta en cada construcción! Este instrumento garantiza mediciones exactas y una nivelación impecable, siendo esencial para profesionales y aficionados.");
@@ -954,7 +954,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta17.setStock(15L);
                 herramienta17.setPrecio(75L);
                 herramienta17.setDisponibilidad(true);
-                herramienta17.setNombre("Taladro");
+                herramienta17.setNombre("Taladro  Bosh ");
 
                 herramienta17.setDescripcion("\n" +
                         "¡Conoce el PowerDrill, tu aliado confiable para perforaciones de todo tipo! Este taladro eléctrico potente te ofrece rendimiento, durabilidad y versatilidad en un paquete compacto. Desde reparaciones en casa hasta proyectos profesionales.");
@@ -995,7 +995,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta18.setStock(15L);
                 herramienta18.setPrecio(75L);
                 herramienta18.setDisponibilidad(true);
-                herramienta18.setNombre("Amoladora");
+                herramienta18.setNombre("Amoladora Makita");
 
                 herramienta18.setDescripcion("\n" +
                         "¡Presentamos la Máquina de Pulir PrimeShape, la clave para esculpir y darle brillo a tus creaciones con facilidad! En perfecto estado y sin uso previo, esta máquina de pulir ofrece resultados excepcionales en cada aplicación");
@@ -1037,7 +1037,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta19.setStock(15L);
                 herramienta19.setPrecio(75L);
                 herramienta19.setDisponibilidad(true);
-                herramienta19.setNombre("Destornillador");
+                herramienta19.setNombre("Destornillador Makita ");
 
                 herramienta19.setDescripcion("\n" +
                         "¡Presentamos el UltraGrip, la elección perfecta para trabajos de precisión! Este destornillador de alta calidad te ofrece la precisión y durabilidad que necesitas en cada tarea.Simplifica tus proyectos con el UltraGrip y lleva tu artesanía al siguiente nivel. ¡Hazte con el tuyo hoy mismo y descubre la diferencia!");
@@ -1077,7 +1077,7 @@ public class DataInitializer implements CommandLineRunner {
                 herramienta20.setStock(15L);
                 herramienta20.setPrecio(75L);
                 herramienta20.setDisponibilidad(true);
-                herramienta20.setNombre("Martillo");
+                herramienta20.setNombre("Martillo  Sima");
 
                 herramienta20.setDescripcion("\n" + "¡Descubre el ThunderHammer, la herramienta definitiva para cualquier proyecto de construcción! Este martillo de alta calidad te ofrece potencia y durabilidad inigualables en cada golpe. Con su mango ergonómico y cabeza de acero forjado");
                 //Imagenes Decima Herramienta
@@ -1277,5 +1277,5 @@ public class DataInitializer implements CommandLineRunner {
 
 
 
-        }
 }
+        }

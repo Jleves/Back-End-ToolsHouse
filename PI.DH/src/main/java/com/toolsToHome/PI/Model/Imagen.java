@@ -1,4 +1,5 @@
 package com.toolsToHome.PI.Model;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.*;
@@ -21,7 +22,7 @@ public class Imagen {
     @Column(nullable = false, length = 3000)
     private String url;
 
-    @JsonIgnore
+    @JsonBackReference("imagenesReference")
     @ManyToOne
     @JoinColumn(name = "herramienta_id", referencedColumnName= "id")
     private Herramienta herramienta;

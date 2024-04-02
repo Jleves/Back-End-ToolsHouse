@@ -1,5 +1,6 @@
 package com.toolsToHome.PI.Model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,6 +12,8 @@ import java.util.*;
 
 @Entity
 @Builder
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 
@@ -41,8 +44,10 @@ public class Usuario implements UserDetails {
     @OneToMany(mappedBy = "usuarioId", cascade = CascadeType.ALL)
     private Set<Reserva> reserva= new HashSet<>();
 
+    @Column
+    private boolean confirmacion;
 
-
+    @JsonBackReference("FavReference")
     @ManyToMany
     @JoinTable(name = "herramienta_favorita",
             joinColumns = @JoinColumn(name = "usuario_id"),
@@ -85,6 +90,7 @@ public class Usuario implements UserDetails {
     public UsuarioRole getUsuarioRole() {
         return usuarioRole;
     }
+
 
 
     @Override

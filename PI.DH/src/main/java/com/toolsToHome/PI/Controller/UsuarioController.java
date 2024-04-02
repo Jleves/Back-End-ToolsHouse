@@ -22,7 +22,7 @@ import java.util.Optional;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/User")
 public class UsuarioController {
     private static final Logger logger = Logger.getLogger(HerramientaController.class);
     private UsuarioService usuarioService;
@@ -31,7 +31,7 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<List<Usuario>> listarHerramientas(){
         logger.info("Get Usuario");
         return ResponseEntity.ok(usuarioService.listarTodos());
@@ -48,9 +48,10 @@ public class UsuarioController {
         }
     }
 
-    @PutMapping("/{id}/usuarioRole")
+    @PutMapping("/updateRole/{id}/usuarioRole")
     public ResponseEntity<?> updateRole(@PathVariable Long id,@RequestBody Usuario usuarioRole) {
         try {
+            logger.info("id usuario:  "+ id+ "Rol:  "+ usuarioRole);
             usuarioService.updateRole(id, usuarioRole);
             return ResponseEntity.ok().build();
         } catch (ResourceNotFoundException e) {
@@ -60,7 +61,7 @@ public class UsuarioController {
         }
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarUsuario(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<UserDTO> buscarUsuario = usuarioService.buscarPorId(id);
         if(buscarUsuario.isPresent()){

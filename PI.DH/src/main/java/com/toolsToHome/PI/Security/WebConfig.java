@@ -4,6 +4,7 @@ import com.toolsToHome.PI.Service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 
@@ -65,13 +66,15 @@ public class WebConfig  {
                                 cors
                                         .disable())
                         .authorizeHttpRequests( authRequest ->
-                                        authRequest
-
-
-                                                .requestMatchers("/swagger-ui/**", "/swagger-resources/*", "/v3/api-docs/**").permitAll()
-                                                .requestMatchers( "/swagger-ui/**", "/swagger-ui.html").permitAll()
-                                                .requestMatchers("/auth/**", "/Herramientas/**", "/admin/**", "/user/**", "/Categorias/**", "/Caracteristicas/**", "/Reservas/**","Reseñas/**").permitAll()
-                                .anyRequest().authenticated()
+                                        authRequest /* RUTAS PUBLICAS */
+                                                .requestMatchers("/swagger-ui/**", "/swagger-resources/*", "/v3/api-docs/**", "/auth/**").permitAll()
+                                                .requestMatchers( "/Herramientas/**").permitAll()
+                                                .requestMatchers("/Reseñas/**").permitAll()
+                                                .requestMatchers("/Categorias/**").permitAll()
+                                                .requestMatchers( "/Caracteristicas/**").permitAll()
+                                                .requestMatchers( "/Reservas/**").permitAll()
+                                                .requestMatchers( "/User/**").permitAll()
+                                                .anyRequest().authenticated()
                         )
                         .sessionManagement(sessionManager ->
                                 sessionManager

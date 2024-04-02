@@ -48,6 +48,7 @@ public class Herramienta {
     private String descripcion;
 
     @JsonIgnore
+    @JsonManagedReference("FavReference")
     @ManyToMany(mappedBy = "herramientasFavoritas")
     private List<Usuario>  usuariosFavoritos = new ArrayList<>();
 
@@ -59,15 +60,21 @@ public class Herramienta {
     private List<Caracteristicas> caracteristicas = new ArrayList<>();
 
 
-
+    @JsonManagedReference("imagenesReference")
     @OneToMany(mappedBy = "herramienta", cascade = CascadeType.ALL)
     private List<Imagen> imagenes = new ArrayList<>();
 
-    @JsonManagedReference
-    @OneToMany(mappedBy = "herramientaId", fetch = FetchType.LAZY)
+
+
+
+    @JsonIgnoreProperties("herramientaId")
+    @OneToMany(mappedBy = "herramientaId",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<Reserva> reserva = new HashSet<>();
+
+
+    @JsonManagedReference("reseñasReference")
     @JsonIgnoreProperties("herramienta_idReseña")
-    @OneToMany(mappedBy = "herramienta_idReseña", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "herramienta_idReseña", fetch = FetchType.LAZY,cascade = CascadeType.ALL )
     private Set<Reseña>reseñas=new HashSet<>();
 
 
