@@ -22,7 +22,7 @@ public class Imagen {
     @Column(nullable = false, length = 3000)
     private String url;
 
-    @JsonBackReference
+    @JsonBackReference("imagenesReference")
     @ManyToOne
     @JoinColumn(name = "herramienta_id", referencedColumnName= "id")
     private Herramienta herramienta;

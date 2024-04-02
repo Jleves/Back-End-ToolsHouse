@@ -2,6 +2,7 @@ package com.toolsToHome.PI.Model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,9 +31,12 @@ public class Reserva {
     @Column
     private LocalDate fechaDevolucion;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "UsuarioID", referencedColumnName = "id")
     private Usuario usuarioId;
+    @JsonManagedReference
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "reserva_id")
+    private Reseña reseña;
 
 
 
