@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*",allowedHeaders = "*")
 @RestController
 @RequestMapping("/Herramientas")
 public class HerramientaController {

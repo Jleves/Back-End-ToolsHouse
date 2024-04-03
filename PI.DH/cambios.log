@@ -628,3 +628,70 @@
 [2024-04-02 13:13:41] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@4b7291ff  Herramienta:  Herramienta(id=10, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
 [2024-04-02 15:46:29] [ INFO ] [HerramientaController:55] Herramienta pasa por controller
 [2024-04-02 15:46:36] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:23:39] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:24:04] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:24:30] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@1fa70641  Herramienta:  Herramienta(id=8, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
+[2024-04-02 19:25:48] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:35:58] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:38:11] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:38:21] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:38:30] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:38:35] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:38:40] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:38:49] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:40:41] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@669dbb34  Herramienta:  Herramienta(id=16, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
+[2024-04-02 19:41:41] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:41:45] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:42:02] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:42:24] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:43:39] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:44:13] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:44:40] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:44:46] [ INFO ] [HerramientaController:36] Get Usuario
+[2024-04-02 19:44:48] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:45:00] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:45:03] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:45:10] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:45:13] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:45:33] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:45:44] [ INFO ] [HerramientaController:57] Nueva Caracteristica, Controller
+[2024-04-02 19:45:47] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:45:57] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:46:19] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:46:28] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:49:10] [ INFO ] [Reseña:70] herramienta encontrada :  Optional[Herramienta(id=1, categoria=com.toolsToHome.PI.Model.Categoria@38dbf688, stock=100, precio=500, disponibilidad=true, nombre=Llave inglesa test actualizar, descripcion=
+¡Presentamos la Llave Ajustable ProGrip, tu compañera confiable para enfrentar una amplia gama de tareas mecánicas con facilidad! Diseñada para durabilidad y precisión, esta versátil llave es un complemento indispensable para cualquier caja de herramientas., usuariosFavoritos=[], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@297021d9, com.toolsToHome.PI.Model.Caracteristicas@4260faf, com.toolsToHome.PI.Model.Caracteristicas@74faf36d, com.toolsToHome.PI.Model.Caracteristicas@34a00d0a, com.toolsToHome.PI.Model.Caracteristicas@280f8d76, com.toolsToHome.PI.Model.Caracteristicas@65cb2f34], imagenes=[com.toolsToHome.PI.Model.Imagen@1b6b3d6, com.toolsToHome.PI.Model.Imagen@fd7fb8d, com.toolsToHome.PI.Model.Imagen@579f8c3a, com.toolsToHome.PI.Model.Imagen@2e90294a, com.toolsToHome.PI.Model.Imagen@1a8c174d], reserva=[com.toolsToHome.PI.Model.Reserva@263a000f, com.toolsToHome.PI.Model.Reserva@40ca7fe1], reseñas=[com.toolsToHome.PI.Model.Reseña@176148a])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@176148a]
+[2024-04-02 19:50:53] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 19:51:16] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:05:27] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@49ff9879  Herramienta:  Herramienta(id=15, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
+[2024-04-02 20:05:47] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:05:52] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:06:08] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:06:25] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:06:28] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:07:33] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:08:53] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:09:33] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:13:58] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:14:08] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:15:47] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@74b65ea7  Herramienta:  Herramienta(id=15, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
+[2024-04-02 20:16:14] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:16:49] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:16:51] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:16:53] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:17:05] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:17:30] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:19:10] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:19:23] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:19:35] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:20:32] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:22:41] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@57d438f6  Herramienta:  Herramienta(id=2, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
+[2024-04-02 20:23:31] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:23:47] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:23:52] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:24:01] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:24:07] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:24:19] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:24:30] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:25:37] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-02 20:27:05] [ INFO ] [HerramientaController:45] Get Herramienta
