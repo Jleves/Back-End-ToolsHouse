@@ -53,17 +53,28 @@ public class ReservaController {
     public ResponseEntity<String>eliminarReserva(@PathVariable Long id)throws ResourceNotFoundException{
         Optional<Reserva>buscarReserva = reservaService.BuscarPorId(id);
         if(buscarReserva.isPresent()){
-            reservaService.eliminarReserva(id);
-            return ResponseEntity.ok("Reserva con id: "+ id +" eliminada");
-        }else throw  new ResourceNotFoundException("No se encontro Reserva con id: "+id);
+
+                Reserva reserva = buscarReserva.get();
+                Herramienta herramienta = reserva.getHerramientaId();
+
+                // Disociar la herramienta de la reserva
+                herramienta.getReserva().remove(reserva);
+
+                // Guardar la herramienta actualizada
+                herramientaService.actualizarHerramienta(herramienta); // Asegúrate de tener un método adecuado en HerramientaService
+
+                // Eliminar la reserva
+                reservaService.eliminarReserva(id);
+
+                return ResponseEntity.ok("Reserva con id: " + id + " eliminada");
+            } else {
+                throw new ResourceNotFoundException("No se encontró Reserva con id: " + id);
 
 
 
 
 
-
-
-    }
+    }}
     @GetMapping("/list")
     public ResponseEntity<List<Reserva>>listarReservas(){
         return ResponseEntity.ok( reservaService.listarReservas());

@@ -20,7 +20,7 @@ public class Reseña {
 
  @JsonBackReference("reseñasReference")
  @JsonIgnoreProperties("reseñas")
- @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.REMOVE})
+ @ManyToOne(cascade = CascadeType.DETACH)
  @JoinColumn(name = "herramienta_id")
  private Herramienta herramienta_idReseña;
 

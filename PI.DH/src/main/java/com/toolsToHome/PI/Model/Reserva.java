@@ -22,7 +22,7 @@ public class Reserva {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     @JsonIgnoreProperties("reserva")
     @JoinColumn(name = "HerramientaId")
     private Herramienta herramientaId;
