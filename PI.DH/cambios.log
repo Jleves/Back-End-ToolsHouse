@@ -703,3 +703,12 @@
 [2024-04-04 18:39:04] [ INFO ] [HerramientaController:57] Nueva Caracteristica, Controller
 [2024-04-04 18:42:13] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@49d0a708  Herramienta:  Herramienta(id=10, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
 [2024-04-04 19:26:21] [ INFO ] [HerramientaController:57] Nueva Caracteristica, Controller
+[2024-04-04 19:39:26] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-04 19:51:16] [ INFO ] [HerramientaController:57] Nueva Caracteristica, Controller
+[2024-04-04 20:32:30] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-04 20:33:52] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-04 20:34:53] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-04 21:38:30] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-04 21:49:59] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-04 21:51:35] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-04-04 21:53:12] [ INFO ] [HerramientaController:45] Get Herramienta

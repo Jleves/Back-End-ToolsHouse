@@ -37,7 +37,7 @@ public class Reserva {
     @JoinColumn(name = "UsuarioID", referencedColumnName = "id")
     private Usuario usuarioId;
     @JsonManagedReference
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "reserva_id")
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "reserva_id",orphanRemoval = false)
     private Reseña reseña;
 
 

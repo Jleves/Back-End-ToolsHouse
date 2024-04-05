@@ -2,6 +2,7 @@ package com.toolsToHome.PI.Model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,13 +18,10 @@ public class Reseña {
  @GeneratedValue(strategy = GenerationType.IDENTITY)
  private Long id;
 
-
  @JsonBackReference("reseñasReference")
- @JsonIgnoreProperties("reseñas")
  @ManyToOne(cascade = CascadeType.DETACH)
  @JoinColumn(name = "herramienta_id")
  private Herramienta herramienta_idReseña;
-
 
 
  @JsonBackReference
