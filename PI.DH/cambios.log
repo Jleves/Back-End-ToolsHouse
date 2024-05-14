@@ -1,714 +1,97 @@
-[2024-03-17 19:29:02] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-17 19:34:59] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-17 19:40:42] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-17 19:43:48] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-17 19:51:14] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-17 20:37:08] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:37:31] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:37:33] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:38:16] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:39:19] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:39:34] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:39:35] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 20:41:05] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:41:05] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 20:46:31] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:48:39] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:52:51] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:56:40] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:59:25] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 20:59:25] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:00:27] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:00:27] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:02:08] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:02:08] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:02:41] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:02:42] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:03:07] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:03:37] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:03:38] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:03:43] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:03:45] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:11:04] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-17 21:11:11] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:11:59] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:11:59] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:12:03] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:12:03] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:12:07] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:12:07] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:12:43] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:12:43] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:12:47] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:12:54] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:12:54] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:12:56] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:16:06] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:16:06] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-17 21:18:07] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 21:18:07] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 22:27:51] [ INFO ] [HerramientaController:55] Nueva Caracteristica, Controller
-[2024-03-17 22:30:26] [ INFO ] [HerramientaController:55] Nueva Caracteristica, Controller
-[2024-03-17 22:33:13] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-17 22:33:35] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-17 22:48:44] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 17:35:50] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 17:42:56] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 22:08:46] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 22:15:13] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 22:25:09] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 22:36:18] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 22:39:04] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 22:41:01] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-19 22:41:57] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-19 22:43:30] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-19 22:44:49] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-19 22:45:28] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 22:46:47] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-19 22:46:57] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 22:51:00] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-19 22:51:09] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 22:59:27] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 23:13:25] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 23:13:55] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-19 23:18:29] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 23:18:38] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-19 23:39:40] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 23:39:47] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-19 23:39:54] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-19 23:41:10] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-19 23:44:04] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 23:44:38] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-19 23:45:44] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 23:46:48] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-19 23:49:30] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 23:49:37] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-19 23:52:05] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-19 23:52:14] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-20 19:53:50] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-20 19:54:09] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-20 19:54:37] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-20 20:02:16] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-20 20:02:26] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-20 21:06:56] [ INFO ] [HerramientaController:55] Nueva Caracteristica, Controller
-[2024-03-20 21:40:06] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-20 21:40:21] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-20 21:40:21] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-20 21:40:25] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-20 21:40:37] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-20 21:40:42] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-20 21:40:47] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-20 21:42:34] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-20 21:43:09] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-20 21:43:18] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-20 21:43:56] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-20 22:04:57] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-20 22:06:33] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-20 22:06:49] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-20 22:06:49] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-20 22:41:20] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-20 23:44:47] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-20 23:55:38] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-21 20:05:41] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 20:06:01] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 20:10:28] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 20:10:54] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 20:10:54] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-21 20:11:01] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 20:11:01] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-21 20:11:14] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 20:11:14] [ INFO ] [HerramientaController:32] Get Usuario
-[2024-03-21 21:24:08] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 21:41:09] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-21 22:35:49] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 22:50:05] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-21 22:50:17] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-21 22:59:48] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 23:00:14] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 23:00:14] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 23:01:27] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-21 23:01:27] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-21 23:02:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-21 23:03:25] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-21 23:03:47] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-21 23:25:38] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-21 23:25:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-21 23:30:45] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-21 23:31:47] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-21 23:54:33] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 00:02:09] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 00:02:09] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 00:02:20] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 00:02:20] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 00:02:56] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 00:03:47] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 00:10:19] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 00:10:29] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 00:23:12] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 00:29:23] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 00:38:19] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 00:39:11] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 00:45:50] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-22 00:46:00] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-22 07:42:42] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 07:42:45] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 07:42:57] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 07:42:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 07:43:00] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 07:46:15] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-22 07:47:01] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-22 07:48:47] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-22 07:51:28] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-22 07:51:42] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-22 08:22:11] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-22 08:22:21] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-22 08:22:33] [ INFO ] [Reseña:45] Reseña: Comentario de la reseña test 1, 2024-03-14, null
-[2024-03-22 08:25:14] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-22 08:25:24] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-22 08:26:08] [ INFO ] [Reseña:45] Reseña: Comentario de la reseña test 1, 2024-03-14, null
-[2024-03-22 08:30:04] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-22 08:30:12] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-22 08:30:23] [ INFO ] [Reseña:45] Reseña: Comentario de la reseña test 1, 2024-03-14, 3
-[2024-03-22 08:57:26] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 08:59:02] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 08:59:02] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 08:59:11] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 08:59:11] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 08:59:22] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 08:59:45] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 08:59:46] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 08:59:56] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 08:59:56] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 09:39:54] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-22 09:40:12] [ INFO ] [ReservaController:32] Procede informacion a Service Reserva
-[2024-03-22 09:42:41] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 09:50:30] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:20:35] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 10:21:01] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 10:21:02] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 10:21:09] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 10:21:09] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:21:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:21:55] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:21:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:21:59] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:22:10] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:23:00] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:23:11] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:24:19] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:24:21] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:24:30] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:24:41] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 10:25:28] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:25:31] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:25:52] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:26:49] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:26:51] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:26:59] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:27:04] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:27:06] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:27:11] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:27:27] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:27:32] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:27:34] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:27:40] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:27:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:27:58] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:28:12] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:28:22] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:28:26] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:28:35] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:02] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:10] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:11] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:16] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:30] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:35] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:43] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:44] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:48] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:54] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:29:59] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:30:32] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:30:41] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:30:46] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:30:47] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:30:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:31:29] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:32:02] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:33:28] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:33:30] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:33:34] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:33:43] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:35:02] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:35:23] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:35:35] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:36:48] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:37:35] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:37:38] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:37:58] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:38:02] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:39:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:39:52] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:41:19] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:41:41] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:42:20] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:42:24] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:42:36] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:42:47] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:44:38] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:53:56] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:54:11] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:55:13] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:55:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:56:34] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:56:41] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:56:50] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 10:56:51] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 10:56:57] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 10:56:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:58:01] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:58:30] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 10:58:34] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:00:07] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:00:13] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:04:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:05:04] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:06:49] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:06:52] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:06:55] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:06:56] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:07:01] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:07:18] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:07:25] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:07:27] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:07:49] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:07:52] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:02] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:16] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:17] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:18] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:19] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:22] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:40] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:45] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:56] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:08:59] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:09:00] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:09:03] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:09:08] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:09:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:10:02] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:10:13] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:10:16] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:11:22] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:11:26] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:11:27] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:11:33] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:11:38] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:11:43] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:11:47] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:11:51] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:12:36] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:12:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:12:58] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:13:00] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:13:03] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:13:16] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:13:31] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:13:35] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:13:38] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:13:42] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:14:19] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:14:24] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:14:38] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:14:40] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:14:45] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:14:46] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:14:49] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:14:53] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:14:54] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:14:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:15:13] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:15:14] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:15:15] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:15:20] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:15:22] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:17:01] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:18:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:19:00] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:19:01] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:19:03] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:19:04] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:19:09] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:19:53] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:20:42] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:21:01] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:21:24] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:21:29] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:21:31] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:21:44] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:22:11] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:22:27] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:22:35] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:22:43] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:23:22] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:23:39] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:24:33] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:24:37] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:26:00] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:26:09] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:26:47] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:27:39] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:27:45] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:27:48] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:30:04] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:30:06] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:30:10] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:30:15] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:30:32] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:30:44] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:30:48] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:31:29] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:31:37] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:38:05] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:38:29] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:39:00] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:39:32] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:39:33] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:39:38] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:40:05] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:40:08] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:41:28] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:41:36] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:41:42] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:41:49] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:42:51] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:43:04] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:43:47] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:50:00] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:50:17] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:50:25] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:50:28] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:50:37] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:52:27] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:52:32] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:53:12] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:53:43] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:55:23] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:55:41] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:56:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:56:52] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 11:56:54] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 12:00:37] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 12:00:37] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 12:00:44] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 12:00:44] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 12:02:42] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 12:02:44] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 12:02:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:06:26] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 14:06:28] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 14:06:35] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 14:06:35] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:07:08] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:07:13] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:07:18] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:07:41] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:07:43] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:07:47] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:07:48] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:07:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:07:52] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:07:54] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:07:59] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:08:10] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:08:56] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:09:07] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:11:18] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:11:23] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:11:43] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:11:48] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:12:05] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:12:18] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:12:22] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:13:06] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:13:10] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:13:23] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:13:28] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:17:34] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:18:02] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:18:07] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:18:11] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:18:16] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:18:18] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:18:20] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:18:22] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:18:23] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:18:44] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:18:49] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:19:20] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:19:26] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:20:26] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:23:08] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 14:23:09] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 14:23:16] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 14:23:16] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:24:45] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:26:44] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:27:25] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:27:44] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:29:42] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:30:03] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:30:38] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:31:01] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:31:23] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:31:27] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:32:07] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:32:11] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:32:22] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:32:29] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:33:35] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:36:02] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:36:14] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:38:15] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:39:09] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:40:54] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:41:15] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:42:24] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:42:41] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:43:03] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:44:15] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:46:03] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:46:37] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:53:01] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 14:53:02] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 14:53:08] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 14:53:08] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:53:13] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 14:53:13] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:55:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:57:22] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:57:28] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:58:02] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:58:18] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:59:25] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 14:59:32] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 15:01:07] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 15:01:42] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 15:02:32] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 15:03:50] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 15:04:34] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 15:04:48] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 15:05:18] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 15:05:23] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 15:05:27] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 15:07:01] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 16:59:51] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:05:08] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:06:26] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:06:27] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 17:14:27] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 17:14:33] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 17:16:18] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 17:28:04] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 17:28:08] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 17:28:13] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:28:15] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:28:26] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:28:26] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 17:28:50] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:28:56] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:29:00] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:29:10] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:29:47] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:29:48] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:29:54] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:29:54] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 17:33:57] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 17:34:12] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 17:36:40] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 17:51:56] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:51:56] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:52:47] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 17:52:47] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 18:06:17] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 18:06:17] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 18:17:01] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 18:17:24] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 18:17:27] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 18:17:33] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 18:17:34] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:17:00] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:17:00] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 19:17:08] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:17:37] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:17:39] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 19:17:45] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:17:46] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:18:13] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:18:13] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 19:18:16] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:18:17] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 19:18:26] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:18:31] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:18:31] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 19:18:34] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:18:44] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:18:44] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 19:18:46] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:18:48] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 19:49:47] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:50:13] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:50:24] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-22 19:50:37] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:52:35] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:52:36] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-22 19:52:56] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:38:34] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:38:51] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:39:54] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:40:55] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:41:58] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:41:58] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-24 11:42:01] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:42:58] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-24 11:42:59] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:42:59] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:43:28] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:43:28] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-24 11:43:32] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:51:19] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-24 11:53:16] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 11:57:20] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:02:44] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:03:43] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:03:52] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:04:05] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:04:17] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:04:26] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:04:37] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:04:53] [ INFO ] [HerramientaController:55] Nueva Caracteristica, Controller
-[2024-03-24 12:05:52] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-24 12:05:54] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:05:55] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:06:11] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:06:11] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-24 12:06:20] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:06:22] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-24 12:06:46] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-24 12:06:46] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-24 12:07:26] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-24 12:07:26] [ INFO ] [HerramientaController:34] Get Usuario
-[2024-03-24 12:12:23] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:15:03] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:16:07] [ INFO ] [HerramientaController:49] Herramienta pasa por controller
-[2024-03-24 12:18:00] [ INFO ] [ReservaController:34] Procede informacion a Service Reserva
-[2024-03-24 12:40:39] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:47:23] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:51:29] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:52:33] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:55:47] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:55:53] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:56:04] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:56:34] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:57:28] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 12:59:12] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 13:02:07] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 13:06:02] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 13:06:56] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 13:08:19] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-03-24 13:30:08] [ INFO ] [HerramientaController:39] Get Herramienta
-[2024-04-02 11:54:36] [ INFO ] [Reseña:70] herramienta encontrada :  Optional[Herramienta(id=1, categoria=com.toolsToHome.PI.Model.Categoria@1dd7682d, stock=10, precio=50, disponibilidad=true, nombre=Llave inglesa, descripcion=
-¡Presentamos la Llave Ajustable ProGrip, tu compañera confiable para enfrentar una amplia gama de tareas mecánicas con facilidad! Diseñada para durabilidad y precisión, esta versátil llave es un complemento indispensable para cualquier caja de herramientas., usuariosFavoritos=[], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@6b5f6a84, com.toolsToHome.PI.Model.Caracteristicas@71a815fd, com.toolsToHome.PI.Model.Caracteristicas@e132f99, com.toolsToHome.PI.Model.Caracteristicas@6b48c0d6, com.toolsToHome.PI.Model.Caracteristicas@21097ad4], imagenes=[com.toolsToHome.PI.Model.Imagen@74ed4eea, com.toolsToHome.PI.Model.Imagen@7d9ce53f, com.toolsToHome.PI.Model.Imagen@40459ce7, com.toolsToHome.PI.Model.Imagen@1c00bd60, com.toolsToHome.PI.Model.Imagen@2042a14], reserva=[com.toolsToHome.PI.Model.Reserva@68a53920, com.toolsToHome.PI.Model.Reserva@678fe91a], reseñas=[com.toolsToHome.PI.Model.Reseña@2b57e5e3])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@2b57e5e3]
-[2024-04-02 12:00:00] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@28bd322b  Herramienta:  Herramienta(id=10, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
-[2024-04-02 13:13:41] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@4b7291ff  Herramienta:  Herramienta(id=10, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
-[2024-04-02 15:46:29] [ INFO ] [HerramientaController:55] Herramienta pasa por controller
-[2024-04-02 15:46:36] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:23:39] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:24:04] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:24:30] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@1fa70641  Herramienta:  Herramienta(id=8, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
-[2024-04-02 19:25:48] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:35:58] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:38:11] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:38:21] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:38:30] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:38:35] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:38:40] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:38:49] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:40:41] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@669dbb34  Herramienta:  Herramienta(id=16, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
-[2024-04-02 19:41:41] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:41:45] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:42:02] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:42:24] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:43:39] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:44:13] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:44:40] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:44:46] [ INFO ] [HerramientaController:36] Get Usuario
-[2024-04-02 19:44:48] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:45:00] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:45:03] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:45:10] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:45:13] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:45:33] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:45:44] [ INFO ] [HerramientaController:57] Nueva Caracteristica, Controller
-[2024-04-02 19:45:47] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:45:57] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:46:19] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:46:28] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:49:10] [ INFO ] [Reseña:70] herramienta encontrada :  Optional[Herramienta(id=1, categoria=com.toolsToHome.PI.Model.Categoria@38dbf688, stock=100, precio=500, disponibilidad=true, nombre=Llave inglesa test actualizar, descripcion=
-¡Presentamos la Llave Ajustable ProGrip, tu compañera confiable para enfrentar una amplia gama de tareas mecánicas con facilidad! Diseñada para durabilidad y precisión, esta versátil llave es un complemento indispensable para cualquier caja de herramientas., usuariosFavoritos=[], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@297021d9, com.toolsToHome.PI.Model.Caracteristicas@4260faf, com.toolsToHome.PI.Model.Caracteristicas@74faf36d, com.toolsToHome.PI.Model.Caracteristicas@34a00d0a, com.toolsToHome.PI.Model.Caracteristicas@280f8d76, com.toolsToHome.PI.Model.Caracteristicas@65cb2f34], imagenes=[com.toolsToHome.PI.Model.Imagen@1b6b3d6, com.toolsToHome.PI.Model.Imagen@fd7fb8d, com.toolsToHome.PI.Model.Imagen@579f8c3a, com.toolsToHome.PI.Model.Imagen@2e90294a, com.toolsToHome.PI.Model.Imagen@1a8c174d], reserva=[com.toolsToHome.PI.Model.Reserva@263a000f, com.toolsToHome.PI.Model.Reserva@40ca7fe1], reseñas=[com.toolsToHome.PI.Model.Reseña@176148a])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@176148a]
-[2024-04-02 19:50:53] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 19:51:16] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:05:27] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@49ff9879  Herramienta:  Herramienta(id=15, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
-[2024-04-02 20:05:47] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:05:52] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:06:08] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:06:25] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:06:28] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:07:33] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:08:53] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:09:33] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:13:58] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:14:08] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:15:47] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@74b65ea7  Herramienta:  Herramienta(id=15, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
-[2024-04-02 20:16:14] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:16:49] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:16:51] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:16:53] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:17:05] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:17:30] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:19:10] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:19:23] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:19:35] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:20:32] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:22:41] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@57d438f6  Herramienta:  Herramienta(id=2, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
-[2024-04-02 20:23:31] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:23:47] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:23:52] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:24:01] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:24:07] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:24:19] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:24:30] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:25:37] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-02 20:27:05] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 17:06:09] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 17:06:52] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 18:36:31] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 18:36:42] [ INFO ] [HerramientaController:55] Herramienta pasa por controller
-[2024-04-04 18:37:15] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 18:39:04] [ INFO ] [HerramientaController:57] Nueva Caracteristica, Controller
-[2024-04-04 18:42:13] [ INFO ] [ReservaController:38] Usuario Id : com.toolsToHome.PI.Model.Usuario@49d0a708  Herramienta:  Herramienta(id=10, categoria=null, stock=null, precio=null, disponibilidad=false, nombre=null, descripcion=null, usuariosFavoritos=[], caracteristicas=[], imagenes=[], reserva=[], reseñas=[])  Herramienta Id Procede informacion a Service Reserva
-[2024-04-04 19:26:21] [ INFO ] [HerramientaController:57] Nueva Caracteristica, Controller
-[2024-04-04 19:39:26] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 19:51:16] [ INFO ] [HerramientaController:57] Nueva Caracteristica, Controller
-[2024-04-04 20:32:30] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 20:33:52] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 20:34:53] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 21:38:30] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 21:49:59] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 21:51:35] [ INFO ] [HerramientaController:45] Get Herramienta
-[2024-04-04 21:53:12] [ INFO ] [HerramientaController:45] Get Herramienta
+[2024-05-13 20:35:37] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 21:05:03] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 21:26:02] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 21:43:02] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 21:50:27] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:04:43] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:09:14] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:09:22] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:09:49] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:09:52] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:10:43] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:10:57] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:11:09] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:11:11] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:11:30] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:11:46] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:11:52] [ INFO ] [HerramientaController:56] Get Herramienta
+[2024-05-13 23:11:53] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@496a67a3, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@772b7c76, com.toolsToHome.PI.Model.Caracteristicas@2534a319, com.toolsToHome.PI.Model.Caracteristicas@10337864, com.toolsToHome.PI.Model.Caracteristicas@7ec0bee7, com.toolsToHome.PI.Model.Caracteristicas@268a6ef5], imagenes=[com.toolsToHome.PI.Model.Imagen@71aaa03f, com.toolsToHome.PI.Model.Imagen@18b9e346, com.toolsToHome.PI.Model.Imagen@6fb1190d, com.toolsToHome.PI.Model.Imagen@7fdfb128, com.toolsToHome.PI.Model.Imagen@5b504db4], reserva=[com.toolsToHome.PI.Model.Reserva@364b9d80], reseñas=[com.toolsToHome.PI.Model.Reseña@3e8e9b8b])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@3e8e9b8b]
+[2024-05-13 23:12:01] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@1bddd59, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@66123321], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@5829cfad, com.toolsToHome.PI.Model.Caracteristicas@3a7505dd, com.toolsToHome.PI.Model.Caracteristicas@63db502, com.toolsToHome.PI.Model.Caracteristicas@49edc94b, com.toolsToHome.PI.Model.Caracteristicas@4826c7c1], imagenes=[com.toolsToHome.PI.Model.Imagen@d18668b, com.toolsToHome.PI.Model.Imagen@6f127908, com.toolsToHome.PI.Model.Imagen@2bb8c423, com.toolsToHome.PI.Model.Imagen@2dbf2f41, com.toolsToHome.PI.Model.Imagen@63dd2843], reserva=[com.toolsToHome.PI.Model.Reserva@15dabc2d], reseñas=[com.toolsToHome.PI.Model.Reseña@4b7ea3cb])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@4b7ea3cb]
+[2024-05-13 23:12:27] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@40c4ebe2, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@2a8ed0ce], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@2824a0c8, com.toolsToHome.PI.Model.Caracteristicas@2a24b722, com.toolsToHome.PI.Model.Caracteristicas@2c61c2d4, com.toolsToHome.PI.Model.Caracteristicas@5427a7f6, com.toolsToHome.PI.Model.Caracteristicas@274b7c1e], imagenes=[com.toolsToHome.PI.Model.Imagen@333f0856, com.toolsToHome.PI.Model.Imagen@2d069ade, com.toolsToHome.PI.Model.Imagen@5280f042, com.toolsToHome.PI.Model.Imagen@5cd75d45, com.toolsToHome.PI.Model.Imagen@17618331], reserva=[com.toolsToHome.PI.Model.Reserva@407fd35c], reseñas=[com.toolsToHome.PI.Model.Reseña@2f874523])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@2f874523]
+[2024-05-13 23:14:43] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@11376047, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@37ad3ecd], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@72f2008f, com.toolsToHome.PI.Model.Caracteristicas@75d2756c, com.toolsToHome.PI.Model.Caracteristicas@4a173537, com.toolsToHome.PI.Model.Caracteristicas@79780dd4, com.toolsToHome.PI.Model.Caracteristicas@3f757328], imagenes=[com.toolsToHome.PI.Model.Imagen@380d0c50, com.toolsToHome.PI.Model.Imagen@4ce77bf, com.toolsToHome.PI.Model.Imagen@7ca6b415, com.toolsToHome.PI.Model.Imagen@7e67962a, com.toolsToHome.PI.Model.Imagen@2e587a3a], reserva=[com.toolsToHome.PI.Model.Reserva@269cbbb2], reseñas=[com.toolsToHome.PI.Model.Reseña@1074d99a])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@1074d99a]
+[2024-05-13 23:21:08] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@47977d69, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@1956eca4], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@14e10815, com.toolsToHome.PI.Model.Caracteristicas@54d8bfb9, com.toolsToHome.PI.Model.Caracteristicas@6349af72, com.toolsToHome.PI.Model.Caracteristicas@6e0ea15a, com.toolsToHome.PI.Model.Caracteristicas@1ab5a393], imagenes=[com.toolsToHome.PI.Model.Imagen@67d77810, com.toolsToHome.PI.Model.Imagen@75eb47b5, com.toolsToHome.PI.Model.Imagen@7b3155f, com.toolsToHome.PI.Model.Imagen@18e03170, com.toolsToHome.PI.Model.Imagen@442bdd84], reserva=[com.toolsToHome.PI.Model.Reserva@d1caf18], reseñas=[com.toolsToHome.PI.Model.Reseña@7d76f8e8])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@7d76f8e8]
+[2024-05-13 23:22:01] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@2e75e3ae, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@6ea0d5cd], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@721932c2, com.toolsToHome.PI.Model.Caracteristicas@137f3c4a, com.toolsToHome.PI.Model.Caracteristicas@5b363759, com.toolsToHome.PI.Model.Caracteristicas@6391650b, com.toolsToHome.PI.Model.Caracteristicas@7db4f152], imagenes=[com.toolsToHome.PI.Model.Imagen@71a3cc71, com.toolsToHome.PI.Model.Imagen@8728750, com.toolsToHome.PI.Model.Imagen@15f70f99, com.toolsToHome.PI.Model.Imagen@2963d5b, com.toolsToHome.PI.Model.Imagen@6d39b93c], reserva=[com.toolsToHome.PI.Model.Reserva@68875dbb], reseñas=[com.toolsToHome.PI.Model.Reseña@7277df29])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@7277df29]
+[2024-05-13 23:32:12] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@1b2ac4f7, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@494c0a32], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@784e6a88, com.toolsToHome.PI.Model.Caracteristicas@401177a9, com.toolsToHome.PI.Model.Caracteristicas@2d8c7f8e, com.toolsToHome.PI.Model.Caracteristicas@2a2b7d4e, com.toolsToHome.PI.Model.Caracteristicas@281b6a02], imagenes=[com.toolsToHome.PI.Model.Imagen@626f61db, com.toolsToHome.PI.Model.Imagen@7ec15182, com.toolsToHome.PI.Model.Imagen@15648f54, com.toolsToHome.PI.Model.Imagen@3e8cc4eb, com.toolsToHome.PI.Model.Imagen@27f41b58], reserva=[com.toolsToHome.PI.Model.Reserva@5bfb583c], reseñas=[com.toolsToHome.PI.Model.Reseña@7ad462a9])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@7ad462a9]
+[2024-05-13 23:32:14] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@3a9e081, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@1f2f5bf9], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@11588f9a, com.toolsToHome.PI.Model.Caracteristicas@5b184dfc, com.toolsToHome.PI.Model.Caracteristicas@44060a43, com.toolsToHome.PI.Model.Caracteristicas@189f2640, com.toolsToHome.PI.Model.Caracteristicas@46ffac42], imagenes=[com.toolsToHome.PI.Model.Imagen@5ffb0b78, com.toolsToHome.PI.Model.Imagen@1ade6021, com.toolsToHome.PI.Model.Imagen@5aa18e74, com.toolsToHome.PI.Model.Imagen@5741a663, com.toolsToHome.PI.Model.Imagen@5066d738], reserva=[com.toolsToHome.PI.Model.Reserva@7f0eebd4], reseñas=[com.toolsToHome.PI.Model.Reseña@28863714])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@28863714]
+[2024-05-13 23:32:20] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@50a3a076, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@62f2e92c], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@426fa187, com.toolsToHome.PI.Model.Caracteristicas@7782b86d, com.toolsToHome.PI.Model.Caracteristicas@42d6099b, com.toolsToHome.PI.Model.Caracteristicas@561b3357, com.toolsToHome.PI.Model.Caracteristicas@e324a3d], imagenes=[com.toolsToHome.PI.Model.Imagen@40a81ef0, com.toolsToHome.PI.Model.Imagen@7b2d64e3, com.toolsToHome.PI.Model.Imagen@3ff0931a, com.toolsToHome.PI.Model.Imagen@5de208ed, com.toolsToHome.PI.Model.Imagen@5dbdc23f], reserva=[com.toolsToHome.PI.Model.Reserva@5306ae30], reseñas=[com.toolsToHome.PI.Model.Reseña@7580da0e])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@7580da0e]
+[2024-05-13 23:32:42] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@2afe2ddd, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@9bb0d1c], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@305bb70a, com.toolsToHome.PI.Model.Caracteristicas@467797f5, com.toolsToHome.PI.Model.Caracteristicas@44864210, com.toolsToHome.PI.Model.Caracteristicas@2c5680d3, com.toolsToHome.PI.Model.Caracteristicas@31cb6c91], imagenes=[com.toolsToHome.PI.Model.Imagen@28891370, com.toolsToHome.PI.Model.Imagen@49f1faac, com.toolsToHome.PI.Model.Imagen@7299ed3a, com.toolsToHome.PI.Model.Imagen@52f79d95, com.toolsToHome.PI.Model.Imagen@32851628], reserva=[com.toolsToHome.PI.Model.Reserva@34c6c06], reseñas=[com.toolsToHome.PI.Model.Reseña@7e7fb459])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@7e7fb459]
+[2024-05-13 23:33:02] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@784d437e, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@1bdc1af8], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@326234a9, com.toolsToHome.PI.Model.Caracteristicas@24b8c888, com.toolsToHome.PI.Model.Caracteristicas@7f17ba00, com.toolsToHome.PI.Model.Caracteristicas@47f77b5, com.toolsToHome.PI.Model.Caracteristicas@21fe11a], imagenes=[com.toolsToHome.PI.Model.Imagen@7a17ab91, com.toolsToHome.PI.Model.Imagen@4b2ea820, com.toolsToHome.PI.Model.Imagen@6d3abff9, com.toolsToHome.PI.Model.Imagen@64680be, com.toolsToHome.PI.Model.Imagen@414af8c4], reserva=[com.toolsToHome.PI.Model.Reserva@6f4827a2], reseñas=[com.toolsToHome.PI.Model.Reseña@34b157bc])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@34b157bc]
+[2024-05-13 23:33:39] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@416e1497, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@5d2f27f], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@34b9a278, com.toolsToHome.PI.Model.Caracteristicas@401a0130, com.toolsToHome.PI.Model.Caracteristicas@24ece339, com.toolsToHome.PI.Model.Caracteristicas@7858e582, com.toolsToHome.PI.Model.Caracteristicas@1ff19497], imagenes=[com.toolsToHome.PI.Model.Imagen@666ca04f, com.toolsToHome.PI.Model.Imagen@bf2a096, com.toolsToHome.PI.Model.Imagen@5e3b566, com.toolsToHome.PI.Model.Imagen@26506ad4, com.toolsToHome.PI.Model.Imagen@253dc889], reserva=[com.toolsToHome.PI.Model.Reserva@449bcb7b], reseñas=[com.toolsToHome.PI.Model.Reseña@7e421354])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@7e421354]
+[2024-05-13 23:33:56] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@4eee5a7f, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@39313070], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@540ef122, com.toolsToHome.PI.Model.Caracteristicas@1086a849, com.toolsToHome.PI.Model.Caracteristicas@513b4021, com.toolsToHome.PI.Model.Caracteristicas@70ca145b, com.toolsToHome.PI.Model.Caracteristicas@702a0d49], imagenes=[com.toolsToHome.PI.Model.Imagen@5c4eb325, com.toolsToHome.PI.Model.Imagen@5fd60395, com.toolsToHome.PI.Model.Imagen@393bf891, com.toolsToHome.PI.Model.Imagen@3051c553, com.toolsToHome.PI.Model.Imagen@192f8fe7], reserva=[com.toolsToHome.PI.Model.Reserva@1edbcfa], reseñas=[com.toolsToHome.PI.Model.Reseña@4d7aa286])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@4d7aa286]
+[2024-05-13 23:34:37] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@6c74385, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@5408b021], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@78584f57, com.toolsToHome.PI.Model.Caracteristicas@53ecae3e, com.toolsToHome.PI.Model.Caracteristicas@3a3201ad, com.toolsToHome.PI.Model.Caracteristicas@57e03121, com.toolsToHome.PI.Model.Caracteristicas@2b29f3b2], imagenes=[com.toolsToHome.PI.Model.Imagen@4332d28f, com.toolsToHome.PI.Model.Imagen@2d738d10, com.toolsToHome.PI.Model.Imagen@6fb44fc0, com.toolsToHome.PI.Model.Imagen@586c3c95, com.toolsToHome.PI.Model.Imagen@d9f3bbd], reserva=[com.toolsToHome.PI.Model.Reserva@276889c6], reseñas=[com.toolsToHome.PI.Model.Reseña@3c6fd606])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@3c6fd606]
+[2024-05-13 23:34:41] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@3f3b62ea, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@2e26399c], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@4d71797d, com.toolsToHome.PI.Model.Caracteristicas@67400268, com.toolsToHome.PI.Model.Caracteristicas@4e3962af, com.toolsToHome.PI.Model.Caracteristicas@360254b4, com.toolsToHome.PI.Model.Caracteristicas@110e719e], imagenes=[com.toolsToHome.PI.Model.Imagen@1ae1cb55, com.toolsToHome.PI.Model.Imagen@5938b576, com.toolsToHome.PI.Model.Imagen@24b4d5c7, com.toolsToHome.PI.Model.Imagen@52f96d8c, com.toolsToHome.PI.Model.Imagen@4656afe5], reserva=[com.toolsToHome.PI.Model.Reserva@7693e86], reseñas=[com.toolsToHome.PI.Model.Reseña@55150a8d])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@55150a8d]
+[2024-05-13 23:35:03] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@6aa08f57, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@6ef98cb3], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@35bf96cd, com.toolsToHome.PI.Model.Caracteristicas@7af1c412, com.toolsToHome.PI.Model.Caracteristicas@a8affe9, com.toolsToHome.PI.Model.Caracteristicas@39b4a66a, com.toolsToHome.PI.Model.Caracteristicas@77c03164], imagenes=[com.toolsToHome.PI.Model.Imagen@34d105d6, com.toolsToHome.PI.Model.Imagen@a2cb064, com.toolsToHome.PI.Model.Imagen@7332f12a, com.toolsToHome.PI.Model.Imagen@53411b15, com.toolsToHome.PI.Model.Imagen@6f024b1e], reserva=[com.toolsToHome.PI.Model.Reserva@330dee4e], reseñas=[com.toolsToHome.PI.Model.Reseña@705bd9b5])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@705bd9b5]
+[2024-05-13 23:35:05] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@2a56931d, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@55db91c5], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@3a9c5210, com.toolsToHome.PI.Model.Caracteristicas@1af8cd87, com.toolsToHome.PI.Model.Caracteristicas@6740c4a6, com.toolsToHome.PI.Model.Caracteristicas@271bb77d, com.toolsToHome.PI.Model.Caracteristicas@59f860f8], imagenes=[com.toolsToHome.PI.Model.Imagen@3acb920, com.toolsToHome.PI.Model.Imagen@132fa09c, com.toolsToHome.PI.Model.Imagen@2e9ecc6a, com.toolsToHome.PI.Model.Imagen@78ab5795, com.toolsToHome.PI.Model.Imagen@1e289419], reserva=[com.toolsToHome.PI.Model.Reserva@6d178537], reseñas=[com.toolsToHome.PI.Model.Reseña@7740c95])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@7740c95]
+[2024-05-13 23:35:06] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@34e484a1, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@3797a368], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@2ce7fe48, com.toolsToHome.PI.Model.Caracteristicas@4295ed34, com.toolsToHome.PI.Model.Caracteristicas@b918f69, com.toolsToHome.PI.Model.Caracteristicas@a053b1e, com.toolsToHome.PI.Model.Caracteristicas@2ce26643], imagenes=[com.toolsToHome.PI.Model.Imagen@223a976b, com.toolsToHome.PI.Model.Imagen@46b02095, com.toolsToHome.PI.Model.Imagen@71ce0f7c, com.toolsToHome.PI.Model.Imagen@457849f3, com.toolsToHome.PI.Model.Imagen@330f0ff8], reserva=[com.toolsToHome.PI.Model.Reserva@67974e5e], reseñas=[com.toolsToHome.PI.Model.Reseña@9879a35])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@9879a35]
+[2024-05-13 23:35:44] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@671027b6, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@212583ac], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@6dbc087c, com.toolsToHome.PI.Model.Caracteristicas@bc9ed4e, com.toolsToHome.PI.Model.Caracteristicas@177f4b6e, com.toolsToHome.PI.Model.Caracteristicas@69458c59, com.toolsToHome.PI.Model.Caracteristicas@748ceaa0], imagenes=[com.toolsToHome.PI.Model.Imagen@2cc28a01, com.toolsToHome.PI.Model.Imagen@1d1a1e39, com.toolsToHome.PI.Model.Imagen@7aa29008, com.toolsToHome.PI.Model.Imagen@259c18, com.toolsToHome.PI.Model.Imagen@388f9c9f], reserva=[com.toolsToHome.PI.Model.Reserva@3ff025b1], reseñas=[com.toolsToHome.PI.Model.Reseña@50d9f642])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@50d9f642]
+[2024-05-13 23:35:47] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@aabc3a3, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@46aea781], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@614e91be, com.toolsToHome.PI.Model.Caracteristicas@b799381, com.toolsToHome.PI.Model.Caracteristicas@95ad957, com.toolsToHome.PI.Model.Caracteristicas@161cc34e, com.toolsToHome.PI.Model.Caracteristicas@3660c137], imagenes=[com.toolsToHome.PI.Model.Imagen@423803ff, com.toolsToHome.PI.Model.Imagen@5f0df65a, com.toolsToHome.PI.Model.Imagen@7365463, com.toolsToHome.PI.Model.Imagen@7dc2bf9d, com.toolsToHome.PI.Model.Imagen@7fe77c21], reserva=[com.toolsToHome.PI.Model.Reserva@475d4620], reseñas=[com.toolsToHome.PI.Model.Reseña@752b3e97])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@752b3e97]
+[2024-05-13 23:35:59] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@6076635, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@7ef2bdcf], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@6a955a44, com.toolsToHome.PI.Model.Caracteristicas@36f8e0d3, com.toolsToHome.PI.Model.Caracteristicas@7a1ac1d7, com.toolsToHome.PI.Model.Caracteristicas@79138e15, com.toolsToHome.PI.Model.Caracteristicas@be9218], imagenes=[com.toolsToHome.PI.Model.Imagen@621718bf, com.toolsToHome.PI.Model.Imagen@3357bf04, com.toolsToHome.PI.Model.Imagen@358705f4, com.toolsToHome.PI.Model.Imagen@4806797e, com.toolsToHome.PI.Model.Imagen@120e4221], reserva=[com.toolsToHome.PI.Model.Reserva@6a1c4701], reseñas=[com.toolsToHome.PI.Model.Reseña@1f18b5f5])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@1f18b5f5]
+[2024-05-13 23:39:38] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@639ac3f9, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@2fc0e5ac], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@67a70878, com.toolsToHome.PI.Model.Caracteristicas@331e6630, com.toolsToHome.PI.Model.Caracteristicas@4363a174, com.toolsToHome.PI.Model.Caracteristicas@17a483cd, com.toolsToHome.PI.Model.Caracteristicas@1160ad8f], imagenes=[com.toolsToHome.PI.Model.Imagen@4277548c, com.toolsToHome.PI.Model.Imagen@53dbda68, com.toolsToHome.PI.Model.Imagen@3b120859, com.toolsToHome.PI.Model.Imagen@11ef97ff, com.toolsToHome.PI.Model.Imagen@69c4627a], reserva=[com.toolsToHome.PI.Model.Reserva@3c113305], reseñas=[com.toolsToHome.PI.Model.Reseña@75855df5])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@75855df5]
+[2024-05-13 23:39:41] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@2f63ccb1, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@c225954], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@23d1d4a1, com.toolsToHome.PI.Model.Caracteristicas@70884450, com.toolsToHome.PI.Model.Caracteristicas@277a23ba, com.toolsToHome.PI.Model.Caracteristicas@1b161bf2, com.toolsToHome.PI.Model.Caracteristicas@7be66866], imagenes=[com.toolsToHome.PI.Model.Imagen@709660c5, com.toolsToHome.PI.Model.Imagen@549ed9c9, com.toolsToHome.PI.Model.Imagen@49ff9a25, com.toolsToHome.PI.Model.Imagen@2d378554, com.toolsToHome.PI.Model.Imagen@6e64487f], reserva=[com.toolsToHome.PI.Model.Reserva@3dc7114], reseñas=[com.toolsToHome.PI.Model.Reseña@46f073a7])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@46f073a7]
+[2024-05-13 23:39:54] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@5af6a530, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@1c10ac91], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@2bb13a09, com.toolsToHome.PI.Model.Caracteristicas@112374e6, com.toolsToHome.PI.Model.Caracteristicas@358c28a0, com.toolsToHome.PI.Model.Caracteristicas@739db81c, com.toolsToHome.PI.Model.Caracteristicas@49e8fb42], imagenes=[com.toolsToHome.PI.Model.Imagen@e519211, com.toolsToHome.PI.Model.Imagen@fa28bd5, com.toolsToHome.PI.Model.Imagen@815500f, com.toolsToHome.PI.Model.Imagen@624f124b, com.toolsToHome.PI.Model.Imagen@608cd509], reserva=[com.toolsToHome.PI.Model.Reserva@2e812617], reseñas=[com.toolsToHome.PI.Model.Reseña@3116cb12])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@3116cb12]
+[2024-05-13 23:42:46] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@6c392b2f, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@5a9c1093], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@6ca0573f, com.toolsToHome.PI.Model.Caracteristicas@698361d9, com.toolsToHome.PI.Model.Caracteristicas@17aa5ce2, com.toolsToHome.PI.Model.Caracteristicas@6e425a09, com.toolsToHome.PI.Model.Caracteristicas@3d2b130f], imagenes=[com.toolsToHome.PI.Model.Imagen@33987d72, com.toolsToHome.PI.Model.Imagen@ff0bc5b, com.toolsToHome.PI.Model.Imagen@3bb4077c, com.toolsToHome.PI.Model.Imagen@18276712, com.toolsToHome.PI.Model.Imagen@6824fa89], reserva=[com.toolsToHome.PI.Model.Reserva@2848eb8d], reseñas=[com.toolsToHome.PI.Model.Reseña@16739215])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@16739215]
+[2024-05-13 23:43:28] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@4c10e84b, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@14ad40b8], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@83f1513, com.toolsToHome.PI.Model.Caracteristicas@67c6335b, com.toolsToHome.PI.Model.Caracteristicas@3b96f802, com.toolsToHome.PI.Model.Caracteristicas@707e7a49, com.toolsToHome.PI.Model.Caracteristicas@38ce09a7], imagenes=[com.toolsToHome.PI.Model.Imagen@621c38bc, com.toolsToHome.PI.Model.Imagen@445ed295, com.toolsToHome.PI.Model.Imagen@1d87f920, com.toolsToHome.PI.Model.Imagen@b3dc96f, com.toolsToHome.PI.Model.Imagen@867c96c], reserva=[com.toolsToHome.PI.Model.Reserva@5a33c94d], reseñas=[com.toolsToHome.PI.Model.Reseña@16b3a4f9])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@16b3a4f9]
+[2024-05-13 23:45:30] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@4307b5c2, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@6d56ba40], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@15f877c3, com.toolsToHome.PI.Model.Caracteristicas@2dcf2ee5, com.toolsToHome.PI.Model.Caracteristicas@49df4c8e, com.toolsToHome.PI.Model.Caracteristicas@1bd686ed, com.toolsToHome.PI.Model.Caracteristicas@4c434a29], imagenes=[com.toolsToHome.PI.Model.Imagen@a1b044b, com.toolsToHome.PI.Model.Imagen@1c18873e, com.toolsToHome.PI.Model.Imagen@55a01720, com.toolsToHome.PI.Model.Imagen@71246ab8, com.toolsToHome.PI.Model.Imagen@23cf018b], reserva=[com.toolsToHome.PI.Model.Reserva@5e038cf1], reseñas=[com.toolsToHome.PI.Model.Reseña@21d2a68])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@21d2a68]
+[2024-05-13 23:45:33] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@24bff364, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@7deb5a40], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@6a3095d7, com.toolsToHome.PI.Model.Caracteristicas@69ca339c, com.toolsToHome.PI.Model.Caracteristicas@298df37b, com.toolsToHome.PI.Model.Caracteristicas@26b9b9b2, com.toolsToHome.PI.Model.Caracteristicas@4d7a9786], imagenes=[com.toolsToHome.PI.Model.Imagen@461ad9a8, com.toolsToHome.PI.Model.Imagen@31a2f19d, com.toolsToHome.PI.Model.Imagen@5712a672, com.toolsToHome.PI.Model.Imagen@253ed9da, com.toolsToHome.PI.Model.Imagen@3579834c], reserva=[com.toolsToHome.PI.Model.Reserva@5a5da9f4], reseñas=[com.toolsToHome.PI.Model.Reseña@5d10ce9d])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@5d10ce9d]
+[2024-05-13 23:45:44] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@7b46837a, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@b42acde], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@781ce1e1, com.toolsToHome.PI.Model.Caracteristicas@39f9d05e, com.toolsToHome.PI.Model.Caracteristicas@2dd0e409, com.toolsToHome.PI.Model.Caracteristicas@5332623c, com.toolsToHome.PI.Model.Caracteristicas@2ba4f252], imagenes=[com.toolsToHome.PI.Model.Imagen@46042015, com.toolsToHome.PI.Model.Imagen@31c59ca1, com.toolsToHome.PI.Model.Imagen@1bc9c069, com.toolsToHome.PI.Model.Imagen@22a56b1f, com.toolsToHome.PI.Model.Imagen@45c6e3d6], reserva=[com.toolsToHome.PI.Model.Reserva@4dad8d86], reseñas=[com.toolsToHome.PI.Model.Reseña@4d600a74])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@4d600a74]
+[2024-05-13 23:48:42] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@66998df7, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@62bc07bc], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@6b13a5c0, com.toolsToHome.PI.Model.Caracteristicas@167ceae, com.toolsToHome.PI.Model.Caracteristicas@51f4059e, com.toolsToHome.PI.Model.Caracteristicas@392caf4e, com.toolsToHome.PI.Model.Caracteristicas@13299735], imagenes=[com.toolsToHome.PI.Model.Imagen@79a8a4a3, com.toolsToHome.PI.Model.Imagen@33815b38, com.toolsToHome.PI.Model.Imagen@717bdcfa, com.toolsToHome.PI.Model.Imagen@6f797987, com.toolsToHome.PI.Model.Imagen@53485577], reserva=[com.toolsToHome.PI.Model.Reserva@2ce991c3], reseñas=[com.toolsToHome.PI.Model.Reseña@7fdb48c7])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@7fdb48c7]
+[2024-05-13 23:48:46] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@2f0f50e0, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@5f10be76], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@fdc42db, com.toolsToHome.PI.Model.Caracteristicas@3bbfe724, com.toolsToHome.PI.Model.Caracteristicas@3a2dd57b, com.toolsToHome.PI.Model.Caracteristicas@5441a9eb, com.toolsToHome.PI.Model.Caracteristicas@3e4816f], imagenes=[com.toolsToHome.PI.Model.Imagen@15f1c5c7, com.toolsToHome.PI.Model.Imagen@5ac7de38, com.toolsToHome.PI.Model.Imagen@7334e9ba, com.toolsToHome.PI.Model.Imagen@fd9932f, com.toolsToHome.PI.Model.Imagen@149da0ee], reserva=[com.toolsToHome.PI.Model.Reserva@26cf2310], reseñas=[com.toolsToHome.PI.Model.Reseña@4e9a3033])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@4e9a3033]
+[2024-05-13 23:48:56] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@7a3ff906, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@41724540], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@341126ad, com.toolsToHome.PI.Model.Caracteristicas@37614c37, com.toolsToHome.PI.Model.Caracteristicas@d6d43e0, com.toolsToHome.PI.Model.Caracteristicas@6f73cf59, com.toolsToHome.PI.Model.Caracteristicas@19fba703], imagenes=[com.toolsToHome.PI.Model.Imagen@5486d3e, com.toolsToHome.PI.Model.Imagen@79c6f22c, com.toolsToHome.PI.Model.Imagen@34c92353, com.toolsToHome.PI.Model.Imagen@d72f620, com.toolsToHome.PI.Model.Imagen@4b955b2d], reserva=[com.toolsToHome.PI.Model.Reserva@7d6b38e], reseñas=[com.toolsToHome.PI.Model.Reseña@78faa85f])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@78faa85f]
+[2024-05-13 23:49:20] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@72d4730c, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@47dbcf08], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@3a3083ee, com.toolsToHome.PI.Model.Caracteristicas@6a73cf4e, com.toolsToHome.PI.Model.Caracteristicas@2a3b2236, com.toolsToHome.PI.Model.Caracteristicas@bb05ef2, com.toolsToHome.PI.Model.Caracteristicas@3be5ad05], imagenes=[com.toolsToHome.PI.Model.Imagen@1ca30bec, com.toolsToHome.PI.Model.Imagen@8cd3d03, com.toolsToHome.PI.Model.Imagen@6172c941, com.toolsToHome.PI.Model.Imagen@2b91360e, com.toolsToHome.PI.Model.Imagen@2fe9b4fb], reserva=[com.toolsToHome.PI.Model.Reserva@40c9af6e], reseñas=[com.toolsToHome.PI.Model.Reseña@6b78e531])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@6b78e531]
+[2024-05-13 23:50:42] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@4fe642e5, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@108e4261], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@74233503, com.toolsToHome.PI.Model.Caracteristicas@682940a2, com.toolsToHome.PI.Model.Caracteristicas@52284e11, com.toolsToHome.PI.Model.Caracteristicas@6752abc5, com.toolsToHome.PI.Model.Caracteristicas@3f62d304], imagenes=[com.toolsToHome.PI.Model.Imagen@3adac28a, com.toolsToHome.PI.Model.Imagen@2c77fd89, com.toolsToHome.PI.Model.Imagen@3cc40459, com.toolsToHome.PI.Model.Imagen@61d8ebe4, com.toolsToHome.PI.Model.Imagen@d7abbc7], reserva=[com.toolsToHome.PI.Model.Reserva@5db4a9a1], reseñas=[com.toolsToHome.PI.Model.Reseña@4c5bd501])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@4c5bd501]
+[2024-05-13 23:51:19] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@521c162f, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@61b45b6a], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@7c7ddf88, com.toolsToHome.PI.Model.Caracteristicas@5647d204, com.toolsToHome.PI.Model.Caracteristicas@3ffcb601, com.toolsToHome.PI.Model.Caracteristicas@aae6649, com.toolsToHome.PI.Model.Caracteristicas@6ae932], imagenes=[com.toolsToHome.PI.Model.Imagen@7c3d385e, com.toolsToHome.PI.Model.Imagen@755b40a4, com.toolsToHome.PI.Model.Imagen@28774867, com.toolsToHome.PI.Model.Imagen@48e52812, com.toolsToHome.PI.Model.Imagen@5d8f0698], reserva=[com.toolsToHome.PI.Model.Reserva@72ba1d74], reseñas=[com.toolsToHome.PI.Model.Reseña@1a3d4567])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@1a3d4567]
+[2024-05-13 23:51:21] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@433418a6, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@459a066], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@470460f0, com.toolsToHome.PI.Model.Caracteristicas@2e6014b8, com.toolsToHome.PI.Model.Caracteristicas@37b09e42, com.toolsToHome.PI.Model.Caracteristicas@a1cd259, com.toolsToHome.PI.Model.Caracteristicas@516b5a1a], imagenes=[com.toolsToHome.PI.Model.Imagen@1a91535f, com.toolsToHome.PI.Model.Imagen@d114a13, com.toolsToHome.PI.Model.Imagen@626277b6, com.toolsToHome.PI.Model.Imagen@78de65b9, com.toolsToHome.PI.Model.Imagen@68c5ca56], reserva=[com.toolsToHome.PI.Model.Reserva@5f9bcce8], reseñas=[com.toolsToHome.PI.Model.Reseña@198cb416])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@198cb416]
+[2024-05-13 23:51:24] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@7e9fbf29, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@10563db7], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@6cc08d6c, com.toolsToHome.PI.Model.Caracteristicas@144cf5f3, com.toolsToHome.PI.Model.Caracteristicas@5f97e4b, com.toolsToHome.PI.Model.Caracteristicas@4b33b4a6, com.toolsToHome.PI.Model.Caracteristicas@395bc2ee], imagenes=[com.toolsToHome.PI.Model.Imagen@294ed9df, com.toolsToHome.PI.Model.Imagen@33719b30, com.toolsToHome.PI.Model.Imagen@7fd1329d, com.toolsToHome.PI.Model.Imagen@1821ecfe, com.toolsToHome.PI.Model.Imagen@47fe5e04], reserva=[com.toolsToHome.PI.Model.Reserva@3e3bb20], reseñas=[com.toolsToHome.PI.Model.Reseña@44a2f83e])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@44a2f83e]
+[2024-05-13 23:51:33] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@18574f5c, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@1d36444d], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@2038fb41, com.toolsToHome.PI.Model.Caracteristicas@6dbc6225, com.toolsToHome.PI.Model.Caracteristicas@45299fd3, com.toolsToHome.PI.Model.Caracteristicas@3e247a19, com.toolsToHome.PI.Model.Caracteristicas@71417584], imagenes=[com.toolsToHome.PI.Model.Imagen@1fa792f1, com.toolsToHome.PI.Model.Imagen@6ea073f0, com.toolsToHome.PI.Model.Imagen@48512c49, com.toolsToHome.PI.Model.Imagen@2cb1a7c3, com.toolsToHome.PI.Model.Imagen@f2288be], reserva=[com.toolsToHome.PI.Model.Reserva@60bf3579], reseñas=[com.toolsToHome.PI.Model.Reseña@614770fa])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@614770fa]
+[2024-05-13 23:51:36] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@55e531a7, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@4c714583], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@6a9ef537, com.toolsToHome.PI.Model.Caracteristicas@2a934ba7, com.toolsToHome.PI.Model.Caracteristicas@61ed2cc0, com.toolsToHome.PI.Model.Caracteristicas@7a9da05c, com.toolsToHome.PI.Model.Caracteristicas@34564812], imagenes=[com.toolsToHome.PI.Model.Imagen@64dc6e3a, com.toolsToHome.PI.Model.Imagen@f092336, com.toolsToHome.PI.Model.Imagen@351b86f7, com.toolsToHome.PI.Model.Imagen@32b54d09, com.toolsToHome.PI.Model.Imagen@351f58db], reserva=[com.toolsToHome.PI.Model.Reserva@59a5c147], reseñas=[com.toolsToHome.PI.Model.Reseña@3f98ede3])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@3f98ede3]
+[2024-05-13 23:51:38] [ INFO ] [Reseña:90] herramienta encontrada :  Optional[Herramienta(id=3, categoria=com.toolsToHome.PI.Model.Categoria@b4ab175, stock=12, precio=50, disponibilidad=true, nombre=Broca, descripcion=
+¡Presentamos la Broca de Carburo UltraDrill, la opción definitiva para perforaciones precisas y eficientes en una variedad de materiales! Diseñada para profesionales y aficionados por igual, esta broca ofrece un rendimiento excepcional y una durabilidad inigualable., usuariosFavoritos=[com.toolsToHome.PI.Model.Usuario@2b08b6ca], caracteristicas=[com.toolsToHome.PI.Model.Caracteristicas@1d99484b, com.toolsToHome.PI.Model.Caracteristicas@7a9d6f46, com.toolsToHome.PI.Model.Caracteristicas@72e721ba, com.toolsToHome.PI.Model.Caracteristicas@61908287, com.toolsToHome.PI.Model.Caracteristicas@505201c2], imagenes=[com.toolsToHome.PI.Model.Imagen@3793918b, com.toolsToHome.PI.Model.Imagen@2db7340a, com.toolsToHome.PI.Model.Imagen@5b7e87dc, com.toolsToHome.PI.Model.Imagen@526d9c90, com.toolsToHome.PI.Model.Imagen@7959509f], reserva=[com.toolsToHome.PI.Model.Reserva@4b76ecca], reseñas=[com.toolsToHome.PI.Model.Reseña@2232e333])]Reseñas de la herramienta : [com.toolsToHome.PI.Model.Reseña@2232e333]

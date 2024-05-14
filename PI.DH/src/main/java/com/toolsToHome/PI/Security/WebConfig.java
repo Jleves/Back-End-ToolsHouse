@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 
@@ -16,12 +17,17 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-
+import java.util.Arrays;
 
 
 @Configuration
@@ -42,6 +48,17 @@ public class WebConfig  {
         provider.setUserDetailsService(usuarioService);
         return provider;
     }
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource(){
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "DELETE", "PUT","OPTIONS"));
+        configuration.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
+        configuration.setAllowCredentials(true);
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**",configuration);
+        return source;
+    }
 
 
     @Bean
@@ -59,27 +76,29 @@ public class WebConfig  {
     {
         return
                 http
-                        .csrf(csrf ->
-                                csrf
-                                        .disable())
-                        .cors(cors ->
-                                cors
-                                        .disable())
-                        .authorizeHttpRequests( authRequest ->
-                                        authRequest /* RUTAS PUBLICAS */
-                                                .requestMatchers("/swagger-ui/**", "/swagger-resources/*", "/v3/api-docs/**", "/auth/**").permitAll()
-                                                .requestMatchers( "/Herramientas/**").permitAll()
-                                                .requestMatchers("/Reseñas/**").permitAll()
-                                                .requestMatchers("/Categorias/**").permitAll()
-                                                .requestMatchers( "/Caracteristicas/**").permitAll()
-                                                .requestMatchers( "/Reservas/**").permitAll()
-                                                .requestMatchers( "/User/**").permitAll()
-                                                .anyRequest().authenticated()
-                        )
+                        .cors(c -> c.configurationSource(corsConfigurationSource()))
+                        .exceptionHandling(customizer -> customizer.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))
+                        .csrf(AbstractHttpConfigurer::disable)
                         .sessionManagement(sessionManager ->
                                 sessionManager
                                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                         )
+                        .authorizeHttpRequests( authRequest ->
+                                        authRequest /* RUTAS PUBLICAS */
+                                                .requestMatchers(HttpMethod.POST,"/auth/login", "/auth/register").permitAll()
+                                                .requestMatchers(HttpMethod.POST,"/Reservas/create","/Reseñas/create","/User/favs/**").hasAnyRole("USER","ADMIN","SUPERADMIN")
+                                                .requestMatchers(HttpMethod.POST, "/Caracteristicas/create","/Categorias/create", "/Herramientas/create" ).hasAnyRole("ADMIN","SUPERADMIN")
+                                                .requestMatchers(HttpMethod.GET,"/Caracteristicas/list","/Caracteristicas/list/**","/Categorias/list","/Categorias/list/**","/Herramientas/list", "/Herramientas/list/**", "/Herramientas/buscar/nombre/**","/Herramientas/buscar/**","/Reseñas/list","/Reseñas/list/**", "/Reseñas/herramienta/**").permitAll()
+                                                .requestMatchers(HttpMethod.GET, "/Reservas/list" ,"/Reservas/list/**", "/User/profile","User/favs/**").hasAnyRole("USER","SUPERADMIN","ADMIN")
+                                                .requestMatchers(HttpMethod.GET,"User/list").hasAnyRole("ADMIN","SUPERADMIN")
+                                                .requestMatchers(HttpMethod.PUT, "/Caracteristicas/update","/Categorias/update","/Herramientas/update","/User/updateRole/**").hasAnyRole("ADMIN", "SUPERADMIN")
+                                                .requestMatchers(HttpMethod.DELETE,"/Reservas/delete/**", "/Reseñas/delete/**").hasAnyRole("USER","SUPERADMIN","ADMIN")
+                                                .requestMatchers(HttpMethod.DELETE, "/Caracteristicas/delete/**","/Categorias/delete/**","/Herramientas/delete/**").hasAnyRole("ADMIN", "SUPERADMIN")
+
+
+                                                .anyRequest().authenticated()
+                        )
+
                         .authenticationProvider(daoAuthenticationProvider())
                         .addFilterBefore(jwtRequestFilter,UsernamePasswordAuthenticationFilter.class)
                         .build();
@@ -90,118 +109,6 @@ public class WebConfig  {
     }
 
 
-    /*
-                http
-                        .csrf(csrf ->
-                                csrf
-                                        .disable())
-                        .cors(cors ->
-                                cors
-                                        .disable())
-
-                        .authorizeHttpRequests( authRequest ->
-                                authRequest
-
-                                        .requestMatchers("/auth/*", "/detail/*","/registro").permitAll()
-                                        .requestMatchers("/Herramientas/**").permitAll()
-                                        .requestMatchers("/admin", "/categoria/**").permitAll()
-                                        .requestMatchers("/user/**", "/user/{id}/usuarioRole").permitAll()
-                                        .requestMatchers("/Categorias/**").permitAll()
-                                        .requestMatchers("/Caracteristicas/**").permitAll()
-                                        .requestMatchers("/v2/api-docs/**", "/swagger-ui/**", "/swagger-resources/**", "/v2/api-docs/**").permitAll()
-
-                                        .anyRequest().authenticated()
-                        )
-                        .sessionManagement(sessionManager ->
-                                sessionManager
-                                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-
-                        )
-                        .authenticationProvider(daoAuthenticationProvider())
-                        .addFilterBefore(jwtRequestFilter,UsernamePasswordAuthenticationFilter.class)
-
-                        .build();
-*/
-
-
-
-
-
-    /*public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
-    {
-        return
-                http
-                        .csrf(AbstractHttpConfigurer::disable)
-                        .cors(AbstractHttpConfigurer::disable)
-                        .authorizeHttpRequests( authRequest ->
-                                authRequest
-                                        .requestMatchers("/v2/api-docs", "/swagger-ui/**", "/swagger-resources/**").permitAll()
-                                        .requestMatchers("/auth/**", "/Herramientas/**", "/admin/**", "/user/**", "/Categorias/**", "/Caracteristicas/**", "/Reservas/**").permitAll()
-                                        //.anyRequest().authenticated()
-                        )
-                        .sessionManagement(sessionManager ->
-                                sessionManager
-                                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                        )
-                        .authenticationProvider(daoAuthenticationProvider())
-                        .addFilterBefore(jwtRequestFilter,UsernamePasswordAuthenticationFilter.class)
-                        .build();
-    }*/
-    /*@Bean
-    public void addCorsMappings(Cors registry) {
-        registry.allowedOriginPatterns("/**")
-                .codePoints("http://localhost:5173")
-                .allowedMethods("GET", "POST", "PUT", "DELETE")
-                .allowedHeaders("*");
-    }*/
-/*
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173/")
-                .allowCredentials(true)
-
-                .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS")
-                .allowedHeaders("Access-Control-Allow-Origin");
-
-
-        registry.addMapping("/auth/**")
-                .allowedOrigins("http://localhost:5173/")
-
-
-                .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS")
-                .allowedHeaders("Access-Control-Allow-Origin");
-
-
-    }*/
 
 }
 
-/*
-* return http
-                .csrf(csrf ->
-                        csrf
-                                .disable())
-                .authorizeHttpRequests( authRequest ->
-                        authRequest
-                                .requestMatchers("/", "/auth/*", "/detail/*").permitAll()
-                                .requestMatchers("/admin", "/categoria/**").hasAnyRole("ADMIN", "SUPERADMIN")
-                                .requestMatchers("/users/**").hasRole("SUPERADMIN")
-                                .anyRequest().authenticated()
-                        )
-                .sessionManagement( sessionManager ->
-                        sessionManager
-                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authenticationProvider(authProvider)
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
-                .build();
-    } */
-
-    /*
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173")
-                .allowedMethods("GET", "POST", "PUT", "DELETE")
-                .allowedHeaders("*");
-    }
-}*/

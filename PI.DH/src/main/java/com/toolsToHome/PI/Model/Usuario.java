@@ -95,7 +95,7 @@ public class Usuario implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        SimpleGrantedAuthority grantedAuthority = new SimpleGrantedAuthority(usuarioRole.name());
+        SimpleGrantedAuthority grantedAuthority = new SimpleGrantedAuthority("ROLE_".concat (usuarioRole.name()));
         return Collections.singletonList(grantedAuthority);
     }
 

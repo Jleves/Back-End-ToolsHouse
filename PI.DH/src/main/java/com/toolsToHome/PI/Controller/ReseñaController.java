@@ -31,10 +31,18 @@ public class ReseñaController {
         this.herramientaService = herramientaService;
     }
 
+
+    //ADMIN, USER********************************************************
+
+
+
     @GetMapping("/list")
     public ResponseEntity<List<Reseña>>listarReseñas(){
     return ResponseEntity.ok( reseñaService.listarReseñas());
     }
+
+    //ADMIN, USER         ******************************************************************
+
 
     @GetMapping("/list/{id}")
     public ResponseEntity<Optional<Reseña>>buscarPorId(@PathVariable Long id) throws ResourceNotFoundException {
@@ -43,6 +51,9 @@ public class ReseñaController {
             return ResponseEntity.ok(buscarReseña);
         }else throw new ResourceNotFoundException("No se encontro reserva con id: " + id);
     }
+
+    //ADMIN, USER
+
 
 
     @PostMapping("/create")
@@ -55,6 +66,10 @@ public class ReseñaController {
 
     }
 
+
+    //ADMIN, USER  *********************************
+
+
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarReseña(@PathVariable Long id) throws ResourceNotFoundException{
         Optional<Reseña>buscarReseña= reseñaService.BuscarPorId(id);
@@ -63,6 +78,11 @@ public class ReseñaController {
             return ResponseEntity.ok("Reseña con id: "+ id + " eliminada");
         }else throw new ResourceNotFoundException("No se encontro la reseña con id: "+id);
     }
+
+
+    //ADMIN, USER                 *****************************************************************
+
+
     @GetMapping("/herramienta/{herramienta_idReseña}")
     public ResponseEntity<Set<Reseña>>buscarHerramienta( @PathVariable Long herramienta_idReseña) throws ResourceNotFoundException {
         Optional<Herramienta>buscarHerramienta = herramientaService.buscarPorId(herramienta_idReseña);

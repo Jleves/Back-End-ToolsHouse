@@ -31,11 +31,20 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
+
+    //ADMIN
+
+
+
     @GetMapping("/list")
     public ResponseEntity<List<Usuario>> listarHerramientas(){
-        logger.info("Get Usuario");
         return ResponseEntity.ok(usuarioService.listarTodos());
     }
+
+
+    //ADMIN, USER  ********************************************
+
+
 
     @GetMapping("/profile")
     public ResponseEntity<UserDTO> getUserProfile(@AuthenticationPrincipal UserDetails userDetails) {
@@ -47,6 +56,11 @@ public class UsuarioController {
             return ResponseEntity.notFound().build();
         }
     }
+
+
+    //ADMIN   ****************************************************
+
+
 
     @PutMapping("/updateRole/{id}/usuarioRole")
     public ResponseEntity<?> updateRole(@PathVariable Long id,@RequestBody Usuario usuarioRole) {
@@ -60,6 +74,12 @@ public class UsuarioController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+
+
+    //ADMIN
+
+
+
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarUsuario(@PathVariable Long id) throws ResourceNotFoundException {
@@ -75,22 +95,23 @@ public class UsuarioController {
 
 
 
-    /* ANGEL */
+    // ADMIN, USER  **************************************************
 
 
-
-
-
-    /* FAVS */
-
-    @PostMapping("/{id}/favs/{herramientaId}")
+    @PostMapping("/favs/{id}/{herramientaId}")
     public ResponseEntity<String> agregarHerramientaFavorita(@PathVariable Long id, @PathVariable Long herramientaId) {
         try {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            System.out.println("autenticacion:   " +  authentication);
+            System.out.println("is authenticated:  " + authentication.isAuthenticated());
             if (authentication != null && authentication.isAuthenticated()) {
                 UserDetails userDetails = (UserDetails) authentication.getPrincipal();
                 String email = userDetails.getUsername();
+                System.out.println("email :" + email);
+                System.out.println("UserDetails :  "+ userDetails);
+                System.out.println(id);
 
+                System.out.println("segunda condicion: " + usuarioService.isUsuarioCorreo(email,id));
                 if (usuarioService.isUsuarioCorreo(email, id)) {
                     usuarioService.agregarHerramientaFavorita(id, herramientaId);
                     return ResponseEntity.ok("Herramienta agregada a favoritos");
@@ -108,7 +129,13 @@ public class UsuarioController {
 
     }
 
-    @DeleteMapping("/{id}/favs/{herramientaId}")
+
+
+
+
+    // ADMIN, USER
+
+    @DeleteMapping("/favs/{id}/{herramientaId}")
     public ResponseEntity<String> eliminarHerramientaFavorita(@PathVariable Long id, @PathVariable Long herramientaId)
     {
         try
@@ -134,7 +161,14 @@ public class UsuarioController {
         }
     }
 
-    @GetMapping("/{id}/favs")
+
+
+
+    // ADMIN, USER ******************************
+
+
+
+    @GetMapping("/favs/{id}")
     public ResponseEntity<List<Herramienta>> listarHerramientasFavoritas(@PathVariable Long id) {
         try {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

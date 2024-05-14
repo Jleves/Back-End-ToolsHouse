@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-@CrossOrigin(origins = "*",allowedHeaders = "*")
+//@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/Herramientas")
 public class HerramientaController {
@@ -30,6 +30,12 @@ public class HerramientaController {
         this.categoriaService = categoriaService;
     }
 
+
+
+    //ADMIN, USER   *******************************
+
+
+
     @GetMapping("/list/{id}")
     public ResponseEntity<Optional<Herramienta>>buscarHerramienta(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Herramienta>buscarHerramienta = herramientaService.buscarPorId(id);
@@ -40,11 +46,22 @@ public class HerramientaController {
         }
     }
 
+
+    //ADMIN, USER   *********************************
+
+
+
     @GetMapping("/list")
     public ResponseEntity<List<Herramienta>>listarHerramientas(){
         logger.info("Get Herramienta");
         return ResponseEntity.ok(herramientaService.listarTodos());
     }
+
+
+
+    //ADMIN              ****************************
+
+
 
     @PostMapping("/create")
     public ResponseEntity<Herramienta>guardarHerramienta(@RequestBody Herramienta herramienta)throws ResourceNotFoundException{
@@ -57,6 +74,7 @@ public class HerramientaController {
 
         }else throw new ResourceNotFoundException("La Herramienta ya existe");
     }
+    //ADMIN   ****************************************
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarHerramienta(@PathVariable Long id) throws ResourceNotFoundException{
@@ -68,6 +86,9 @@ public class HerramientaController {
             throw new ResourceNotFoundException("No se encontró la herramienta con el ID: " + id);
         }
     }
+    //ADMIN *************************************************************
+
+
 
     @PutMapping("/update")
     public ResponseEntity<String>actualizarHerramienta(@RequestBody Herramienta herramienta) throws ResourceNotFoundException{
@@ -84,6 +105,8 @@ public class HerramientaController {
         }
     }
 
+    //ADMIN, USER        ****************************
+
 
 
   @GetMapping ("/buscar/nombre/{nombre}")
@@ -94,6 +117,9 @@ public class HerramientaController {
             return ResponseEntity.ok(herramientaBuscada);
         }else throw new ResourceNotFoundException("No se encontro la herramienta especificada con el nombre:  "+ nombre);
     }
+
+
+    //ADMIN, USER ************************************
 
 
 

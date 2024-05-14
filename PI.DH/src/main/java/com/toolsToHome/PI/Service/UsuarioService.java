@@ -37,6 +37,7 @@ public class UsuarioService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<Usuario> buscarUsuario = usuarioRepository.findByEmail(username);
         if(buscarUsuario.isPresent()){
+            System.out.println("Load user by Username:  " + buscarUsuario.get().getAuthorities());
             return buscarUsuario.get();
 
         }else throw new UsernameNotFoundException("No se encontro el usuario");
@@ -88,9 +89,6 @@ public class UsuarioService implements UserDetailsService {
         return userOptional.map(UserDTO::fromUser);
     }
 
-/*Favs Angel*/
-
-    /* FAVS */
     public boolean isUsuarioCorreo(String email, Long id) {
         Optional<Usuario> usuario = usuarioRepository.findById(id);
         return usuario.isPresent() && usuario.get().getUsername().equals(email);

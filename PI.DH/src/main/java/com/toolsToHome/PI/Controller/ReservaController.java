@@ -28,7 +28,7 @@ public class ReservaController {
         this.herramientaService = herramientaService;
     }
 
-
+    //ADMIN, USER
     @PostMapping("/create")
     public ResponseEntity<Reserva> guardarReserva(@RequestBody Reserva reserva)throws ResourceNotFoundException{
 
@@ -40,6 +40,8 @@ public class ReservaController {
 
     }
 
+    //ADMIN, USER   **********************************************
+
 
     @GetMapping("/list/{id}")
     public ResponseEntity<Optional<Reserva>>buscarReserva(@PathVariable Long id) throws ResourceNotFoundException{
@@ -48,7 +50,7 @@ public class ReservaController {
             return ResponseEntity.ok(buscarReserva);
         }else throw new ResourceNotFoundException("No se encontro la reserva con ID :  "+ id);
     }
-
+    //ADMIN, USER   ****************************** //
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String>eliminarReserva(@PathVariable Long id)throws ResourceNotFoundException{
         Optional<Reserva>buscarReserva = reservaService.BuscarPorId(id);
@@ -75,6 +77,10 @@ public class ReservaController {
 
 
     }}
+    //ADMIN, USER ********************************
+
+
+
     @GetMapping("/list")
     public ResponseEntity<List<Reserva>>listarReservas(){
         return ResponseEntity.ok( reservaService.listarReservas());

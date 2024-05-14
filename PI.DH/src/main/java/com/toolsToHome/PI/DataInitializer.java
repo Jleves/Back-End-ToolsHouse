@@ -52,7 +52,7 @@ public class DataInitializer implements CommandLineRunner {
                         .apellido("Admin")
                         .ciudad("El Espacio Exterior")
                         .usuarioRole(UsuarioRole.SUPERADMIN)
-                        .build();
+                        .confirmacion(true).build();
 
                 usuarioRepository.save(superAdmin);
 

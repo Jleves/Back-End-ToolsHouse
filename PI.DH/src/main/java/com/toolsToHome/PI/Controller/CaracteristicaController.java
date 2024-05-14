@@ -8,11 +8,22 @@ import com.toolsToHome.PI.Service.CategoriaService;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.web.authentication.Http403ForbiddenEntryPoint;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpClientErrorException;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+
+import static org.springframework.http.HttpHeaders.WWW_AUTHENTICATE;
 
 @CrossOrigin(origins = "*",allowedHeaders = "*")
 @RestController
@@ -28,6 +39,11 @@ public class CaracteristicaController {
     }
 
 
+
+    //USER, ADMIN **************************
+
+
+
     @GetMapping("/list/{id}")
     public ResponseEntity<Optional<Caracteristicas>> buscarCaracteristicas(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Caracteristicas> buscarCaracteristicas = caracteristicaService.buscarPorId(id);
@@ -37,7 +53,7 @@ public class CaracteristicaController {
             throw new ResourceNotFoundException("No se encontró la categoria con el ID: " + id);
         }
     }
-
+    //USER, ADMIN   ******************************
     @GetMapping("/list")
     public ResponseEntity<List<Caracteristicas>>listarHerramientas(){
         return ResponseEntity.ok(caracteristicaService.listarTodos());
@@ -47,18 +63,28 @@ public class CaracteristicaController {
 
 
 
+    //ADMIN                ++++++++++
+
+
 
     @PostMapping("/create")
     public ResponseEntity<Caracteristicas>guardarCaracteristicas(@RequestBody Caracteristicas caracteristicas)throws ResourceNotFoundException{
-        Optional<Caracteristicas>buscarCaracteristicas= caracteristicaService.buscarPorCaracteristicas(caracteristicas.getTitulo());
-        if(buscarCaracteristicas.isEmpty()){
-            Caracteristicas categoriaGuardada = caracteristicaService.guardarCaracteristica(caracteristicas);
 
-            logger.info("Nueva Caracteristica, Controller");
-            return ResponseEntity.ok(categoriaGuardada);
+                    Optional<Caracteristicas>buscarCaracteristicas= caracteristicaService.buscarPorCaracteristicas(caracteristicas.getTitulo());
+                    if(buscarCaracteristicas.isEmpty()){
+                        Caracteristicas categoriaGuardada = caracteristicaService.guardarCaracteristica(caracteristicas);
+                        return ResponseEntity.ok(categoriaGuardada);
 
-        }else throw new ResourceNotFoundException("La Caracteristica ya existe");
+                    }
+                    else throw new ResourceNotFoundException("La Caracteristica ya existe");
+
     }
+
+
+
+    // ADMIN   ***********************************
+
+
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarCaracteristicas(@PathVariable Long id) throws ResourceNotFoundException{
@@ -70,6 +96,12 @@ public class CaracteristicaController {
             throw new ResourceNotFoundException("No se encontró la caracteristica con el ID: " + id);
         }
     }
+
+
+
+    //ADMIN **********************************************
+
+
 
     @PutMapping("/update")
     public ResponseEntity<String>actualizarCaracteristicas(@RequestBody Caracteristicas caracteristicas) throws ResourceNotFoundException{

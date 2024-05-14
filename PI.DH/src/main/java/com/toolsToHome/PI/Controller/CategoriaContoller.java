@@ -25,6 +25,12 @@ public class CategoriaContoller {
         this.categoriaService = categoriaService;
     }
 
+
+
+    //USER, ADMIN            **********************************************
+
+
+
     @GetMapping("/list/{id}")
     public ResponseEntity<Optional<Categoria>> buscarCategoria(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Categoria> buscarcategoria = categoriaService.buscarPorId(id);
@@ -35,11 +41,16 @@ public class CategoriaContoller {
         }
     }
     @CrossOrigin(origins = "*")
-
+    //USER, ADMIN   ****************************************************
     @GetMapping("/list")
     public ResponseEntity<List<Categoria>>listarCategorias(){
         return ResponseEntity.ok(categoriaService.listarTodos());
     }
+
+
+
+    //ADMIN         +++++++++++++++++++
+
 
     @PostMapping("/create")
     public ResponseEntity<Categoria>guardarCategoria(@RequestBody Categoria categoria){
@@ -48,6 +59,11 @@ public class CategoriaContoller {
 
         return ResponseEntity.ok(categoria);
     }
+
+
+    //ADMIN   *********************************
+
+
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> eliminarCategoria(@PathVariable Long id) throws ResourceNotFoundException{
@@ -59,6 +75,12 @@ public class CategoriaContoller {
             throw new ResourceNotFoundException("No se encontró la caracteristica con el ID: " + id);
         }
     }
+
+
+
+    //ADMIN ********************************************
+
+
 
     @PutMapping("/update")
     public ResponseEntity<String>actualizarCategoria(@RequestBody Categoria categoria) throws ResourceNotFoundException{
