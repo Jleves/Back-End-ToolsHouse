@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  app_toolshouse:
+    build: PI.DH
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: jdbc:mysql://toolshouse:3306/toolshouse?createDatabaseIfNotExist=true&serverTimezone=UTC
+      DB_USERNAME: root
+      DB_PASSWORD: 1234
+      EMAIL_HOST: smtp.gmail.com
+      EMAIL_ID: toolshouse.dh@gmail.com
+      EMAIL_PASSWORD: m i t i u o i i q j w a e y h t
+      EMAIL_PORT: 587
+      VERIFY_EMAIL_HOST: ec2-54-237-167-60.compute-1.amazonaws.com
+    restart: always
+    depends_on:
+      toolshouse:
+          condition: service_healthy
+  toolshouse:
+    image: mysql:8.0.33 
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_PASSWORD: 1234
+      MYSQL_DATABASE: toolshouse
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 10
