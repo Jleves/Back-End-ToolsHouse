@@ -14,7 +14,7 @@ services:
       EMAIL_ID: toolshouse.dh@gmail.com
       EMAIL_PASSWORD: m i t i u o i i q j w a e y h t
       EMAIL_PORT: 587
-      VERIFY_EMAIL_HOST: ec2-54-237-167-60.compute-1.amazonaws.com
+      VERIFY_EMAIL_HOST: ec2-54-145-44-94.compute-1.amazonaws.com
     restart: always
     depends_on:
       toolshouse:
